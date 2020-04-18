@@ -12,6 +12,13 @@ namespace New_TJ_Tutors_System
 {
     public partial class mainform : Form
     {
+
+        //定义全局变量
+
+        private bool dragging = false;
+        private Point startpoint = new Point(0, 0);
+
+
         public mainform()
         {
             InitializeComponent();
@@ -46,7 +53,7 @@ namespace New_TJ_Tutors_System
         {
             if(submenu.Visible == false)
             {
-                hidesubmenu();
+                //hidesubmenu();
                 submenu.Visible = true;
             }
             else
@@ -63,25 +70,25 @@ namespace New_TJ_Tutors_System
         {
             /**/
             openchidform(new tutoring_info());
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_tutoring_add_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_tutoring_track_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_tutoring_form_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
         #endregion
 
@@ -95,19 +102,19 @@ namespace New_TJ_Tutors_System
         private void btn_tutor_search_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_tutor_add_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_tutor_blacklist_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
         #endregion
 
@@ -121,19 +128,19 @@ namespace New_TJ_Tutors_System
         private void btn_worker_search_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_worker_add_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_worker_responsibility_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
 
@@ -145,7 +152,7 @@ namespace New_TJ_Tutors_System
         private void btn_work_tutorial_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
         #endregion
 
@@ -154,19 +161,19 @@ namespace New_TJ_Tutors_System
         private void btn_price_check_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_doc_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
 
         private void btn_about_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            //hidesubmenu();
         }
         #endregion
 
@@ -197,6 +204,67 @@ namespace New_TJ_Tutors_System
             childform.BringToFront();
             childform.Show();
         }
+        #region windowstate
+        private void btn_min_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (WindowState.ToString() == "Normal")
+            {
+                this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+                this.WindowState = FormWindowState.Maximized;              
+            }
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void mainform_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startpoint = new Point(e.X, e.Y);
+        }
+
+        private void mainform_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void mainform_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.startpoint.X, p.Y - this.startpoint.Y);
+            }
+        }
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startpoint = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.startpoint.X, p.Y - this.startpoint.Y);
+            }
+        }
+        #endregion
 
 
     }

@@ -16,7 +16,18 @@ namespace New_TJ_Tutors_System
             grade_stu1, subject_stu1, student_sex1, tutors_price1, tutors_time1, sex1, place1, grade1, subject1, other_requests1,
             payment_state1, payment_time1,tutor_state1,remarks1;
 
-        
+        private void btn_buss_Click(object sender, EventArgs e)
+        {
+            panel_tutor.Visible = false;
+            panel_buss.Visible = true;
+        }
+
+        private void btn_tutor_info_Click(object sender, EventArgs e)
+        {
+            panel_tutor.Visible = true;
+            panel_buss.Visible = false;
+
+        }
 
         public tutoring_info()
         {
@@ -32,6 +43,7 @@ namespace New_TJ_Tutors_System
             txt_print_search.Text = "打印编号";
             txt_phone_search.Text = "联系方式";
             txt_address_search.Text = "地址中含有";
+            lbl_dadd.Parent = groupBox1;
         }
 
         
