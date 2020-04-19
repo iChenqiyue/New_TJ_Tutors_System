@@ -60,6 +60,22 @@ namespace New_TJ_Tutors_System
                 submenu.Visible = false;
         }
 
+        private Form activeform = null;
+        private void openchidform(Form childform)
+        {
+            if (activeform != null)
+                activeform.Close();
+            activeform = childform;
+            childform.TopLevel = false;
+            childform.FormBorderStyle = FormBorderStyle.None;
+            childform.Dock = DockStyle.Fill;
+            paneltutoring.Controls.Add(childform);
+            paneltutoring.Tag = childform;
+            childform.BringToFront();
+            childform.Show();
+        }
+
+
         #region panltutoringmenu
         private void btn_tutoring_info_Click(object sender, EventArgs e)
         {
@@ -190,20 +206,7 @@ namespace New_TJ_Tutors_System
         }
         #endregion
 
-        private Form activeform = null;
-        private void openchidform(Form childform)
-        {
-            if (activeform != null)
-                activeform.Close();
-            activeform = childform;
-            childform.TopLevel = false;
-            childform.FormBorderStyle = FormBorderStyle.None;
-            childform.Dock = DockStyle.Fill;
-            paneltutoring.Controls.Add(childform);
-            paneltutoring.Tag = childform;
-            childform.BringToFront();
-            childform.Show();
-        }
+        
         #region windowstate
         private void btn_min_Click(object sender, EventArgs e)
         {
