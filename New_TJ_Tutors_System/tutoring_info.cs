@@ -16,7 +16,10 @@ namespace New_TJ_Tutors_System
             grade_stu1, subject_stu1, student_sex1, tutors_price1, tutors_time1, sex1, place1, grade1, subject1, other_requests1,
             payment_state1, payment_time1,tutor_state1,remarks1;
 
-        
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private Form activeform = null;
         private void openchidform(Form childform)

@@ -202,7 +202,9 @@ namespace New_TJ_Tutors_System
         private void btn_backup_Click(object sender, EventArgs e)
         {
             /**/
-            hidesubmenu();
+            commondb mydb = new commondb();
+            MessageBox.Show(mydb.connection(), "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //hidesubmenu();
         }
         #endregion
 

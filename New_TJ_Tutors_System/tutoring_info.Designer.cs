@@ -35,6 +35,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_select = new System.Windows.Forms.Label();
             this.cbo_select = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
             this.panelsearch = new System.Windows.Forms.Panel();
             this.gbo_search = new System.Windows.Forms.GroupBox();
             this.txt_parent_search = new System.Windows.Forms.TextBox();
@@ -45,14 +47,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelinfo = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.paneldeal = new System.Windows.Forms.Panel();
+            this.btn_deal = new System.Windows.Forms.Button();
             this.panel_tutor = new System.Windows.Forms.Panel();
             this.panel_buss = new System.Windows.Forms.Panel();
             this.btn_buss = new System.Windows.Forms.Button();
             this.btn_tutor_info = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.paneldeal = new System.Windows.Forms.Panel();
-            this.btn_deal = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).BeginInit();
@@ -135,6 +135,44 @@
             this.cbo_select.Size = new System.Drawing.Size(148, 28);
             this.cbo_select.TabIndex = 17;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(123, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 50);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "删除";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_add.FlatAppearance.BorderSize = 0;
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_add.ForeColor = System.Drawing.Color.White;
+            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
+            this.btn_add.Location = new System.Drawing.Point(0, 0);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(123, 50);
+            this.btn_add.TabIndex = 15;
+            this.btn_add.Text = "新增";
+            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_add.UseVisualStyleBackColor = false;
+            // 
             // panelsearch
             // 
             this.panelsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
@@ -190,6 +228,7 @@
             this.btn_search.TabIndex = 4;
             this.btn_search.Text = "查询";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_address_search
             // 
@@ -269,6 +308,29 @@
             this.panel7.Size = new System.Drawing.Size(579, 36);
             this.panel7.TabIndex = 1;
             // 
+            // paneldeal
+            // 
+            this.paneldeal.BackColor = System.Drawing.Color.White;
+            this.paneldeal.Location = new System.Drawing.Point(256, 33);
+            this.paneldeal.Name = "paneldeal";
+            this.paneldeal.Size = new System.Drawing.Size(128, 3);
+            this.paneldeal.TabIndex = 4;
+            // 
+            // btn_deal
+            // 
+            this.btn_deal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_deal.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_deal.FlatAppearance.BorderSize = 0;
+            this.btn_deal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_deal.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btn_deal.ForeColor = System.Drawing.Color.White;
+            this.btn_deal.Location = new System.Drawing.Point(256, 0);
+            this.btn_deal.Name = "btn_deal";
+            this.btn_deal.Size = new System.Drawing.Size(128, 36);
+            this.btn_deal.TabIndex = 3;
+            this.btn_deal.Text = "办理业务";
+            this.btn_deal.UseVisualStyleBackColor = false;
+            // 
             // panel_tutor
             // 
             this.panel_tutor.BackColor = System.Drawing.Color.White;
@@ -316,67 +378,6 @@
             this.btn_tutor_info.Text = "家教信息";
             this.btn_tutor_info.UseVisualStyleBackColor = false;
             this.btn_tutor_info.Click += new System.EventHandler(this.btn_tutor_info_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(123, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 50);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "删除";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_add.FlatAppearance.BorderSize = 0;
-            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
-            this.btn_add.Location = new System.Drawing.Point(0, 0);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(123, 50);
-            this.btn_add.TabIndex = 15;
-            this.btn_add.Text = "新增";
-            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_add.UseVisualStyleBackColor = false;
-            // 
-            // paneldeal
-            // 
-            this.paneldeal.BackColor = System.Drawing.Color.White;
-            this.paneldeal.Location = new System.Drawing.Point(256, 33);
-            this.paneldeal.Name = "paneldeal";
-            this.paneldeal.Size = new System.Drawing.Size(128, 3);
-            this.paneldeal.TabIndex = 4;
-            // 
-            // btn_deal
-            // 
-            this.btn_deal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_deal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_deal.FlatAppearance.BorderSize = 0;
-            this.btn_deal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_deal.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_deal.ForeColor = System.Drawing.Color.White;
-            this.btn_deal.Location = new System.Drawing.Point(256, 0);
-            this.btn_deal.Name = "btn_deal";
-            this.btn_deal.Size = new System.Drawing.Size(128, 36);
-            this.btn_deal.TabIndex = 3;
-            this.btn_deal.Text = "办理业务";
-            this.btn_deal.UseVisualStyleBackColor = false;
             // 
             // tutoring_info
             // 
