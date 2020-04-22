@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace New_TJ_Tutors_System
 {
-    public partial class tutor : Form
+    public partial class tutor_search : Form
     {
-        public tutor()
+        public tutor_search()
         {
             InitializeComponent();
         }

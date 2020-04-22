@@ -85,25 +85,14 @@ namespace New_TJ_Tutors_System
         private void btn_tutoring_search_Click(object sender, EventArgs e)
         {
             /**/
-            openchidform(new tutoring_info());
+            openchidform(new tutoring_all());
             //hidesubmenu();
-        }
-
-        private void btn_tutoring_add_Click(object sender, EventArgs e)
-        {
-            /**/
-            //hidesubmenu();
-        }
-
-        private void btn_tutoring_track_Click(object sender, EventArgs e)
-        {
-            /**/
-            //hidesubmenu();
-        }
+        } 
 
         private void btn_tutoring_form_Click(object sender, EventArgs e)
         {
             /**/
+            openchidform(new todayform());
             //hidesubmenu();
         }
         #endregion
@@ -118,6 +107,7 @@ namespace New_TJ_Tutors_System
         private void btn_tutor_search_Click(object sender, EventArgs e)
         {
             /**/
+            openchidform(new tutor_all());
             //hidesubmenu();
         }
 

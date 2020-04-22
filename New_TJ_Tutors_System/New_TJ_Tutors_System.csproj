@@ -77,11 +77,17 @@
       <DependentUpon>bussiness.cs</DependentUpon>
     </Compile>
     <Compile Include="commondb.cs" />
-    <Compile Include="deal.cs">
+    <Compile Include="databind.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="tutor_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="deal.Designer.cs">
-      <DependentUpon>deal.cs</DependentUpon>
+    <Compile Include="tutor_search.Designer.cs">
+      <DependentUpon>tutor_search.cs</DependentUpon>
     </Compile>
     <Compile Include="mainform.cs">
       <SubType>Form</SubType>
@@ -91,11 +97,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tutor.cs">
+    <Compile Include="todayform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tutor.Designer.cs">
-      <DependentUpon>tutor.cs</DependentUpon>
+    <Compile Include="todayform.Designer.cs">
+      <DependentUpon>todayform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tutor_all.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tutor_all.Designer.cs">
+      <DependentUpon>tutor_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tutoring_all.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tutoring_all.Designer.cs">
+      <DependentUpon>tutoring_all.cs</DependentUpon>
     </Compile>
     <Compile Include="tutoring_info.cs">
       <SubType>Form</SubType>
@@ -103,39 +121,31 @@
     <Compile Include="tutoring_info.Designer.cs">
       <DependentUpon>tutoring_info.cs</DependentUpon>
     </Compile>
-    <Compile Include="tutor_info.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tutor_info.Designer.cs">
-      <DependentUpon>tutor_info.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="bussiness.resx">
       <DependentUpon>bussiness.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="deal.resx">
-      <DependentUpon>deal.cs</DependentUpon>
+    <EmbeddedResource Include="tutor_search.resx">
+      <DependentUpon>tutor_search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainform.resx">
       <DependentUpon>mainform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="tutor.resx">
-      <DependentUpon>tutor.cs</DependentUpon>
+    <EmbeddedResource Include="todayform.resx">
+      <DependentUpon>todayform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tutor_all.resx">
+      <DependentUpon>tutor_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tutoring_all.resx">
+      <DependentUpon>tutoring_all.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tutoring_info.resx">
       <DependentUpon>tutoring_info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tutor_info.resx">
-      <DependentUpon>tutor_info.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -159,6 +169,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\QQ图片20190223220706.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ashbin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

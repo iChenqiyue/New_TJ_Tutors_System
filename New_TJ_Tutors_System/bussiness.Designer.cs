@@ -28,10 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.paneltop = new System.Windows.Forms.Panel();
+            this.panelbus = new System.Windows.Forms.Panel();
             this.btn_bus = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.cbo_state = new System.Windows.Forms.ComboBox();
+            this.txt_remark = new System.Windows.Forms.TextBox();
+            this.lbl_remark = new System.Windows.Forms.Label();
+            this.txt_tutor_num = new System.Windows.Forms.TextBox();
+            this.lbl_subject = new System.Windows.Forms.Label();
+            this.lbl_tutor_num = new System.Windows.Forms.Label();
+            this.cbo_subject = new System.Windows.Forms.ComboBox();
+            this.lbl_tutor_name = new System.Windows.Forms.Label();
+            this.lbl_state = new System.Windows.Forms.Label();
+            this.txt_tutor_name = new System.Windows.Forms.TextBox();
+            this.dgv_subject = new System.Windows.Forms.DataGridView();
+            this.panelstate = new System.Windows.Forms.Panel();
             this.gpo_state = new System.Windows.Forms.GroupBox();
             this.cbo_tutor_state = new System.Windows.Forms.ComboBox();
             this.txt_remarks = new System.Windows.Forms.TextBox();
@@ -46,60 +57,190 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.paneltop.SuspendLayout();
+            this.panelbus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_subject)).BeginInit();
+            this.panelstate.SuspendLayout();
             this.gpo_state.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_done)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel4
+            // paneltop
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.panel4.Controls.Add(this.btn_bus);
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(579, 361);
-            this.panel4.TabIndex = 66;
+            this.paneltop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.paneltop.Controls.Add(this.panelbus);
+            this.paneltop.Controls.Add(this.dgv_subject);
+            this.paneltop.Controls.Add(this.panelstate);
+            this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneltop.Location = new System.Drawing.Point(0, 0);
+            this.paneltop.Name = "paneltop";
+            this.paneltop.Size = new System.Drawing.Size(579, 464);
+            this.paneltop.TabIndex = 66;
+            // 
+            // panelbus
+            // 
+            this.panelbus.Controls.Add(this.btn_bus);
+            this.panelbus.Controls.Add(this.cbo_state);
+            this.panelbus.Controls.Add(this.txt_remark);
+            this.panelbus.Controls.Add(this.lbl_remark);
+            this.panelbus.Controls.Add(this.txt_tutor_num);
+            this.panelbus.Controls.Add(this.lbl_subject);
+            this.panelbus.Controls.Add(this.lbl_tutor_num);
+            this.panelbus.Controls.Add(this.cbo_subject);
+            this.panelbus.Controls.Add(this.lbl_tutor_name);
+            this.panelbus.Controls.Add(this.lbl_state);
+            this.panelbus.Controls.Add(this.txt_tutor_name);
+            this.panelbus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelbus.Location = new System.Drawing.Point(281, 165);
+            this.panelbus.Name = "panelbus";
+            this.panelbus.Size = new System.Drawing.Size(298, 299);
+            this.panelbus.TabIndex = 81;
             // 
             // btn_bus
             // 
             this.btn_bus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_bus.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_bus.FlatAppearance.BorderSize = 0;
             this.btn_bus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bus.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
             this.btn_bus.ForeColor = System.Drawing.Color.White;
-            this.btn_bus.Location = new System.Drawing.Point(0, 165);
+            this.btn_bus.Location = new System.Drawing.Point(108, 256);
             this.btn_bus.Name = "btn_bus";
-            this.btn_bus.Size = new System.Drawing.Size(120, 44);
+            this.btn_bus.Size = new System.Drawing.Size(86, 38);
             this.btn_bus.TabIndex = 76;
-            this.btn_bus.Text = "办理业务";
+            this.btn_bus.Text = "办理";
             this.btn_bus.UseVisualStyleBackColor = false;
             this.btn_bus.Click += new System.EventHandler(this.btn_bus_Click);
             // 
-            // dataGridView1
+            // cbo_state
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 209);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(579, 152);
-            this.dataGridView1.TabIndex = 66;
+            this.cbo_state.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_state.FormattingEnabled = true;
+            this.cbo_state.Items.AddRange(new object[] {
+            "接入",
+            "已接",
+            "待接",
+            "换人",
+            "不请",
+            "重请"});
+            this.cbo_state.Location = new System.Drawing.Point(166, 33);
+            this.cbo_state.Name = "cbo_state";
+            this.cbo_state.Size = new System.Drawing.Size(114, 23);
+            this.cbo_state.TabIndex = 53;
             // 
-            // panel6
+            // txt_remark
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel6.Controls.Add(this.gpo_state);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(579, 165);
-            this.panel6.TabIndex = 79;
+            this.txt_remark.Location = new System.Drawing.Point(29, 146);
+            this.txt_remark.Multiline = true;
+            this.txt_remark.Name = "txt_remark";
+            this.txt_remark.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txt_remark.Size = new System.Drawing.Size(251, 100);
+            this.txt_remark.TabIndex = 52;
+            // 
+            // lbl_remark
+            // 
+            this.lbl_remark.AutoSize = true;
+            this.lbl_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_remark.ForeColor = System.Drawing.Color.White;
+            this.lbl_remark.Location = new System.Drawing.Point(25, 124);
+            this.lbl_remark.Name = "lbl_remark";
+            this.lbl_remark.Size = new System.Drawing.Size(39, 19);
+            this.lbl_remark.TabIndex = 51;
+            this.lbl_remark.Text = "备注";
+            // 
+            // txt_tutor_num
+            // 
+            this.txt_tutor_num.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_tutor_num.Location = new System.Drawing.Point(29, 90);
+            this.txt_tutor_num.Name = "txt_tutor_num";
+            this.txt_tutor_num.Size = new System.Drawing.Size(114, 25);
+            this.txt_tutor_num.TabIndex = 50;
+            // 
+            // lbl_subject
+            // 
+            this.lbl_subject.AutoSize = true;
+            this.lbl_subject.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_subject.ForeColor = System.Drawing.Color.White;
+            this.lbl_subject.Location = new System.Drawing.Point(25, 15);
+            this.lbl_subject.Name = "lbl_subject";
+            this.lbl_subject.Size = new System.Drawing.Size(39, 19);
+            this.lbl_subject.TabIndex = 43;
+            this.lbl_subject.Text = "科目";
+            // 
+            // lbl_tutor_num
+            // 
+            this.lbl_tutor_num.AutoSize = true;
+            this.lbl_tutor_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_tutor_num.ForeColor = System.Drawing.Color.White;
+            this.lbl_tutor_num.Location = new System.Drawing.Point(25, 70);
+            this.lbl_tutor_num.Name = "lbl_tutor_num";
+            this.lbl_tutor_num.Size = new System.Drawing.Size(69, 19);
+            this.lbl_tutor_num.TabIndex = 45;
+            this.lbl_tutor_num.Text = "教员编号";
+            // 
+            // cbo_subject
+            // 
+            this.cbo_subject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_subject.FormattingEnabled = true;
+            this.cbo_subject.Items.AddRange(new object[] {
+            "接入",
+            "已接",
+            "待接",
+            "换人",
+            "不请",
+            "重请"});
+            this.cbo_subject.Location = new System.Drawing.Point(29, 33);
+            this.cbo_subject.Name = "cbo_subject";
+            this.cbo_subject.Size = new System.Drawing.Size(114, 23);
+            this.cbo_subject.TabIndex = 49;
+            // 
+            // lbl_tutor_name
+            // 
+            this.lbl_tutor_name.AutoSize = true;
+            this.lbl_tutor_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_tutor_name.ForeColor = System.Drawing.Color.White;
+            this.lbl_tutor_name.Location = new System.Drawing.Point(162, 70);
+            this.lbl_tutor_name.Name = "lbl_tutor_name";
+            this.lbl_tutor_name.Size = new System.Drawing.Size(69, 19);
+            this.lbl_tutor_name.TabIndex = 46;
+            this.lbl_tutor_name.Text = "教员姓名";
+            // 
+            // lbl_state
+            // 
+            this.lbl_state.AutoSize = true;
+            this.lbl_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_state.ForeColor = System.Drawing.Color.White;
+            this.lbl_state.Location = new System.Drawing.Point(163, 15);
+            this.lbl_state.Name = "lbl_state";
+            this.lbl_state.Size = new System.Drawing.Size(69, 19);
+            this.lbl_state.TabIndex = 48;
+            this.lbl_state.Text = "进行状态";
+            // 
+            // txt_tutor_name
+            // 
+            this.txt_tutor_name.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_tutor_name.Location = new System.Drawing.Point(166, 90);
+            this.txt_tutor_name.Name = "txt_tutor_name";
+            this.txt_tutor_name.Size = new System.Drawing.Size(114, 25);
+            this.txt_tutor_name.TabIndex = 47;
+            // 
+            // dgv_subject
+            // 
+            this.dgv_subject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_subject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_subject.Location = new System.Drawing.Point(0, 165);
+            this.dgv_subject.Name = "dgv_subject";
+            this.dgv_subject.RowTemplate.Height = 27;
+            this.dgv_subject.Size = new System.Drawing.Size(579, 299);
+            this.dgv_subject.TabIndex = 66;
+            // 
+            // panelstate
+            // 
+            this.panelstate.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelstate.Controls.Add(this.gpo_state);
+            this.panelstate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelstate.Location = new System.Drawing.Point(0, 0);
+            this.panelstate.Name = "panelstate";
+            this.panelstate.Size = new System.Drawing.Size(579, 165);
+            this.panelstate.TabIndex = 79;
             // 
             // gpo_state
             // 
@@ -141,7 +282,7 @@
             // lbl_tutor_state
             // 
             this.lbl_tutor_state.AutoSize = true;
-            this.lbl_tutor_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_tutor_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_tutor_state.ForeColor = System.Drawing.Color.White;
             this.lbl_tutor_state.Location = new System.Drawing.Point(24, 30);
             this.lbl_tutor_state.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
@@ -190,10 +331,10 @@
             this.Column4,
             this.Column5});
             this.dgv_done.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_done.Location = new System.Drawing.Point(0, 361);
+            this.dgv_done.Location = new System.Drawing.Point(0, 464);
             this.dgv_done.Name = "dgv_done";
             this.dgv_done.RowTemplate.Height = 27;
-            this.dgv_done.Size = new System.Drawing.Size(579, 388);
+            this.dgv_done.Size = new System.Drawing.Size(579, 285);
             this.dgv_done.TabIndex = 67;
             // 
             // 多选
@@ -244,13 +385,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 749);
             this.Controls.Add(this.dgv_done);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.paneltop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "bussiness";
             this.Text = "bussiness";
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel6.ResumeLayout(false);
+            this.paneltop.ResumeLayout(false);
+            this.panelbus.ResumeLayout(false);
+            this.panelbus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_subject)).EndInit();
+            this.panelstate.ResumeLayout(false);
             this.gpo_state.ResumeLayout(false);
             this.gpo_state.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_done)).EndInit();
@@ -260,10 +403,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btn_bus;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel paneltop;
+        private System.Windows.Forms.DataGridView dgv_subject;
+        private System.Windows.Forms.Panel panelstate;
         private System.Windows.Forms.GroupBox gpo_state;
         private System.Windows.Forms.ComboBox cbo_tutor_state;
         private System.Windows.Forms.TextBox txt_remarks;
@@ -278,5 +420,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Panel panelbus;
+        private System.Windows.Forms.TextBox txt_tutor_num;
+        private System.Windows.Forms.Label lbl_subject;
+        private System.Windows.Forms.Label lbl_tutor_num;
+        private System.Windows.Forms.ComboBox cbo_subject;
+        private System.Windows.Forms.Label lbl_tutor_name;
+        private System.Windows.Forms.Label lbl_state;
+        private System.Windows.Forms.TextBox txt_tutor_name;
+        private System.Windows.Forms.Button btn_bus;
+        private System.Windows.Forms.ComboBox cbo_state;
+        private System.Windows.Forms.TextBox txt_remark;
+        private System.Windows.Forms.Label lbl_remark;
     }
 }

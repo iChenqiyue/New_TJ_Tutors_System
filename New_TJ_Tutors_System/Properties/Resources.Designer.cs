@@ -83,6 +83,26 @@ namespace New_TJ_Tutors_System.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap ashbin {
+            get {
+                object obj = ResourceManager.GetObject("ashbin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap nav_list {
+            get {
+                object obj = ResourceManager.GetObject("nav_list", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap QQ图片20190223220706 {
             get {
                 object obj = ResourceManager.GetObject("QQ图片20190223220706", resourceCulture);

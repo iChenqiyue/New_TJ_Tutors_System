@@ -42,8 +42,7 @@ namespace New_TJ_Tutors_System
         public int Rownum(string sql)
         {
             int i = 0;
-            string mystr = System.Configuration.ConfigurationManager.
-                ConnectionStrings["myconnstring"].ToString();
+            string mystr = connectionstr;
             //从App.config文件获取连接字符串
             MySqlConnection myconn = new MySqlConnection(connectionstr);
             myconn.ConnectionString = mystr;
@@ -61,8 +60,7 @@ namespace New_TJ_Tutors_System
         public string Returnafield(string sql)
         {//sql参数指出SQL语句
             string fn;
-            string mystr = System.Configuration.ConfigurationManager.
-                ConnectionStrings["myconnstring"].ToString();
+            string mystr = connectionstr;
             MySqlConnection myconn = new MySqlConnection();
             myconn.ConnectionString = mystr;
             myconn.Open();
@@ -81,8 +79,7 @@ namespace New_TJ_Tutors_System
         //****************************************************************
         public void ExecuteNonQuery(string sql)
         {
-            string mystr = System.Configuration.ConfigurationManager.
-               ConnectionStrings["myconnstring"].ToString();
+            string mystr = connectionstr;
             MySqlConnection myconn = new MySqlConnection();
             myconn.ConnectionString = mystr;
             myconn.Open();
@@ -95,8 +92,7 @@ namespace New_TJ_Tutors_System
         //****************************************************************
         public DataSet ExecuteQuery(string sql, string tname)
         {
-            string mystr = System.Configuration.ConfigurationManager.
-               ConnectionStrings["myconnstring"].ToString();
+            string mystr = connectionstr;
             MySqlConnection myconn = new MySqlConnection();
             myconn.ConnectionString = mystr;
             myconn.Open();
@@ -112,8 +108,7 @@ namespace New_TJ_Tutors_System
         public string ExecuteAggregateQuery(string sql)
         {
             string jg;
-            string mystr = System.Configuration.ConfigurationManager.
-              ConnectionStrings["myconnstring"].ToString();
+            string mystr = connectionstr;
             MySqlConnection myconn = new MySqlConnection();
             myconn.ConnectionString = mystr;
             myconn.Open();
@@ -124,7 +119,6 @@ namespace New_TJ_Tutors_System
             myconn.Close();
             return jg;
         }
-
 
     }
 }

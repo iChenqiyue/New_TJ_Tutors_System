@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace New_TJ_Tutors_System
 {
-    public partial class deal : Form
+    public partial class todayform : Form
     {
-        public deal()
+        public todayform()
         {
             InitializeComponent();
         }
