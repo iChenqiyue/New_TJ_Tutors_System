@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tutoring_all));
             this.paneleft = new System.Windows.Forms.Panel();
             this.panel_searchresult = new System.Windows.Forms.Panel();
@@ -85,11 +87,34 @@
             // 
             // dgv_search
             // 
+            this.dgv_search.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dgv_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_search.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_search.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_search.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_search.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_search.EnableHeadersVisualStyles = false;
+            this.dgv_search.GridColor = System.Drawing.Color.SteelBlue;
             this.dgv_search.Location = new System.Drawing.Point(0, 0);
             this.dgv_search.Name = "dgv_search";
+            this.dgv_search.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_search.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(61)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_search.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_search.RowTemplate.Height = 27;
+            this.dgv_search.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_search.Size = new System.Drawing.Size(591, 616);
             this.dgv_search.TabIndex = 0;
             // 
@@ -134,6 +159,7 @@
             this.cbo_select.Name = "cbo_select";
             this.cbo_select.Size = new System.Drawing.Size(148, 28);
             this.cbo_select.TabIndex = 17;
+            this.cbo_select.SelectedIndexChanged += new System.EventHandler(this.cbo_select_SelectedIndexChanged);
             // 
             // btn_delete
             // 
@@ -358,9 +384,9 @@
             // 
             this.paneltutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(161)))), ((int)(((byte)(244)))));
             this.paneltutor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.paneltutor.Location = new System.Drawing.Point(0, 0);
+            this.paneltutor.Location = new System.Drawing.Point(527, 0);
             this.paneltutor.Name = "paneltutor";
-            this.paneltutor.Size = new System.Drawing.Size(591, 785);
+            this.paneltutor.Size = new System.Drawing.Size(64, 785);
             this.paneltutor.TabIndex = 1;
             // 
             // tutoring_all

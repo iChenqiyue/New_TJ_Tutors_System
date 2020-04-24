@@ -24,7 +24,7 @@ namespace New_TJ_Tutors_System
             InitializeComponent();
             customizedesing();
         }
-
+        #region menusettings
         private void customizedesing()
         {
             paneltutoringmenu.Visible = false;
@@ -74,7 +74,7 @@ namespace New_TJ_Tutors_System
             childform.BringToFront();
             childform.Show();
         }
-
+        #endregion
 
         #region panltutoringmenu
         private void btn_tutoring_info_Click(object sender, EventArgs e)

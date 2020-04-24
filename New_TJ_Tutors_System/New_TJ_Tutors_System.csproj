@@ -83,6 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="styleinit.cs" />
     <Compile Include="tutor_search.cs">
       <SubType>Form</SubType>
     </Compile>
