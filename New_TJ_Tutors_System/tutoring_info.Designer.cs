@@ -611,6 +611,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tutoring_info";
             this.Text = "tutor_info";
+            this.Activated += new System.EventHandler(this.tutoring_info_Activated);
+            this.Load += new System.EventHandler(this.tutoring_info_Load);
             this.gbo_request.ResumeLayout(false);
             this.gbo_request.PerformLayout();
             this.gpo_info.ResumeLayout(false);

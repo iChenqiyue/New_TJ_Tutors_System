@@ -120,5 +120,17 @@ namespace New_TJ_Tutors_System
             return jg;
         }
 
+        public void update_payment_date(string print_num,string payment_time)
+        {
+            string mystr = connectionstr;
+            string sql = "update tutoring set payment_time='" + payment_time + "' where print_num='" + print_num + "'";
+            MySqlConnection myconn = new MySqlConnection();
+            myconn.ConnectionString = mystr;
+            myconn.Open();
+            MySqlCommand mycmd = new MySqlCommand(sql, myconn);
+            mycmd.ExecuteNonQuery();
+            myconn.Close();
+        }
+
     }
 }

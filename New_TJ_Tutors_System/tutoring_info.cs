@@ -13,16 +13,32 @@ namespace New_TJ_Tutors_System
     public partial class tutoring_info : Form
     {
 
-        public string ID1, parent_num1, print_num1, reception1, reception_time1, parent_name1, phone1, simple_adr1, detail_adr1,
-            grade_stu1, subject_stu1, student_sex1, tutors_price1, tutors_time1, sex1, place1, grade1, subject1, other_requests1,
-            payment_state1, payment_time1, tutor_state1, remarks1;
 
+        //全局变量
+        string print_num;
+        commondb mydb = new commondb();
+        objectclass.tutoringinfo tutor = new objectclass.tutoringinfo();
 
         public tutoring_info()
         {
             InitializeComponent();
         }
+        public tutoring_info(objectclass.tutoringinfo tutor1)
+        {
+            InitializeComponent();
+            tutor = tutor1;
+        }
 
+
+        private void initdata(string print_num, objectclass tutor)
+        {
+            string tablename = "tutoring";
+            string mysql = "select * from tutoring where print_num=" + print_num;
+            DataSet mydataset = mydb.ExecuteQuery(mysql, tablename);
+
+
+
+        }
         private void btn_save_Click(object sender, EventArgs e)
         {
             //初始化数据
@@ -105,34 +121,77 @@ namespace New_TJ_Tutors_System
                     return;
                 }
 
+
+                objectclass.tutoringinfo tutor1 = new objectclass.tutoringinfo();
                 //为字段赋值
-                parent_num1 = txt_parent_num.Text.Trim();
-                print_num1 = txt_print_num.Text.Trim();
-                reception1 = cbo_reception.SelectedItem.ToString();
-                reception_time1 = dt_recepiton_time.Value.ToString();
-                parent_name1 = txt_parent_name.Text.Trim();
-                phone1 = txt_phone.Text.Trim();
-                simple_adr1 = txt_sadd.Text.Trim();
-                detail_adr1 = txt_dadd.Text.Trim();
-                grade_stu1 = txt_grade_stu.Text.Trim();
-                subject_stu1 = txt_subject_stu.Text.Trim();
+
+                tutor1.parent_num = txt_parent_num.Text.Trim();
+                tutor1.print_num = txt_print_num.Text.Trim();
+                tutor1.reception = cbo_reception.SelectedItem.ToString();
+                tutor1.reception_time = dt_recepiton_time.Value.ToString();
+                tutor1.parent_name = txt_parent_name.Text.Trim();
+                tutor1.phone = txt_phone.Text.Trim();
+                tutor1.simple_adr = txt_sadd.Text.Trim();
+                tutor1.detail_adr = txt_dadd.Text.Trim();
+                tutor1.grade_stu = txt_grade_stu.Text.Trim();
+                tutor1.subject_stu = txt_subject_stu.Text.Trim();
                 if (rdo_man.Checked)
-                    student_sex1 = rdo_man.Text;
+                    tutor1.student_sex = rdo_man.Text;
                 else
-                    student_sex1 = rdo_woman.Text;
-                tutors_price1 = txt_tutor_price.Text.Trim();
-                tutors_time1 = txt_tutor_time.Text.Trim();
-                sex1 = cbo_sex.SelectedItem.ToString();
-                place1 = txt_place.Text.Trim();
-                grade1 = txt_grade.Text.Trim();
-                subject1 = txt_subject.Text.Trim();
-                other_requests1 = txt_other_requests.Text.Trim();
-                payment_state1 = cbo_payment_state.SelectedItem.ToString();
-                payment_time1 = dt_payment_time.Value.ToString();
+                    tutor1.student_sex = rdo_woman.Text;
+                tutor1.tutors_price = txt_tutor_price.Text.Trim();
+                tutor1.tutors_time = txt_tutor_time.Text.Trim();
+                tutor1.sex = cbo_sex.SelectedItem.ToString();
+                tutor1.place = txt_place.Text.Trim();
+                tutor1.grade = txt_grade.Text.Trim();
+                tutor1.subject = txt_subject.Text.Trim();
+                tutor1.other_requests = txt_other_requests.Text.Trim();
+                tutor1.payment_state = cbo_payment_state.SelectedItem.ToString();
+                tutor1.payment_time = dt_payment_time.Value.ToString();
 
                 //数据库操作
                 //...
             }
+        }
+
+
+        /// <summary>
+        /// 初始化窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tutoring_info_Load(object sender, EventArgs e)
+        {
+            txt_parent_num.Text = tutor.parent_num;
+            txt_print_num.Text = tutor.print_num;
+            cbo_reception.Text = tutor.reception;
+            dt_recepiton_time.Text = tutor.reception_time;
+            txt_parent_name.Text = tutor.parent_name;
+            txt_phone.Text = tutor.phone;
+            txt_sadd.Text = tutor.simple_adr;
+            txt_dadd.Text = tutor.detail_adr;
+            txt_grade_stu.Text = tutor.grade_stu;
+            txt_subject_stu.Text = tutor.subject_stu;
+            if (tutor.student_sex == "男")
+                rdo_man.Checked = true;
+            else if (tutor.student_sex == "女")
+                rdo_woman.Checked = true;
+            else { }
+            txt_tutor_price.Text = tutor.tutors_price;
+            txt_tutor_time.Text = tutor.tutors_time;
+            cbo_sex.Text = tutor.sex;
+            txt_place.Text = tutor.place;
+            txt_grade.Text = tutor.grade;
+            txt_subject.Text = tutor.subject;
+            txt_subject.Text = tutor.payment_time;
+            txt_other_requests.Text = tutor.other_requests;
+            cbo_payment_state.Text = tutor.payment_state;
+            //dt_payment_time.Text = (DateTime.Parse(tutor.payment_time)).ToString();
+        }
+
+        private void tutoring_info_Activated(object sender, EventArgs e)
+        {
+
         }
     }
 }

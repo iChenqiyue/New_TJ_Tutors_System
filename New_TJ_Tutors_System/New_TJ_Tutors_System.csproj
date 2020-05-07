@@ -84,6 +84,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="styleinit.cs" />
+    <Compile Include="objectclass.cs" />
     <Compile Include="tutor_search.cs">
       <SubType>Form</SubType>
     </Compile>
