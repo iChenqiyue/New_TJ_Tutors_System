@@ -33,7 +33,20 @@ namespace New_TJ_Tutors_System
                 explantion = "";
                 remarks = "";
             }
-            
+            public string connectstr()
+            {
+                string str = "('" + tutor_num + "','" + name + "','" + student_num + "','" + subject + "','" + degree + "','" + sex
+                    + "','" + phone + "','" + place + "','" + blacklist + "','" + explantion + "','" + remarks + "')";
+                return str;
+            }
+            public string updatestr()
+            {
+                string mysql = string.Format("UPDATE tutor SET name='{0}',student_num='{1}',subject='{2}',degree='{3}'," +
+                            "sex='{4}',phone='{5}',place='{6}',blacklist='{7}',explanation='{8}',remarks='{9}' WHERE tutor_num='{10}'",
+                            name, student_num, subject, degree, sex, phone, place, blacklist, explantion, remarks, tutor_num);
+                return mysql;
+            }
+
         }
         public class tutoringinfo
         {
@@ -94,6 +107,16 @@ namespace New_TJ_Tutors_System
                 return mysql;
             }
         }
-        
+
+        public class business
+        {
+            public string print_num, tutor_num, tutor_name, subject, state, time, reception, remarks, now;
+            public string connectstr()
+            {
+                string str = "('" + print_num + "','" + tutor_num + "','" + tutor_name + "','" + subject + "','" + state + "','" + time
+                    + "','" + reception + "','" + remarks + "','" + now + "')";
+                return str;
+            }
+        }
     }
 }

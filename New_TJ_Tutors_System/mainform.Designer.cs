@@ -56,7 +56,7 @@
             this.btn_min = new System.Windows.Forms.Button();
             this.btn_max = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labeltitle = new System.Windows.Forms.Label();
             this.panelmenu.SuspendLayout();
             this.panelemergency.SuspendLayout();
             this.panelhelpmenu.SuspendLayout();
@@ -444,7 +444,7 @@
             this.paneltitle.Controls.Add(this.btn_min);
             this.paneltitle.Controls.Add(this.btn_max);
             this.paneltitle.Controls.Add(this.button_close);
-            this.paneltitle.Controls.Add(this.label1);
+            this.paneltitle.Controls.Add(this.labeltitle);
             this.paneltitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitle.Location = new System.Drawing.Point(0, 0);
             this.paneltitle.Name = "paneltitle";
@@ -499,16 +499,19 @@
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // labeltitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "同 济 大 学 家 教 管 理 系 统";
+            this.labeltitle.AutoSize = true;
+            this.labeltitle.Font = new System.Drawing.Font("微软雅黑", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labeltitle.ForeColor = System.Drawing.Color.White;
+            this.labeltitle.Location = new System.Drawing.Point(12, 9);
+            this.labeltitle.Name = "labeltitle";
+            this.labeltitle.Size = new System.Drawing.Size(369, 37);
+            this.labeltitle.TabIndex = 0;
+            this.labeltitle.Text = "同 济 大 学 家 教 管 理 系 统";
+            this.labeltitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labeltitle_MouseDown);
+            this.labeltitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labeltitle_MouseMove);
+            this.labeltitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.labeltitle_MouseUp);
             // 
             // mainform
             // 
@@ -524,9 +527,6 @@
             this.Name = "mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainform_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainform_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mainform_MouseUp);
             this.panelmenu.ResumeLayout(false);
             this.panelemergency.ResumeLayout(false);
             this.panelhelpmenu.ResumeLayout(false);
@@ -568,7 +568,7 @@
         private System.Windows.Forms.Button btn_about;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel paneltitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labeltitle;
         private System.Windows.Forms.Button button_close;
         private System.Windows.Forms.Button btn_min;
         private System.Windows.Forms.Button btn_max;

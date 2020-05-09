@@ -80,6 +80,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "todayform";
             this.Text = "todayform";
+            this.Load += new System.EventHandler(this.todayform_Load);
             this.paneltop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_todayform)).EndInit();
             this.ResumeLayout(false);

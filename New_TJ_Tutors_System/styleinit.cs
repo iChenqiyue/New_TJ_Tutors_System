@@ -41,7 +41,11 @@ namespace New_TJ_Tutors_System
             dgv.RowTemplate.Height = 27;
             dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             dgv.ReadOnly = true;
+            // 禁止用户改变DataGridView1的所有列的列宽
+            dgv.AllowUserToResizeColumns = false;
 
+            //禁止用户改变DataGridView1所有行的行高
+            dgv.AllowUserToResizeRows = false;
         }
         #endregion
     }

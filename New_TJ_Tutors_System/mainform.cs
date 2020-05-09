@@ -221,25 +221,7 @@ namespace New_TJ_Tutors_System
             this.Close();
         }
 
-        private void mainform_MouseDown(object sender, MouseEventArgs e)
-        {
-            dragging = true;
-            startpoint = new Point(e.X, e.Y);
-        }
-
-        private void mainform_MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
-
-        private void mainform_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.startpoint.X, p.Y - this.startpoint.Y);
-            }
-        }
+        
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -252,6 +234,25 @@ namespace New_TJ_Tutors_System
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.startpoint.X, p.Y - this.startpoint.Y);
+            }
+        }
+        private void labeltitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startpoint = new Point(e.X, e.Y);
+        }
+
+        private void labeltitle_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void labeltitle_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
             {
