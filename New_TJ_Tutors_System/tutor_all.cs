@@ -50,16 +50,6 @@ namespace New_TJ_Tutors_System
         }
         
 
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (paneltutoring.Visible == false)
-                paneltutoring.Visible = true;
-            else
-                paneltutoring.Visible = false;
-        }
-
-
         private void tutor_all_Load(object sender, EventArgs e)
         {
             paneltutoring.Visible = false;
@@ -728,9 +718,35 @@ namespace New_TJ_Tutors_System
 
         private void button_close_Click(object sender, EventArgs e)
         {
-            pantutoring.Visible = false;
+            paneltutoring.Visible = false;
         }
 
+
+
+        private void dgv_subject_SelectionChanged(object sender, EventArgs e)
+        {
+            string subject = "";
+            string state = "";
+            string tutor_num = "";
+            string tutor_name = "";
+            string remark = "";
+            //新建对象tutoring_info
+            if (dgv_subject.SelectedRows.Count != 0)
+            {
+                subject = dgv_subject.SelectedRows[0].Cells[0].Value.ToString();
+                state = dgv_subject.SelectedRows[0].Cells[1].Value.ToString();
+                tutor_num = dgv_subject.SelectedRows[0].Cells[2].Value.ToString();
+                tutor_name = dgv_subject.SelectedRows[0].Cells[3].Value.ToString();
+                remark = dgv_subject.SelectedRows[0].Cells[4].Value.ToString();
+            }
+            //Console.WriteLine(subject);
+            txt_sesubject.Text = subject;
+            //Console.WriteLine(cbo_subject.Text);
+            cbo_state.SelectedItem = state;
+            txt_tutor_num.Text = tutor_num;
+            txt_tutor_name.Text = tutor_name;
+            txt_remark.Text = remark;
+        }
         #endregion
 
 

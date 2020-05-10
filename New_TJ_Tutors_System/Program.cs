@@ -16,7 +16,7 @@ namespace New_TJ_Tutors_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainform());
+            Application.Run(new login());
         }
     }
 }

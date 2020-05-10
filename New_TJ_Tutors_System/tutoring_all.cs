@@ -664,6 +664,7 @@ namespace New_TJ_Tutors_System
                             
                             mydb.ExecuteNonQuery(mysql);
                         }
+                        //mysql="insert into history ("
 
                     }
                     catch (Exception ex)

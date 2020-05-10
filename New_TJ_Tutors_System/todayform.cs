@@ -16,6 +16,7 @@ namespace New_TJ_Tutors_System
         styleinit dgvstyle = new styleinit();
         databind dgvbind = new databind();
         commondb mydb = new commondb();
+        string filename = "";
         public todayform()
         {
             InitializeComponent();
@@ -33,6 +34,46 @@ namespace New_TJ_Tutors_System
                 + "(CASE WHEN other_request = '' THEN '' ELSE concat(other_request, ';') END)) as 其他要求,simple_adr as 地址,tutor_time as 时间 " +
                 "from tutoring where tutor_state='接入' OR tutor_state='换人' or tutor_state='重请' order by print_num desc";
             dgvbind.dgvbind(dgv_todayform, mysql, tablename);
+        }
+
+        private void btn_export_Click(object sender, EventArgs e)
+        {
+            string defaultname = DateTime.Now.ToLongDateString() + ".xlsx";
+            //bool fileSaved = false;
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.DefaultExt = "xlsx";
+            saveDialog.Filter = "Excel文件|*.xlsx";
+            saveDialog.FileName = defaultname;
+            saveDialog.ShowDialog();
+            filename = saveDialog.FileName;
+
+            //Form1_Load
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.WorkerSupportsCancellation = true;
+
+
+            
+
+            //CheckUpdate为窗体显示过程中需要处理算法的方法
+            worker.DoWork += new DoWorkEventHandler(CheckUpdate);
+            worker.RunWorkerAsync();
+
+            //显示进度窗体
+            progress f = new progress(worker);
+            f.Text = "正在导出...";
+            f.ShowDialog();
+
+            //处理算法CheckUpdate，注意参数一致
+            /*exporttoexcel ete = new exporttoexcel();
+            string filename = DateTime.Now.ToLongDateString() + ".xlsx";
+            ete.ExportExcel(filename, dgv_todayform);*/
+
+        }
+        public void CheckUpdate(object sender, DoWorkEventArgs e)
+        {
+            exporttoexcel ete = new exporttoexcel();
+            //string filename = DateTime.Now.ToLongDateString() + ".xlsx";
+            ete.ExportExcel(filename, dgv_todayform);
         }
     }
 }

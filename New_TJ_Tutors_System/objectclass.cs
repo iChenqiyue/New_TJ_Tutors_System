@@ -118,5 +118,50 @@ namespace New_TJ_Tutors_System
                 return str;
             }
         }
+
+        public class workerinfo
+        {
+            public string worker_num, name, sex, student_num, subject, phone, position, month_score, total_score,isleave;
+
+            public void reset()
+            {
+                init();
+            }
+            public void truck()
+            {
+                init();
+            }
+            private void init()
+            {
+                worker_num="";
+                name ="";
+                sex ="";
+                student_num ="";
+                subject ="";
+                phone ="";
+                position ="";
+                month_score ="";
+                total_score = "";
+                isleave = "";
+            }
+
+            public string connectstr()
+            {
+                string str = "('" + worker_num + "','" + name + "','" + sex+"','"+student_num + "','" + subject + "','"  + phone + "','" + 
+                    position + "','" + month_score + "','" + total_score + "','" + isleave + "')";
+                return str;
+            }
+            public string updatestr()
+            {
+                string mysql = string.Format("UPDATE worker SET name='{0}',student_num='{1}',subject='{2}'," +
+                            "sex='{3}',phone='{4}',position='{5}',isleave='{6}',month_score='{7}',total_score='{8}' WHERE worker_num='{9}'",
+                            name, student_num, subject, sex, phone, position, isleave, month_score, total_score, worker_num);
+                return mysql;
+            }
+        }
+        public static class userinfo
+        {
+            public static string username, password, degree;
+        }
     }
 }

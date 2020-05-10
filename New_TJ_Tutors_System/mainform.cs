@@ -133,6 +133,7 @@ namespace New_TJ_Tutors_System
 
         private void btn_worker_search_Click(object sender, EventArgs e)
         {
+            openchidform(new worker());
             /**/
             //hidesubmenu();
         }
@@ -218,7 +219,7 @@ namespace New_TJ_Tutors_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         

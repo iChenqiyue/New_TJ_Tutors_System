@@ -426,8 +426,8 @@
             // 
             // panelright
             // 
-            this.panelright.Controls.Add(this.panelbuss);
             this.panelright.Controls.Add(this.panelinfo);
+            this.panelright.Controls.Add(this.panelbuss);
             this.panelright.Controls.Add(this.paneltitle);
             this.panelright.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelright.Location = new System.Drawing.Point(591, 0);

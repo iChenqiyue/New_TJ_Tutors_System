@@ -78,6 +78,19 @@
     </Compile>
     <Compile Include="commondb.cs" />
     <Compile Include="databind.cs" />
+    <Compile Include="exporttoexcel.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="progress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="progress.Designer.cs">
+      <DependentUpon>progress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,8 +136,20 @@
     <Compile Include="tutoring_info.Designer.cs">
       <DependentUpon>tutoring_info.cs</DependentUpon>
     </Compile>
+    <Compile Include="worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worker.Designer.cs">
+      <DependentUpon>worker.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="bussiness.resx">
       <DependentUpon>bussiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progress.resx">
+      <DependentUpon>progress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tutor_search.resx">
       <DependentUpon>tutor_search.cs</DependentUpon>
@@ -148,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tutoring_info.resx">
       <DependentUpon>tutoring_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="worker.resx">
+      <DependentUpon>worker.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -177,6 +205,38 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ashbin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

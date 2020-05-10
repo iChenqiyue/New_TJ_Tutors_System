@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_tutor = new System.Windows.Forms.Panel();
             this.btn_tutor_info = new System.Windows.Forms.Button();
             this.paneltop = new System.Windows.Forms.Panel();
@@ -65,30 +65,11 @@
             this.dgv_tutoring = new System.Windows.Forms.DataGridView();
             this.paneltutoring = new System.Windows.Forms.Panel();
             this.panelmid = new System.Windows.Forms.Panel();
-            this.panelmidtitle = new System.Windows.Forms.Panel();
-            this.panelselect1 = new System.Windows.Forms.Panel();
-            this.panelselect2 = new System.Windows.Forms.Panel();
-            this.btn_select2 = new System.Windows.Forms.Button();
-            this.btn_select1 = new System.Windows.Forms.Button();
-            this.dgv_search = new System.Windows.Forms.DataGridView();
-            this.panelleft = new System.Windows.Forms.Panel();
-            this.panelsearchresult = new System.Windows.Forms.Panel();
-            this.panelop = new System.Windows.Forms.Panel();
-            this.lbl_select = new System.Windows.Forms.Label();
-            this.cbo_select = new System.Windows.Forms.ComboBox();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.panelsearch = new System.Windows.Forms.Panel();
-            this.gbo_search = new System.Windows.Forms.GroupBox();
-            this.txt_num_search = new System.Windows.Forms.TextBox();
-            this.btn_search = new System.Windows.Forms.Button();
-            this.txt_stunum_search = new System.Windows.Forms.TextBox();
-            this.txt_phone_search = new System.Windows.Forms.TextBox();
-            this.txt_name_search = new System.Windows.Forms.TextBox();
+            this.dgv_done = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_subject = new System.Windows.Forms.DataGridView();
             this.panelbus = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_sesubject = new System.Windows.Forms.TextBox();
             this.panelbutton = new System.Windows.Forms.Panel();
             this.cbo_state = new System.Windows.Forms.ComboBox();
             this.txt_remark = new System.Windows.Forms.TextBox();
@@ -105,7 +86,6 @@
             this.txt_remarks = new System.Windows.Forms.TextBox();
             this.lbl_tutor_state = new System.Windows.Forms.Label();
             this.lbl_remarks = new System.Windows.Forms.Label();
-            this.dgv_done = new System.Windows.Forms.DataGridView();
             this.pantutoring = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdo_stuwoman = new System.Windows.Forms.RadioButton();
@@ -150,7 +130,27 @@
             this.lbl_other_requests = new System.Windows.Forms.Label();
             this.lbl_payment_state = new System.Windows.Forms.Label();
             this.lbl_payment_time = new System.Windows.Forms.Label();
+            this.panelmidtitle = new System.Windows.Forms.Panel();
             this.button_close = new System.Windows.Forms.Button();
+            this.panelselect1 = new System.Windows.Forms.Panel();
+            this.panelselect2 = new System.Windows.Forms.Panel();
+            this.btn_select2 = new System.Windows.Forms.Button();
+            this.btn_select1 = new System.Windows.Forms.Button();
+            this.dgv_search = new System.Windows.Forms.DataGridView();
+            this.panelleft = new System.Windows.Forms.Panel();
+            this.panelsearchresult = new System.Windows.Forms.Panel();
+            this.panelop = new System.Windows.Forms.Panel();
+            this.lbl_select = new System.Windows.Forms.Label();
+            this.cbo_select = new System.Windows.Forms.ComboBox();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.panelsearch = new System.Windows.Forms.Panel();
+            this.gbo_search = new System.Windows.Forms.GroupBox();
+            this.txt_num_search = new System.Windows.Forms.TextBox();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.txt_stunum_search = new System.Windows.Forms.TextBox();
+            this.txt_phone_search = new System.Windows.Forms.TextBox();
+            this.txt_name_search = new System.Windows.Forms.TextBox();
             this.paneltop.SuspendLayout();
             this.panelright.SuspendLayout();
             this.panelinfo.SuspendLayout();
@@ -160,6 +160,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutoring)).BeginInit();
             this.paneltutoring.SuspendLayout();
             this.panelmid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_done)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_subject)).BeginInit();
+            this.panelbus.SuspendLayout();
+            this.panelstate.SuspendLayout();
+            this.gpo_state.SuspendLayout();
+            this.pantutoring.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.gbo_request.SuspendLayout();
             this.panelmidtitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).BeginInit();
             this.panelleft.SuspendLayout();
@@ -167,15 +176,6 @@
             this.panelop.SuspendLayout();
             this.panelsearch.SuspendLayout();
             this.gbo_search.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_subject)).BeginInit();
-            this.panelbus.SuspendLayout();
-            this.panelstate.SuspendLayout();
-            this.gpo_state.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_done)).BeginInit();
-            this.pantutoring.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.gbo_request.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_tutor
@@ -572,282 +572,34 @@
             this.panelmid.Size = new System.Drawing.Size(579, 749);
             this.panelmid.TabIndex = 4;
             // 
-            // panelmidtitle
+            // dgv_done
             // 
-            this.panelmidtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.panelmidtitle.Controls.Add(this.button_close);
-            this.panelmidtitle.Controls.Add(this.panelselect1);
-            this.panelmidtitle.Controls.Add(this.panelselect2);
-            this.panelmidtitle.Controls.Add(this.btn_select2);
-            this.panelmidtitle.Controls.Add(this.btn_select1);
-            this.panelmidtitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelmidtitle.Location = new System.Drawing.Point(0, 0);
-            this.panelmidtitle.Name = "panelmidtitle";
-            this.panelmidtitle.Size = new System.Drawing.Size(579, 36);
-            this.panelmidtitle.TabIndex = 3;
-            // 
-            // panelselect1
-            // 
-            this.panelselect1.BackColor = System.Drawing.Color.White;
-            this.panelselect1.Location = new System.Drawing.Point(0, 33);
-            this.panelselect1.Name = "panelselect1";
-            this.panelselect1.Size = new System.Drawing.Size(128, 3);
-            this.panelselect1.TabIndex = 1;
-            // 
-            // panelselect2
-            // 
-            this.panelselect2.BackColor = System.Drawing.Color.White;
-            this.panelselect2.Location = new System.Drawing.Point(128, 33);
-            this.panelselect2.Name = "panelselect2";
-            this.panelselect2.Size = new System.Drawing.Size(128, 3);
-            this.panelselect2.TabIndex = 2;
-            // 
-            // btn_select2
-            // 
-            this.btn_select2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_select2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_select2.FlatAppearance.BorderSize = 0;
-            this.btn_select2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_select2.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_select2.ForeColor = System.Drawing.Color.White;
-            this.btn_select2.Location = new System.Drawing.Point(128, 0);
-            this.btn_select2.Name = "btn_select2";
-            this.btn_select2.Size = new System.Drawing.Size(128, 36);
-            this.btn_select2.TabIndex = 1;
-            this.btn_select2.Text = "业务详情";
-            this.btn_select2.UseVisualStyleBackColor = false;
-            this.btn_select2.Click += new System.EventHandler(this.btn_select2_Click);
-            // 
-            // btn_select1
-            // 
-            this.btn_select1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_select1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_select1.FlatAppearance.BorderSize = 0;
-            this.btn_select1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_select1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_select1.ForeColor = System.Drawing.Color.White;
-            this.btn_select1.Location = new System.Drawing.Point(0, 0);
-            this.btn_select1.Name = "btn_select1";
-            this.btn_select1.Size = new System.Drawing.Size(128, 36);
-            this.btn_select1.TabIndex = 0;
-            this.btn_select1.Text = "家教信息";
-            this.btn_select1.UseVisualStyleBackColor = false;
-            this.btn_select1.Click += new System.EventHandler(this.btn_select1_Click);
-            // 
-            // dgv_search
-            // 
-            this.dgv_search.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_search.Location = new System.Drawing.Point(0, 0);
-            this.dgv_search.Name = "dgv_search";
-            this.dgv_search.RowTemplate.Height = 27;
-            this.dgv_search.Size = new System.Drawing.Size(591, 616);
-            this.dgv_search.TabIndex = 0;
-            this.dgv_search.SelectionChanged += new System.EventHandler(this.dgv_search_SelectionChanged);
-            // 
-            // panelleft
-            // 
-            this.panelleft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(161)))), ((int)(((byte)(244)))));
-            this.panelleft.Controls.Add(this.panelsearchresult);
-            this.panelleft.Controls.Add(this.panelop);
-            this.panelleft.Controls.Add(this.panelsearch);
-            this.panelleft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelleft.Location = new System.Drawing.Point(0, 0);
-            this.panelleft.Name = "panelleft";
-            this.panelleft.Size = new System.Drawing.Size(591, 785);
-            this.panelleft.TabIndex = 5;
-            // 
-            // panelsearchresult
-            // 
-            this.panelsearchresult.Controls.Add(this.dgv_search);
-            this.panelsearchresult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelsearchresult.Location = new System.Drawing.Point(0, 169);
-            this.panelsearchresult.Name = "panelsearchresult";
-            this.panelsearchresult.Size = new System.Drawing.Size(591, 616);
-            this.panelsearchresult.TabIndex = 12;
-            // 
-            // panelop
-            // 
-            this.panelop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.panelop.Controls.Add(this.lbl_select);
-            this.panelop.Controls.Add(this.cbo_select);
-            this.panelop.Controls.Add(this.btn_delete);
-            this.panelop.Controls.Add(this.btn_add);
-            this.panelop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelop.Location = new System.Drawing.Point(0, 119);
-            this.panelop.Name = "panelop";
-            this.panelop.Size = new System.Drawing.Size(591, 50);
-            this.panelop.TabIndex = 11;
-            // 
-            // lbl_select
-            // 
-            this.lbl_select.AutoSize = true;
-            this.lbl_select.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_select.ForeColor = System.Drawing.Color.White;
-            this.lbl_select.Location = new System.Drawing.Point(264, 17);
-            this.lbl_select.Name = "lbl_select";
-            this.lbl_select.Size = new System.Drawing.Size(69, 19);
-            this.lbl_select.TabIndex = 18;
-            this.lbl_select.Text = "筛选条件";
-            // 
-            // cbo_select
-            // 
-            this.cbo_select.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.cbo_select.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_select.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_select.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.cbo_select.ForeColor = System.Drawing.Color.White;
-            this.cbo_select.FormattingEnabled = true;
-            this.cbo_select.Items.AddRange(new object[] {
-            "全部",
-            "黑名单",
-            "非黑名单"});
-            this.cbo_select.Location = new System.Drawing.Point(338, 13);
-            this.cbo_select.Name = "cbo_select";
-            this.cbo_select.Size = new System.Drawing.Size(148, 28);
-            this.cbo_select.TabIndex = 17;
-            this.cbo_select.SelectedIndexChanged += new System.EventHandler(this.cbo_select_SelectedIndexChanged);
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_delete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_delete.FlatAppearance.BorderSize = 0;
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Image = global::New_TJ_Tutors_System.Properties.Resources.ashbin;
-            this.btn_delete.Location = new System.Drawing.Point(123, 0);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(123, 50);
-            this.btn_delete.TabIndex = 16;
-            this.btn_delete.Text = "删除";
-            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_add.FlatAppearance.BorderSize = 0;
-            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Image = global::New_TJ_Tutors_System.Properties.Resources.nav_list;
-            this.btn_add.Location = new System.Drawing.Point(0, 0);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(123, 50);
-            this.btn_add.TabIndex = 15;
-            this.btn_add.Text = "新增";
-            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // panelsearch
-            // 
-            this.panelsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.panelsearch.Controls.Add(this.gbo_search);
-            this.panelsearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelsearch.Location = new System.Drawing.Point(0, 0);
-            this.panelsearch.Name = "panelsearch";
-            this.panelsearch.Size = new System.Drawing.Size(591, 119);
-            this.panelsearch.TabIndex = 10;
-            // 
-            // gbo_search
-            // 
-            this.gbo_search.Controls.Add(this.txt_num_search);
-            this.gbo_search.Controls.Add(this.btn_search);
-            this.gbo_search.Controls.Add(this.txt_stunum_search);
-            this.gbo_search.Controls.Add(this.txt_phone_search);
-            this.gbo_search.Controls.Add(this.txt_name_search);
-            this.gbo_search.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbo_search.ForeColor = System.Drawing.Color.White;
-            this.gbo_search.Location = new System.Drawing.Point(12, 5);
-            this.gbo_search.Name = "gbo_search";
-            this.gbo_search.Size = new System.Drawing.Size(483, 111);
-            this.gbo_search.TabIndex = 5;
-            this.gbo_search.TabStop = false;
-            this.gbo_search.Text = "搜索";
-            // 
-            // txt_num_search
-            // 
-            this.txt_num_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
-            this.txt_num_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_num_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_num_search.ForeColor = System.Drawing.Color.Gray;
-            this.txt_num_search.Location = new System.Drawing.Point(25, 35);
-            this.txt_num_search.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
-            this.txt_num_search.Name = "txt_num_search";
-            this.txt_num_search.Size = new System.Drawing.Size(179, 27);
-            this.txt_num_search.TabIndex = 0;
-            this.txt_num_search.Enter += new System.EventHandler(this.txt_num_search_Enter);
-            this.txt_num_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_num_search_KeyPress);
-            this.txt_num_search.Leave += new System.EventHandler(this.txt_num_search_Leave);
-            // 
-            // btn_search
-            // 
-            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_search.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_search.ForeColor = System.Drawing.Color.White;
-            this.btn_search.Location = new System.Drawing.Point(397, 35);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(78, 54);
-            this.btn_search.TabIndex = 4;
-            this.btn_search.Text = "查询";
-            this.btn_search.UseVisualStyleBackColor = false;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
-            // 
-            // txt_stunum_search
-            // 
-            this.txt_stunum_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(184)))), ((int)(((byte)(211)))));
-            this.txt_stunum_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_stunum_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_stunum_search.ForeColor = System.Drawing.Color.SeaShell;
-            this.txt_stunum_search.Location = new System.Drawing.Point(25, 62);
-            this.txt_stunum_search.Margin = new System.Windows.Forms.Padding(20, 0, 0, 20);
-            this.txt_stunum_search.Name = "txt_stunum_search";
-            this.txt_stunum_search.Size = new System.Drawing.Size(179, 27);
-            this.txt_stunum_search.TabIndex = 2;
-            this.txt_stunum_search.Enter += new System.EventHandler(this.txt_stunum_search_Enter);
-            this.txt_stunum_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_stunum_search_KeyPress);
-            this.txt_stunum_search.Leave += new System.EventHandler(this.txt_stunum_search_Leave);
-            // 
-            // txt_phone_search
-            // 
-            this.txt_phone_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
-            this.txt_phone_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_phone_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_phone_search.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_phone_search.Location = new System.Drawing.Point(204, 62);
-            this.txt_phone_search.Margin = new System.Windows.Forms.Padding(0, 0, 100, 20);
-            this.txt_phone_search.Name = "txt_phone_search";
-            this.txt_phone_search.Size = new System.Drawing.Size(179, 27);
-            this.txt_phone_search.TabIndex = 3;
-            this.txt_phone_search.Enter += new System.EventHandler(this.txt_phone_search_Enter);
-            this.txt_phone_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phone_search_KeyPress);
-            this.txt_phone_search.Leave += new System.EventHandler(this.txt_phone_search_Leave);
-            // 
-            // txt_name_search
-            // 
-            this.txt_name_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(184)))), ((int)(((byte)(211)))));
-            this.txt_name_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_name_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_name_search.ForeColor = System.Drawing.Color.SeaShell;
-            this.txt_name_search.Location = new System.Drawing.Point(204, 35);
-            this.txt_name_search.Margin = new System.Windows.Forms.Padding(0, 20, 100, 0);
-            this.txt_name_search.Name = "txt_name_search";
-            this.txt_name_search.Size = new System.Drawing.Size(179, 27);
-            this.txt_name_search.TabIndex = 1;
-            this.txt_name_search.Enter += new System.EventHandler(this.txt_name_search_Enter);
-            this.txt_name_search.Leave += new System.EventHandler(this.txt_name_search_Leave);
+            this.dgv_done.AllowUserToDeleteRows = false;
+            this.dgv_done.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_done.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_done.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_done.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_done.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_done.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_done.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgv_done.Location = new System.Drawing.Point(0, 464);
+            this.dgv_done.Name = "dgv_done";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_done.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_done.RowTemplate.Height = 27;
+            this.dgv_done.Size = new System.Drawing.Size(579, 285);
+            this.dgv_done.TabIndex = 70;
             // 
             // panel1
             // 
@@ -871,10 +623,11 @@
             this.dgv_subject.RowTemplate.Height = 27;
             this.dgv_subject.Size = new System.Drawing.Size(281, 299);
             this.dgv_subject.TabIndex = 66;
+            this.dgv_subject.SelectionChanged += new System.EventHandler(this.dgv_subject_SelectionChanged);
             // 
             // panelbus
             // 
-            this.panelbus.Controls.Add(this.comboBox1);
+            this.panelbus.Controls.Add(this.txt_sesubject);
             this.panelbus.Controls.Add(this.panelbutton);
             this.panelbus.Controls.Add(this.cbo_state);
             this.panelbus.Controls.Add(this.txt_remark);
@@ -891,14 +644,13 @@
             this.panelbus.Size = new System.Drawing.Size(298, 299);
             this.panelbus.TabIndex = 81;
             // 
-            // comboBox1
+            // txt_sesubject
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(29, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(114, 23);
-            this.comboBox1.TabIndex = 80;
+            this.txt_sesubject.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_sesubject.Location = new System.Drawing.Point(29, 33);
+            this.txt_sesubject.Name = "txt_sesubject";
+            this.txt_sesubject.Size = new System.Drawing.Size(114, 25);
+            this.txt_sesubject.TabIndex = 80;
             // 
             // panelbutton
             // 
@@ -1080,35 +832,6 @@
             this.lbl_remarks.Size = new System.Drawing.Size(69, 19);
             this.lbl_remarks.TabIndex = 69;
             this.lbl_remarks.Text = "重要备注";
-            // 
-            // dgv_done
-            // 
-            this.dgv_done.AllowUserToDeleteRows = false;
-            this.dgv_done.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_done.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_done.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_done.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dgv_done.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_done.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_done.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv_done.Location = new System.Drawing.Point(0, 464);
-            this.dgv_done.Name = "dgv_done";
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_done.RowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dgv_done.RowTemplate.Height = 27;
-            this.dgv_done.Size = new System.Drawing.Size(579, 285);
-            this.dgv_done.TabIndex = 70;
             // 
             // pantutoring
             // 
@@ -1632,6 +1355,20 @@
             this.lbl_payment_time.TabIndex = 104;
             this.lbl_payment_time.Text = "缴费时间";
             // 
+            // panelmidtitle
+            // 
+            this.panelmidtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.panelmidtitle.Controls.Add(this.button_close);
+            this.panelmidtitle.Controls.Add(this.panelselect1);
+            this.panelmidtitle.Controls.Add(this.panelselect2);
+            this.panelmidtitle.Controls.Add(this.btn_select2);
+            this.panelmidtitle.Controls.Add(this.btn_select1);
+            this.panelmidtitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelmidtitle.Location = new System.Drawing.Point(0, 0);
+            this.panelmidtitle.Name = "panelmidtitle";
+            this.panelmidtitle.Size = new System.Drawing.Size(579, 36);
+            this.panelmidtitle.TabIndex = 3;
+            // 
             // button_close
             // 
             this.button_close.Dock = System.Windows.Forms.DockStyle.Right;
@@ -1646,6 +1383,269 @@
             this.button_close.Text = "X";
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
+            // 
+            // panelselect1
+            // 
+            this.panelselect1.BackColor = System.Drawing.Color.White;
+            this.panelselect1.Location = new System.Drawing.Point(0, 33);
+            this.panelselect1.Name = "panelselect1";
+            this.panelselect1.Size = new System.Drawing.Size(128, 3);
+            this.panelselect1.TabIndex = 1;
+            // 
+            // panelselect2
+            // 
+            this.panelselect2.BackColor = System.Drawing.Color.White;
+            this.panelselect2.Location = new System.Drawing.Point(128, 33);
+            this.panelselect2.Name = "panelselect2";
+            this.panelselect2.Size = new System.Drawing.Size(128, 3);
+            this.panelselect2.TabIndex = 2;
+            // 
+            // btn_select2
+            // 
+            this.btn_select2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_select2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_select2.FlatAppearance.BorderSize = 0;
+            this.btn_select2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_select2.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btn_select2.ForeColor = System.Drawing.Color.White;
+            this.btn_select2.Location = new System.Drawing.Point(128, 0);
+            this.btn_select2.Name = "btn_select2";
+            this.btn_select2.Size = new System.Drawing.Size(128, 36);
+            this.btn_select2.TabIndex = 1;
+            this.btn_select2.Text = "业务详情";
+            this.btn_select2.UseVisualStyleBackColor = false;
+            this.btn_select2.Click += new System.EventHandler(this.btn_select2_Click);
+            // 
+            // btn_select1
+            // 
+            this.btn_select1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_select1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_select1.FlatAppearance.BorderSize = 0;
+            this.btn_select1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_select1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_select1.ForeColor = System.Drawing.Color.White;
+            this.btn_select1.Location = new System.Drawing.Point(0, 0);
+            this.btn_select1.Name = "btn_select1";
+            this.btn_select1.Size = new System.Drawing.Size(128, 36);
+            this.btn_select1.TabIndex = 0;
+            this.btn_select1.Text = "家教信息";
+            this.btn_select1.UseVisualStyleBackColor = false;
+            this.btn_select1.Click += new System.EventHandler(this.btn_select1_Click);
+            // 
+            // dgv_search
+            // 
+            this.dgv_search.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_search.Location = new System.Drawing.Point(0, 0);
+            this.dgv_search.Name = "dgv_search";
+            this.dgv_search.RowTemplate.Height = 27;
+            this.dgv_search.Size = new System.Drawing.Size(591, 616);
+            this.dgv_search.TabIndex = 0;
+            this.dgv_search.SelectionChanged += new System.EventHandler(this.dgv_search_SelectionChanged);
+            // 
+            // panelleft
+            // 
+            this.panelleft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(161)))), ((int)(((byte)(244)))));
+            this.panelleft.Controls.Add(this.panelsearchresult);
+            this.panelleft.Controls.Add(this.panelop);
+            this.panelleft.Controls.Add(this.panelsearch);
+            this.panelleft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelleft.Location = new System.Drawing.Point(0, 0);
+            this.panelleft.Name = "panelleft";
+            this.panelleft.Size = new System.Drawing.Size(591, 785);
+            this.panelleft.TabIndex = 5;
+            // 
+            // panelsearchresult
+            // 
+            this.panelsearchresult.Controls.Add(this.dgv_search);
+            this.panelsearchresult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelsearchresult.Location = new System.Drawing.Point(0, 169);
+            this.panelsearchresult.Name = "panelsearchresult";
+            this.panelsearchresult.Size = new System.Drawing.Size(591, 616);
+            this.panelsearchresult.TabIndex = 12;
+            // 
+            // panelop
+            // 
+            this.panelop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.panelop.Controls.Add(this.lbl_select);
+            this.panelop.Controls.Add(this.cbo_select);
+            this.panelop.Controls.Add(this.btn_delete);
+            this.panelop.Controls.Add(this.btn_add);
+            this.panelop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelop.Location = new System.Drawing.Point(0, 119);
+            this.panelop.Name = "panelop";
+            this.panelop.Size = new System.Drawing.Size(591, 50);
+            this.panelop.TabIndex = 11;
+            // 
+            // lbl_select
+            // 
+            this.lbl_select.AutoSize = true;
+            this.lbl_select.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_select.ForeColor = System.Drawing.Color.White;
+            this.lbl_select.Location = new System.Drawing.Point(264, 17);
+            this.lbl_select.Name = "lbl_select";
+            this.lbl_select.Size = new System.Drawing.Size(69, 19);
+            this.lbl_select.TabIndex = 18;
+            this.lbl_select.Text = "筛选条件";
+            // 
+            // cbo_select
+            // 
+            this.cbo_select.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.cbo_select.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_select.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_select.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.cbo_select.ForeColor = System.Drawing.Color.White;
+            this.cbo_select.FormattingEnabled = true;
+            this.cbo_select.Items.AddRange(new object[] {
+            "全部",
+            "黑名单",
+            "非黑名单"});
+            this.cbo_select.Location = new System.Drawing.Point(338, 13);
+            this.cbo_select.Name = "cbo_select";
+            this.cbo_select.Size = new System.Drawing.Size(148, 28);
+            this.cbo_select.TabIndex = 17;
+            this.cbo_select.SelectedIndexChanged += new System.EventHandler(this.cbo_select_SelectedIndexChanged);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_delete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Image = global::New_TJ_Tutors_System.Properties.Resources.ashbin;
+            this.btn_delete.Location = new System.Drawing.Point(123, 0);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(123, 50);
+            this.btn_delete.TabIndex = 16;
+            this.btn_delete.Text = "删除";
+            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_add.FlatAppearance.BorderSize = 0;
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_add.ForeColor = System.Drawing.Color.White;
+            this.btn_add.Image = global::New_TJ_Tutors_System.Properties.Resources.nav_list;
+            this.btn_add.Location = new System.Drawing.Point(0, 0);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(123, 50);
+            this.btn_add.TabIndex = 15;
+            this.btn_add.Text = "新增";
+            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // panelsearch
+            // 
+            this.panelsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.panelsearch.Controls.Add(this.gbo_search);
+            this.panelsearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelsearch.Location = new System.Drawing.Point(0, 0);
+            this.panelsearch.Name = "panelsearch";
+            this.panelsearch.Size = new System.Drawing.Size(591, 119);
+            this.panelsearch.TabIndex = 10;
+            // 
+            // gbo_search
+            // 
+            this.gbo_search.Controls.Add(this.txt_num_search);
+            this.gbo_search.Controls.Add(this.btn_search);
+            this.gbo_search.Controls.Add(this.txt_stunum_search);
+            this.gbo_search.Controls.Add(this.txt_phone_search);
+            this.gbo_search.Controls.Add(this.txt_name_search);
+            this.gbo_search.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbo_search.ForeColor = System.Drawing.Color.White;
+            this.gbo_search.Location = new System.Drawing.Point(12, 5);
+            this.gbo_search.Name = "gbo_search";
+            this.gbo_search.Size = new System.Drawing.Size(483, 111);
+            this.gbo_search.TabIndex = 5;
+            this.gbo_search.TabStop = false;
+            this.gbo_search.Text = "搜索";
+            // 
+            // txt_num_search
+            // 
+            this.txt_num_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
+            this.txt_num_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_num_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_num_search.ForeColor = System.Drawing.Color.Gray;
+            this.txt_num_search.Location = new System.Drawing.Point(25, 35);
+            this.txt_num_search.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
+            this.txt_num_search.Name = "txt_num_search";
+            this.txt_num_search.Size = new System.Drawing.Size(179, 27);
+            this.txt_num_search.TabIndex = 0;
+            this.txt_num_search.Enter += new System.EventHandler(this.txt_num_search_Enter);
+            this.txt_num_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_num_search_KeyPress);
+            this.txt_num_search.Leave += new System.EventHandler(this.txt_num_search_Leave);
+            // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_search.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_search.ForeColor = System.Drawing.Color.White;
+            this.btn_search.Location = new System.Drawing.Point(397, 35);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(78, 54);
+            this.btn_search.TabIndex = 4;
+            this.btn_search.Text = "查询";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // txt_stunum_search
+            // 
+            this.txt_stunum_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(184)))), ((int)(((byte)(211)))));
+            this.txt_stunum_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_stunum_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_stunum_search.ForeColor = System.Drawing.Color.SeaShell;
+            this.txt_stunum_search.Location = new System.Drawing.Point(25, 62);
+            this.txt_stunum_search.Margin = new System.Windows.Forms.Padding(20, 0, 0, 20);
+            this.txt_stunum_search.Name = "txt_stunum_search";
+            this.txt_stunum_search.Size = new System.Drawing.Size(179, 27);
+            this.txt_stunum_search.TabIndex = 2;
+            this.txt_stunum_search.Enter += new System.EventHandler(this.txt_stunum_search_Enter);
+            this.txt_stunum_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_stunum_search_KeyPress);
+            this.txt_stunum_search.Leave += new System.EventHandler(this.txt_stunum_search_Leave);
+            // 
+            // txt_phone_search
+            // 
+            this.txt_phone_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.txt_phone_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_phone_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_phone_search.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_phone_search.Location = new System.Drawing.Point(204, 62);
+            this.txt_phone_search.Margin = new System.Windows.Forms.Padding(0, 0, 100, 20);
+            this.txt_phone_search.Name = "txt_phone_search";
+            this.txt_phone_search.Size = new System.Drawing.Size(179, 27);
+            this.txt_phone_search.TabIndex = 3;
+            this.txt_phone_search.Enter += new System.EventHandler(this.txt_phone_search_Enter);
+            this.txt_phone_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phone_search_KeyPress);
+            this.txt_phone_search.Leave += new System.EventHandler(this.txt_phone_search_Leave);
+            // 
+            // txt_name_search
+            // 
+            this.txt_name_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(184)))), ((int)(((byte)(211)))));
+            this.txt_name_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_name_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_name_search.ForeColor = System.Drawing.Color.SeaShell;
+            this.txt_name_search.Location = new System.Drawing.Point(204, 35);
+            this.txt_name_search.Margin = new System.Windows.Forms.Padding(0, 20, 100, 0);
+            this.txt_name_search.Name = "txt_name_search";
+            this.txt_name_search.Size = new System.Drawing.Size(179, 27);
+            this.txt_name_search.TabIndex = 1;
+            this.txt_name_search.Enter += new System.EventHandler(this.txt_name_search_Enter);
+            this.txt_name_search.Leave += new System.EventHandler(this.txt_name_search_Leave);
             // 
             // tutor_all
             // 
@@ -1669,6 +1669,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutoring)).EndInit();
             this.paneltutoring.ResumeLayout(false);
             this.panelmid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_done)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_subject)).EndInit();
+            this.panelbus.ResumeLayout(false);
+            this.panelbus.PerformLayout();
+            this.panelstate.ResumeLayout(false);
+            this.gpo_state.ResumeLayout(false);
+            this.gpo_state.PerformLayout();
+            this.pantutoring.ResumeLayout(false);
+            this.pantutoring.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.gbo_request.ResumeLayout(false);
+            this.gbo_request.PerformLayout();
             this.panelmidtitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).EndInit();
             this.panelleft.ResumeLayout(false);
@@ -1678,20 +1692,6 @@
             this.panelsearch.ResumeLayout(false);
             this.gbo_search.ResumeLayout(false);
             this.gbo_search.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_subject)).EndInit();
-            this.panelbus.ResumeLayout(false);
-            this.panelbus.PerformLayout();
-            this.panelstate.ResumeLayout(false);
-            this.gpo_state.ResumeLayout(false);
-            this.gpo_state.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_done)).EndInit();
-            this.pantutoring.ResumeLayout(false);
-            this.pantutoring.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.gbo_request.ResumeLayout(false);
-            this.gbo_request.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1756,7 +1756,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_subject;
         private System.Windows.Forms.Panel panelbus;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panelbutton;
         private System.Windows.Forms.ComboBox cbo_state;
         private System.Windows.Forms.TextBox txt_remark;
@@ -1819,5 +1818,6 @@
         private System.Windows.Forms.Label lbl_payment_state;
         private System.Windows.Forms.Label lbl_payment_time;
         private System.Windows.Forms.Button button_close;
+        private System.Windows.Forms.TextBox txt_sesubject;
     }
 }

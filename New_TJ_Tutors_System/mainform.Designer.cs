@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainform));
             this.panelmenu = new System.Windows.Forms.Panel();
             this.panelemergency = new System.Windows.Forms.Panel();
             this.btn_backup = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.btn_work_tutorial = new System.Windows.Forms.Button();
             this.btn_help = new System.Windows.Forms.Button();
             this.panelworkermenu = new System.Windows.Forms.Panel();
-            this.btn_worker_responsibility = new System.Windows.Forms.Button();
             this.btn_worker_search = new System.Windows.Forms.Button();
             this.btn_worker = new System.Windows.Forms.Button();
             this.paneltutormenu = new System.Windows.Forms.Panel();
@@ -51,21 +51,27 @@
             this.btn_tutoring_info = new System.Windows.Forms.Button();
             this.panellogo = new System.Windows.Forms.Panel();
             this.paneltutoring = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltitle = new System.Windows.Forms.Panel();
             this.btn_min = new System.Windows.Forms.Button();
             this.btn_max = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
             this.labeltitle = new System.Windows.Forms.Label();
+            this.lbl_user_num = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.lbl_user_name = new System.Windows.Forms.Label();
             this.panelmenu.SuspendLayout();
             this.panelemergency.SuspendLayout();
             this.panelhelpmenu.SuspendLayout();
             this.panelworkermenu.SuspendLayout();
             this.paneltutormenu.SuspendLayout();
             this.paneltutoringmenu.SuspendLayout();
+            this.panellogo.SuspendLayout();
             this.paneltutoring.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneltitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelmenu
@@ -93,7 +99,7 @@
             // 
             this.panelemergency.Controls.Add(this.btn_backup);
             this.panelemergency.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelemergency.Location = new System.Drawing.Point(0, 732);
+            this.panelemergency.Location = new System.Drawing.Point(0, 689);
             this.panelemergency.Name = "panelemergency";
             this.panelemergency.Size = new System.Drawing.Size(220, 45);
             this.panelemergency.TabIndex = 10;
@@ -124,7 +130,7 @@
             this.btn_emergency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_emergency.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_emergency.ForeColor = System.Drawing.Color.White;
-            this.btn_emergency.Location = new System.Drawing.Point(0, 687);
+            this.btn_emergency.Location = new System.Drawing.Point(0, 644);
             this.btn_emergency.Name = "btn_emergency";
             this.btn_emergency.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_emergency.Size = new System.Drawing.Size(220, 45);
@@ -141,7 +147,7 @@
             this.panelhelpmenu.Controls.Add(this.btn_price_check);
             this.panelhelpmenu.Controls.Add(this.btn_work_tutorial);
             this.panelhelpmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelhelpmenu.Location = new System.Drawing.Point(0, 507);
+            this.panelhelpmenu.Location = new System.Drawing.Point(0, 464);
             this.panelhelpmenu.Name = "panelhelpmenu";
             this.panelhelpmenu.Size = new System.Drawing.Size(220, 180);
             this.panelhelpmenu.TabIndex = 8;
@@ -225,7 +231,7 @@
             this.btn_help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_help.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_help.ForeColor = System.Drawing.Color.White;
-            this.btn_help.Location = new System.Drawing.Point(0, 462);
+            this.btn_help.Location = new System.Drawing.Point(0, 419);
             this.btn_help.Name = "btn_help";
             this.btn_help.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_help.Size = new System.Drawing.Size(220, 45);
@@ -237,31 +243,12 @@
             // 
             // panelworkermenu
             // 
-            this.panelworkermenu.Controls.Add(this.btn_worker_responsibility);
             this.panelworkermenu.Controls.Add(this.btn_worker_search);
             this.panelworkermenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelworkermenu.Location = new System.Drawing.Point(0, 372);
+            this.panelworkermenu.Location = new System.Drawing.Point(0, 374);
             this.panelworkermenu.Name = "panelworkermenu";
-            this.panelworkermenu.Size = new System.Drawing.Size(220, 90);
+            this.panelworkermenu.Size = new System.Drawing.Size(220, 45);
             this.panelworkermenu.TabIndex = 6;
-            // 
-            // btn_worker_responsibility
-            // 
-            this.btn_worker_responsibility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
-            this.btn_worker_responsibility.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_worker_responsibility.FlatAppearance.BorderSize = 0;
-            this.btn_worker_responsibility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_worker_responsibility.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_worker_responsibility.ForeColor = System.Drawing.Color.White;
-            this.btn_worker_responsibility.Location = new System.Drawing.Point(0, 45);
-            this.btn_worker_responsibility.Name = "btn_worker_responsibility";
-            this.btn_worker_responsibility.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_worker_responsibility.Size = new System.Drawing.Size(220, 45);
-            this.btn_worker_responsibility.TabIndex = 2;
-            this.btn_worker_responsibility.Text = "责任认定表";
-            this.btn_worker_responsibility.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_worker_responsibility.UseVisualStyleBackColor = false;
-            this.btn_worker_responsibility.Click += new System.EventHandler(this.btn_worker_responsibility_Click);
             // 
             // btn_worker_search
             // 
@@ -276,7 +263,7 @@
             this.btn_worker_search.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btn_worker_search.Size = new System.Drawing.Size(220, 45);
             this.btn_worker_search.TabIndex = 0;
-            this.btn_worker_search.Text = "查询工作人员信息";
+            this.btn_worker_search.Text = "查询职工信息";
             this.btn_worker_search.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_worker_search.UseVisualStyleBackColor = false;
             this.btn_worker_search.Click += new System.EventHandler(this.btn_worker_search_Click);
@@ -289,7 +276,7 @@
             this.btn_worker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_worker.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_worker.ForeColor = System.Drawing.Color.White;
-            this.btn_worker.Location = new System.Drawing.Point(0, 325);
+            this.btn_worker.Location = new System.Drawing.Point(0, 327);
             this.btn_worker.Name = "btn_worker";
             this.btn_worker.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_worker.Size = new System.Drawing.Size(220, 47);
@@ -303,7 +290,7 @@
             // 
             this.paneltutormenu.Controls.Add(this.btn_tutor_search);
             this.paneltutormenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltutormenu.Location = new System.Drawing.Point(0, 280);
+            this.paneltutormenu.Location = new System.Drawing.Point(0, 282);
             this.paneltutormenu.Name = "paneltutormenu";
             this.paneltutormenu.Size = new System.Drawing.Size(220, 45);
             this.paneltutormenu.TabIndex = 4;
@@ -334,7 +321,7 @@
             this.btn_tutor_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tutor_info.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_tutor_info.ForeColor = System.Drawing.Color.White;
-            this.btn_tutor_info.Location = new System.Drawing.Point(0, 235);
+            this.btn_tutor_info.Location = new System.Drawing.Point(0, 237);
             this.btn_tutor_info.Name = "btn_tutor_info";
             this.btn_tutor_info.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_tutor_info.Size = new System.Drawing.Size(220, 45);
@@ -350,7 +337,7 @@
             this.paneltutoringmenu.Controls.Add(this.btn_tutoring_form);
             this.paneltutoringmenu.Controls.Add(this.btn_tutoring_search);
             this.paneltutoringmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltutoringmenu.Location = new System.Drawing.Point(0, 145);
+            this.paneltutoringmenu.Location = new System.Drawing.Point(0, 147);
             this.paneltutoringmenu.Name = "paneltutoringmenu";
             this.paneltutoringmenu.Size = new System.Drawing.Size(220, 90);
             this.paneltutoringmenu.TabIndex = 2;
@@ -399,7 +386,7 @@
             this.btn_tutoring_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tutoring_info.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_tutoring_info.ForeColor = System.Drawing.Color.White;
-            this.btn_tutoring_info.Location = new System.Drawing.Point(0, 100);
+            this.btn_tutoring_info.Location = new System.Drawing.Point(0, 102);
             this.btn_tutoring_info.Name = "btn_tutoring_info";
             this.btn_tutoring_info.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_tutoring_info.Size = new System.Drawing.Size(220, 45);
@@ -411,10 +398,14 @@
             // 
             // panellogo
             // 
+            this.panellogo.Controls.Add(this.lbl_user_name);
+            this.panellogo.Controls.Add(this.btn_logout);
+            this.panellogo.Controls.Add(this.pictureBox2);
+            this.panellogo.Controls.Add(this.lbl_user_num);
             this.panellogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(220, 100);
+            this.panellogo.Size = new System.Drawing.Size(220, 102);
             this.panellogo.TabIndex = 1;
             // 
             // paneltutoring
@@ -426,17 +417,6 @@
             this.paneltutoring.Name = "paneltutoring";
             this.paneltutoring.Size = new System.Drawing.Size(1170, 785);
             this.paneltutoring.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::New_TJ_Tutors_System.Properties.Resources.QQ图片20190223220706;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1170, 785);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // paneltitle
             // 
@@ -513,6 +493,64 @@
             this.labeltitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labeltitle_MouseMove);
             this.labeltitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.labeltitle_MouseUp);
             // 
+            // lbl_user_num
+            // 
+            this.lbl_user_num.AutoSize = true;
+            this.lbl_user_num.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_user_num.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_user_num.ForeColor = System.Drawing.Color.White;
+            this.lbl_user_num.Location = new System.Drawing.Point(103, 3);
+            this.lbl_user_num.Name = "lbl_user_num";
+            this.lbl_user_num.Size = new System.Drawing.Size(84, 26);
+            this.lbl_user_num.TabIndex = 60;
+            this.lbl_user_num.Text = "190031";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::New_TJ_Tutors_System.Properties.Resources.QQ图片20190223220706;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1170, 785);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(31, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
+            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_logout.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(0, 61);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(220, 41);
+            this.btn_logout.TabIndex = 62;
+            this.btn_logout.Text = "换班登出";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            // 
+            // lbl_user_name
+            // 
+            this.lbl_user_name.AutoSize = true;
+            this.lbl_user_name.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_user_name.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_user_name.ForeColor = System.Drawing.Color.White;
+            this.lbl_user_name.Location = new System.Drawing.Point(103, 32);
+            this.lbl_user_name.Name = "lbl_user_name";
+            this.lbl_user_name.Size = new System.Drawing.Size(69, 26);
+            this.lbl_user_name.TabIndex = 63;
+            this.lbl_user_name.Text = "陈振华";
+            // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -533,10 +571,13 @@
             this.panelworkermenu.ResumeLayout(false);
             this.paneltutormenu.ResumeLayout(false);
             this.paneltutoringmenu.ResumeLayout(false);
+            this.panellogo.ResumeLayout(false);
+            this.panellogo.PerformLayout();
             this.paneltutoring.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.paneltitle.ResumeLayout(false);
             this.paneltitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,7 +600,6 @@
         private System.Windows.Forms.Button btn_work_tutorial;
         private System.Windows.Forms.Button btn_help;
         private System.Windows.Forms.Panel panelworkermenu;
-        private System.Windows.Forms.Button btn_worker_responsibility;
         private System.Windows.Forms.Button btn_worker_search;
         private System.Windows.Forms.Button btn_worker;
         private System.Windows.Forms.Panel panelemergency;
@@ -572,6 +612,10 @@
         private System.Windows.Forms.Button button_close;
         private System.Windows.Forms.Button btn_min;
         private System.Windows.Forms.Button btn_max;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbl_user_num;
+        private System.Windows.Forms.Label lbl_user_name;
+        private System.Windows.Forms.Button btn_logout;
     }
 }
 

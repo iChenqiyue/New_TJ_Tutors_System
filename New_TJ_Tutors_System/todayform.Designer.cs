@@ -58,6 +58,7 @@
             this.btn_export.TabIndex = 1;
             this.btn_export.Text = "导出表格";
             this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
             // dgv_todayform
             // 
