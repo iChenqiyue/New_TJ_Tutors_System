@@ -55,7 +55,6 @@
             this.txt_sadd = new System.Windows.Forms.TextBox();
             this.txt_parent_name = new System.Windows.Forms.TextBox();
             this.txt_print_num = new System.Windows.Forms.TextBox();
-            this.txt_parent_num = new System.Windows.Forms.TextBox();
             this.lbl_tutor_time = new System.Windows.Forms.Label();
             this.lbl_tutor_price = new System.Windows.Forms.Label();
             this.lbl_student_sex = new System.Windows.Forms.Label();
@@ -72,8 +71,15 @@
             this.lbl_payment_time = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.lbl_payment_state = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_parent_num = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.gbo_request.SuspendLayout();
             this.gpo_info.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dt_payment_time
@@ -102,6 +108,7 @@
             // 
             // gbo_request
             // 
+            this.gbo_request.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.gbo_request.Controls.Add(this.txt_place);
             this.gbo_request.Controls.Add(this.txt_grade);
             this.gbo_request.Controls.Add(this.cbo_sex);
@@ -237,20 +244,21 @@
             // 
             // gpo_info
             // 
+            this.gpo_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
+            this.gpo_info.Controls.Add(this.panel3);
+            this.gpo_info.Controls.Add(this.panel2);
+            this.gpo_info.Controls.Add(this.panel1);
+            this.gpo_info.Controls.Add(this.txt_phone);
             this.gpo_info.Controls.Add(this.rdo_woman);
             this.gpo_info.Controls.Add(this.rdo_man);
-            this.gpo_info.Controls.Add(this.dt_recepiton_time);
-            this.gpo_info.Controls.Add(this.cbo_reception);
             this.gpo_info.Controls.Add(this.txt_tutor_time);
             this.gpo_info.Controls.Add(this.txt_tutor_price);
             this.gpo_info.Controls.Add(this.txt_subject_stu);
             this.gpo_info.Controls.Add(this.txt_grade_stu);
             this.gpo_info.Controls.Add(this.txt_dadd);
-            this.gpo_info.Controls.Add(this.txt_phone);
             this.gpo_info.Controls.Add(this.txt_sadd);
             this.gpo_info.Controls.Add(this.txt_parent_name);
             this.gpo_info.Controls.Add(this.txt_print_num);
-            this.gpo_info.Controls.Add(this.txt_parent_num);
             this.gpo_info.Controls.Add(this.lbl_tutor_time);
             this.gpo_info.Controls.Add(this.lbl_tutor_price);
             this.gpo_info.Controls.Add(this.lbl_student_sex);
@@ -265,7 +273,7 @@
             this.gpo_info.Controls.Add(this.lbl_print_num);
             this.gpo_info.Controls.Add(this.lbl_parent_num);
             this.gpo_info.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gpo_info.ForeColor = System.Drawing.Color.White;
+            this.gpo_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.gpo_info.Location = new System.Drawing.Point(39, 0);
             this.gpo_info.Name = "gpo_info";
             this.gpo_info.Size = new System.Drawing.Size(500, 451);
@@ -277,7 +285,7 @@
             // 
             this.rdo_woman.AutoSize = true;
             this.rdo_woman.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rdo_woman.ForeColor = System.Drawing.Color.White;
+            this.rdo_woman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.rdo_woman.Location = new System.Drawing.Point(151, 365);
             this.rdo_woman.Name = "rdo_woman";
             this.rdo_woman.Size = new System.Drawing.Size(45, 23);
@@ -290,7 +298,7 @@
             // 
             this.rdo_man.AutoSize = true;
             this.rdo_man.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rdo_man.ForeColor = System.Drawing.Color.White;
+            this.rdo_man.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.rdo_man.Location = new System.Drawing.Point(48, 365);
             this.rdo_man.Name = "rdo_man";
             this.rdo_man.Size = new System.Drawing.Size(45, 23);
@@ -302,7 +310,7 @@
             // dt_recepiton_time
             // 
             this.dt_recepiton_time.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dt_recepiton_time.Location = new System.Drawing.Point(262, 95);
+            this.dt_recepiton_time.Location = new System.Drawing.Point(7, 0);
             this.dt_recepiton_time.Name = "dt_recepiton_time";
             this.dt_recepiton_time.Size = new System.Drawing.Size(195, 27);
             this.dt_recepiton_time.TabIndex = 83;
@@ -311,11 +319,12 @@
             // cbo_reception
             // 
             this.cbo_reception.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_reception.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_reception.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_reception.FormattingEnabled = true;
-            this.cbo_reception.Location = new System.Drawing.Point(48, 95);
+            this.cbo_reception.Location = new System.Drawing.Point(2, 2);
             this.cbo_reception.Name = "cbo_reception";
-            this.cbo_reception.Size = new System.Drawing.Size(195, 28);
+            this.cbo_reception.Size = new System.Drawing.Size(200, 28);
             this.cbo_reception.TabIndex = 82;
             // 
             // txt_tutor_time
@@ -362,7 +371,7 @@
             // txt_phone
             // 
             this.txt_phone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_phone.Location = new System.Drawing.Point(262, 144);
+            this.txt_phone.Location = new System.Drawing.Point(263, 148);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(195, 27);
             this.txt_phone.TabIndex = 68;
@@ -393,20 +402,11 @@
             this.txt_print_num.Size = new System.Drawing.Size(195, 27);
             this.txt_print_num.TabIndex = 60;
             // 
-            // txt_parent_num
-            // 
-            this.txt_parent_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_parent_num.Location = new System.Drawing.Point(48, 46);
-            this.txt_parent_num.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txt_parent_num.Name = "txt_parent_num";
-            this.txt_parent_num.Size = new System.Drawing.Size(195, 27);
-            this.txt_parent_num.TabIndex = 58;
-            // 
             // lbl_tutor_time
             // 
             this.lbl_tutor_time.AutoSize = true;
             this.lbl_tutor_time.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_tutor_time.ForeColor = System.Drawing.Color.White;
+            this.lbl_tutor_time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_tutor_time.Location = new System.Drawing.Point(45, 396);
             this.lbl_tutor_time.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_tutor_time.Name = "lbl_tutor_time";
@@ -418,7 +418,7 @@
             // 
             this.lbl_tutor_price.AutoSize = true;
             this.lbl_tutor_price.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_tutor_price.ForeColor = System.Drawing.Color.White;
+            this.lbl_tutor_price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_tutor_price.Location = new System.Drawing.Point(259, 347);
             this.lbl_tutor_price.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_tutor_price.Name = "lbl_tutor_price";
@@ -430,7 +430,7 @@
             // 
             this.lbl_student_sex.AutoSize = true;
             this.lbl_student_sex.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_student_sex.ForeColor = System.Drawing.Color.White;
+            this.lbl_student_sex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_student_sex.Location = new System.Drawing.Point(45, 347);
             this.lbl_student_sex.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_student_sex.Name = "lbl_student_sex";
@@ -442,7 +442,7 @@
             // 
             this.lbl_subject_stu.AutoSize = true;
             this.lbl_subject_stu.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_subject_stu.ForeColor = System.Drawing.Color.White;
+            this.lbl_subject_stu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_subject_stu.Location = new System.Drawing.Point(259, 298);
             this.lbl_subject_stu.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_subject_stu.Name = "lbl_subject_stu";
@@ -454,7 +454,7 @@
             // 
             this.lbl_grade_stu.AutoSize = true;
             this.lbl_grade_stu.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_grade_stu.ForeColor = System.Drawing.Color.White;
+            this.lbl_grade_stu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_grade_stu.Location = new System.Drawing.Point(45, 298);
             this.lbl_grade_stu.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_grade_stu.Name = "lbl_grade_stu";
@@ -466,7 +466,7 @@
             // 
             this.lbl_dadd.AutoSize = true;
             this.lbl_dadd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_dadd.ForeColor = System.Drawing.Color.White;
+            this.lbl_dadd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_dadd.Location = new System.Drawing.Point(45, 224);
             this.lbl_dadd.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_dadd.Name = "lbl_dadd";
@@ -478,7 +478,7 @@
             // 
             this.lbl_phone.AutoSize = true;
             this.lbl_phone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_phone.ForeColor = System.Drawing.Color.White;
+            this.lbl_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_phone.Location = new System.Drawing.Point(259, 126);
             this.lbl_phone.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_phone.Name = "lbl_phone";
@@ -490,7 +490,7 @@
             // 
             this.lbl_sadd.AutoSize = true;
             this.lbl_sadd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_sadd.ForeColor = System.Drawing.Color.White;
+            this.lbl_sadd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_sadd.Location = new System.Drawing.Point(45, 175);
             this.lbl_sadd.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_sadd.Name = "lbl_sadd";
@@ -502,7 +502,7 @@
             // 
             this.lbl_parent_name.AutoSize = true;
             this.lbl_parent_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_parent_name.ForeColor = System.Drawing.Color.White;
+            this.lbl_parent_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_parent_name.Location = new System.Drawing.Point(45, 126);
             this.lbl_parent_name.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_parent_name.Name = "lbl_parent_name";
@@ -514,7 +514,7 @@
             // 
             this.lbl_recepiton_time.AutoSize = true;
             this.lbl_recepiton_time.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_recepiton_time.ForeColor = System.Drawing.Color.White;
+            this.lbl_recepiton_time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_recepiton_time.Location = new System.Drawing.Point(259, 77);
             this.lbl_recepiton_time.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_recepiton_time.Name = "lbl_recepiton_time";
@@ -526,7 +526,7 @@
             // 
             this.lbl_reception.AutoSize = true;
             this.lbl_reception.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_reception.ForeColor = System.Drawing.Color.White;
+            this.lbl_reception.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_reception.Location = new System.Drawing.Point(45, 77);
             this.lbl_reception.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lbl_reception.Name = "lbl_reception";
@@ -538,7 +538,7 @@
             // 
             this.lbl_print_num.AutoSize = true;
             this.lbl_print_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_print_num.ForeColor = System.Drawing.Color.White;
+            this.lbl_print_num.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_print_num.Location = new System.Drawing.Point(259, 28);
             this.lbl_print_num.Name = "lbl_print_num";
             this.lbl_print_num.Size = new System.Drawing.Size(69, 19);
@@ -550,7 +550,7 @@
             this.lbl_parent_num.AutoSize = true;
             this.lbl_parent_num.BackColor = System.Drawing.Color.Transparent;
             this.lbl_parent_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_parent_num.ForeColor = System.Drawing.Color.White;
+            this.lbl_parent_num.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
             this.lbl_parent_num.Location = new System.Drawing.Point(46, 28);
             this.lbl_parent_num.Name = "lbl_parent_num";
             this.lbl_parent_num.Size = new System.Drawing.Size(69, 19);
@@ -595,11 +595,48 @@
             this.lbl_payment_state.TabIndex = 96;
             this.lbl_payment_state.Text = "缴费状态";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txt_parent_num);
+            this.panel1.Location = new System.Drawing.Point(48, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(205, 30);
+            this.panel1.TabIndex = 86;
+            // 
+            // txt_parent_num
+            // 
+            this.txt_parent_num.BackColor = System.Drawing.Color.White;
+            this.txt_parent_num.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_parent_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_parent_num.Location = new System.Drawing.Point(5, 5);
+            this.txt_parent_num.Name = "txt_parent_num";
+            this.txt_parent_num.Size = new System.Drawing.Size(195, 20);
+            this.txt_parent_num.TabIndex = 58;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.cbo_reception);
+            this.panel2.Location = new System.Drawing.Point(48, 99);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(205, 35);
+            this.panel2.TabIndex = 87;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.dt_recepiton_time);
+            this.panel3.Location = new System.Drawing.Point(264, 99);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(205, 30);
+            this.panel3.TabIndex = 87;
+            // 
             // tutoring_info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(579, 749);
             this.Controls.Add(this.dt_payment_time);
             this.Controls.Add(this.cbo_payment_state);
@@ -617,6 +654,10 @@
             this.gbo_request.PerformLayout();
             this.gpo_info.ResumeLayout(false);
             this.gpo_info.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,7 +692,6 @@
         private System.Windows.Forms.TextBox txt_sadd;
         private System.Windows.Forms.TextBox txt_parent_name;
         private System.Windows.Forms.TextBox txt_print_num;
-        private System.Windows.Forms.TextBox txt_parent_num;
         private System.Windows.Forms.Label lbl_tutor_time;
         private System.Windows.Forms.Label lbl_tutor_price;
         private System.Windows.Forms.Label lbl_student_sex;
@@ -668,5 +708,9 @@
         private System.Windows.Forms.Label lbl_payment_time;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Label lbl_payment_state;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txt_parent_num;
+        private System.Windows.Forms.Panel panel3;
     }
 }

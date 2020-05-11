@@ -31,6 +31,7 @@
             this.panelleft = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelright = new System.Windows.Forms.Panel();
+            this.labeltitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_min = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.paneluser = new System.Windows.Forms.Panel();
             this.txt_user = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.labeltitle = new System.Windows.Forms.Label();
             this.panelleft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelright.SuspendLayout();
@@ -72,7 +72,7 @@
             // 
             // panelright
             // 
-            this.panelright.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(214)))));
+            this.panelright.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
             this.panelright.Controls.Add(this.labeltitle);
             this.panelright.Controls.Add(this.panel1);
             this.panelright.Controls.Add(this.btn_login);
@@ -83,6 +83,17 @@
             this.panelright.Name = "panelright";
             this.panelright.Size = new System.Drawing.Size(580, 337);
             this.panelright.TabIndex = 1;
+            // 
+            // labeltitle
+            // 
+            this.labeltitle.AutoSize = true;
+            this.labeltitle.Font = new System.Drawing.Font("微软雅黑", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labeltitle.ForeColor = System.Drawing.Color.White;
+            this.labeltitle.Location = new System.Drawing.Point(108, 58);
+            this.labeltitle.Name = "labeltitle";
+            this.labeltitle.Size = new System.Drawing.Size(369, 37);
+            this.labeltitle.TabIndex = 65;
+            this.labeltitle.Text = "同 济 大 学 家 教 管 理 系 统";
             // 
             // panel1
             // 
@@ -129,7 +140,7 @@
             // 
             // btn_login
             // 
-            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(189)))), ((int)(((byte)(244)))));
+            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(154)))), ((int)(((byte)(255)))));
             this.btn_login.FlatAppearance.BorderSize = 0;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -138,7 +149,7 @@
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(220, 41);
             this.btn_login.TabIndex = 63;
-            this.btn_login.Text = "Login In";
+            this.btn_login.Text = "登录";
             this.btn_login.UseVisualStyleBackColor = false;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
@@ -154,7 +165,7 @@
             // 
             // txt_pwd
             // 
-            this.txt_pwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(214)))));
+            this.txt_pwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
             this.txt_pwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_pwd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txt_pwd.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -188,7 +199,7 @@
             // 
             // txt_user
             // 
-            this.txt_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(214)))));
+            this.txt_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
             this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_user.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txt_user.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -209,17 +220,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(327, 1);
             this.panel4.TabIndex = 1;
-            // 
-            // labeltitle
-            // 
-            this.labeltitle.AutoSize = true;
-            this.labeltitle.Font = new System.Drawing.Font("微软雅黑", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labeltitle.ForeColor = System.Drawing.Color.White;
-            this.labeltitle.Location = new System.Drawing.Point(108, 58);
-            this.labeltitle.Name = "labeltitle";
-            this.labeltitle.Size = new System.Drawing.Size(369, 37);
-            this.labeltitle.TabIndex = 65;
-            this.labeltitle.Text = "同 济 大 学 家 教 管 理 系 统";
             // 
             // login
             // 

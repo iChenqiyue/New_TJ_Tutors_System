@@ -20,6 +20,7 @@ namespace New_TJ_Tutors_System
         databind dgvbind = new databind();
         databind cbobind = new databind();
         commondb mydb = new commondb();
+        string user = objectclass.userinfo.username;
         string select_tutoring_str = "select print_num as 打印编号,parent_num as 家长编号,parent_name as 家长称呼,phone as 联系方式,"
             + "tutor_state as 家教状态,payment_state as 缴费状态,grade_stu as 年级,subject_stu as 科目,simple_adr as 家教地址,"
             + "student_sex as 学员性别,tutor_time as 家教时间,tutor_price as 家教价格,remarks as 重要备注,latest_time as 最近更新时间"
@@ -29,6 +30,7 @@ namespace New_TJ_Tutors_System
         string insert_business_str = "(print_num,tutor_num,tutor_name,subject,state,time,reception,remarks,now)";
         objectclass.tutoringinfo tutoring1 = new objectclass.tutoringinfo();
         objectclass.tutorinfo tutor1 = new objectclass.tutorinfo();
+        objectclass.business bus1 = new objectclass.business();
         bool insertstate = false;
         string tutor_num = "";
         string tutor_name = "";
@@ -573,6 +575,8 @@ namespace New_TJ_Tutors_System
         /// <param name="e"></param>
         private void btn_save_Click(object sender, EventArgs e)
         {
+
+            string history = "";
             //封装数组
             TextBox[] txt = { txt_parent_num, txt_print_num, txt_parent_name, txt_phone, txt_sadd, txt_dadd,
                 txt_grade_stu, txt_subject_stu, txt_tutor_price, txt_tutor_time };
@@ -606,29 +610,57 @@ namespace New_TJ_Tutors_System
             bool subject_changed = false;
             if (tutoring1.subject_stu != txt_subject_stu.Text.Trim())
                 subject_changed = true;
-            tutoring1.parent_num = txt_parent_num.Text.Trim();
+
+            updateinfo(ref history, ref tutoring1.parent_num, txt_parent_num.Text.Trim());
+            updateinfo(ref history, ref tutoring1.print_num, txt_print_num.Text.Trim());
+            updateinfo(ref history, ref tutoring1.parent_name, txt_parent_name.Text.Trim());
+            updateinfo(ref history, ref tutoring1.reception, cbo_reception.SelectedItem.ToString());        
+            updateinfo(ref history, ref tutoring1.phone, txt_phone.Text.Trim());
+            updateinfo(ref history, ref tutoring1.simple_adr, txt_sadd.Text.Trim());
+            updateinfo(ref history, ref tutoring1.detail_adr, txt_dadd.Text.Trim());
+            updateinfo(ref history, ref tutoring1.grade_stu, txt_grade_stu.Text.Trim());
+            updateinfo(ref history, ref tutoring1.subject_stu, txt_subject_stu.Text.Trim());
+            tutoring1.reception_time = dt_recepiton_time.Value.ToString();
+            /*tutoring1.parent_num = txt_parent_num.Text.Trim();
             tutoring1.print_num = txt_print_num.Text.Trim();
             tutoring1.reception = cbo_reception.SelectedItem.ToString();
-            tutoring1.reception_time = dt_recepiton_time.Value.ToString();
+            
             tutoring1.parent_name = txt_parent_name.Text.Trim();
             tutoring1.phone = txt_phone.Text.Trim();
             tutoring1.simple_adr = txt_sadd.Text.Trim();
             tutoring1.detail_adr = txt_dadd.Text.Trim();
             tutoring1.grade_stu = txt_grade_stu.Text.Trim();
-            tutoring1.subject_stu = txt_subject_stu.Text.Trim();
+            tutoring1.subject_stu = txt_subject_stu.Text.Trim();*/
             if (rdo_man.Checked == true)
                 tutoring1.student_sex = "男";
-            //rdo_man.Checked = true;
             if (rdo_woman.Checked == true)
                 tutoring1.student_sex = "女";
-            tutoring1.tutors_price = txt_tutor_price.Text.Trim();
+
+
+            updateinfo(ref history, ref tutoring1.tutors_price, txt_tutor_price.Text.Trim());
+            updateinfo(ref history, ref tutoring1.tutors_time, txt_tutor_time.Text.Trim());
+            updateinfo(ref history, ref tutoring1.sex, cbo_sex.SelectedItem.ToString());
+            updateinfo(ref history, ref tutoring1.place, txt_place.Text.Trim());
+            updateinfo(ref history, ref tutoring1.grade, txt_grade.Text.Trim());
+            updateinfo(ref history, ref tutoring1.subject, txt_subject.Text.Trim());
+            updateinfo(ref history, ref tutoring1.other_requests, txt_other_requests.Text.Trim());
+
+            /*tutoring1.tutors_price = txt_tutor_price.Text.Trim();
             tutoring1.tutors_time = txt_tutor_time.Text.Trim();
             tutoring1.sex = cbo_sex.SelectedItem.ToString();
             tutoring1.place = txt_place.Text.Trim();
             tutoring1.grade = txt_grade.Text.Trim();
             tutoring1.subject = txt_subject.Text.Trim();
-            tutoring1.other_requests = txt_other_requests.Text.Trim();
-            tutoring1.payment_state = cbo_payment_state.SelectedItem.ToString();
+            tutoring1.other_requests = txt_other_requests.Text.Trim();*/
+
+
+            bool payment_changed = false;
+            if (tutoring1.payment_state !="已缴"&& cbo_payment_state.SelectedItem.ToString()=="已缴")
+            {
+                payment_changed = true;
+            }
+            updateinfo(ref history, ref tutoring1.payment_state, cbo_payment_state.SelectedItem.ToString());
+            //tutoring1.payment_state = cbo_payment_state.SelectedItem.ToString();
             subject = tutoring1.subject_stu.Split('、');
             if (tutoring1.payment_state != "已缴")
             {
@@ -638,6 +670,8 @@ namespace New_TJ_Tutors_System
             {
                 tutoring1.payment_time = dt_payment_time.Value.ToString();
             }
+
+
             tutoring1.latest_time = DateTime.Now.ToString();
 
             //插入新家教信息
@@ -645,6 +679,7 @@ namespace New_TJ_Tutors_System
             {
                 tutoring1.tutor_state = "接入";
                 tutoring1.remarks = "";
+                
                 mysql = "insert into tutoring " + insert_tutoring_str + " values " + tutoring1.connectstr();
                 DialogResult result = MessageBox.Show("确认新增家教信息？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Cancel)
@@ -654,8 +689,21 @@ namespace New_TJ_Tutors_System
                     try
                     {
                         mydb.ExecuteNonQuery(mysql);
+                        Console.WriteLine(history);
+                        mysql = string.Format("insert into history (user,optype,num,time,content) values ('{0}', '{1}', '{2}', '{3}','{4}')",
+                            user, "新增家教信息", tutoring1.print_num, DateTime.Now.ToString(),history);
+                        Console.WriteLine(mysql);
+                        mydb.ExecuteNonQuery(mysql);
                         if (tutoring1.payment_time != null)
+                        {
                             mydb.update_payment_date(tutoring1.print_num, tutoring1.payment_time);
+                            if (payment_changed == true)
+                            {
+                                mysql = string.Format("insert into history (user,optype,num,time) values ('{0}', '{1}', '{2}', '{3}')",
+                                user, "缴费", tutoring1.print_num, DateTime.Now.ToString());
+                                mydb.ExecuteNonQuery(mysql);
+                            }
+                        }
                         for (int i = 0; i < subject.Length; i++)
                         {
                             //string insert_business_str = "(print_num,tutor_num,subject,state,time,reception,remarks,now";
@@ -664,7 +712,7 @@ namespace New_TJ_Tutors_System
                             
                             mydb.ExecuteNonQuery(mysql);
                         }
-                        //mysql="insert into history ("
+                        
 
                     }
                     catch (Exception ex)
@@ -691,9 +739,19 @@ namespace New_TJ_Tutors_System
                     try
                     {
                         mydb.ExecuteNonQuery(mysql);
+                        mysql = string.Format("insert into history (user,optype,num,time,content) values ('{0}', '{1}', '{2}', '{3}','{4}')",
+                            user, "更新家教信息", tutoring1.print_num, DateTime.Now.ToString(),history);
+                        mydb.ExecuteNonQuery(mysql);
                         if (tutoring1.payment_time != null)
+                        {
                             mydb.update_payment_date(tutoring1.print_num, tutoring1.payment_time);
-
+                            if (payment_changed == true)
+                            {
+                                mysql = string.Format("insert into history (user,optype,num,time) values ('{0}', '{1}', '{2}', '{3}')",
+                                user, "缴费", tutoring1.print_num, DateTime.Now.ToString());
+                                mydb.ExecuteNonQuery(mysql);
+                            }
+                        }
 
 
                         ///更新关于科目的更更改
@@ -707,7 +765,6 @@ namespace New_TJ_Tutors_System
                                     "where not exists(select 1 from business where print_num = '{3}' and subject ='{4}')", tutoring1.print_num,
                                     subject[i], DateTime.Now.ToString(), tutoring1.print_num, subject[i]);
                                 temp += "'" + subject[i] + "',";
-                                
                                 mydb.ExecuteNonQuery(mysql);
                             }
                             
@@ -777,6 +834,9 @@ namespace New_TJ_Tutors_System
                 try
                 {
                     mydb.ExecuteNonQuery(mysql);
+                    mysql = string.Format("insert into history (user,optype,num,time) values ('{0}', '{1}', '{2}', '{3}')",
+                            user, "删除家教信息", tutoring1.print_num, DateTime.Now.ToString());
+                    mydb.ExecuteNonQuery(mysql);
                 }
                 catch (Exception ex)
                 {
@@ -789,6 +849,13 @@ namespace New_TJ_Tutors_System
         }
         #endregion
 
+        private void updateinfo(ref string history,ref string str1,string str2)
+        {
+            if (str1 != str2)
+                history += str1 + "->" + str2 + ";";
+            str1 = str2;
+        }
+
         #region 家教业务办理
         /// <summary>
         /// 保存家教状态
@@ -797,8 +864,10 @@ namespace New_TJ_Tutors_System
         /// <param name="e"></param>
         private void btn_save_buss_Click(object sender, EventArgs e)
         {
-            tutoring1.tutor_state = cbo_tutor_state.SelectedItem.ToString();
-            tutoring1.remarks = txt_remarks.Text.Trim();
+           
+            string history = "";
+            updateinfo(ref history, ref tutoring1.tutor_state,cbo_tutor_state.SelectedItem.ToString()) ;
+            updateinfo(ref history, ref tutoring1.remarks, txt_remarks.Text.Trim());
             tutoring1.latest_time = DateTime.Now.ToString();
             string mysql = "";
             mysql = string.Format("update tutoring set tutor_state='{0}',remarks='{1}',latest_time='{2}' WHERE print_num='{3}'",
@@ -810,6 +879,9 @@ namespace New_TJ_Tutors_System
             {
                 try
                 {
+                    mydb.ExecuteNonQuery(mysql);
+                    mysql = string.Format("insert into history (user,optype,num,time,content) values ('{0}', '{1}', '{2}', '{3}','{4}')",
+                            user, "更新家教状态/备注", tutoring1.print_num, DateTime.Now.ToString(),history);
                     mydb.ExecuteNonQuery(mysql);
                 }
                 catch (Exception ex)
@@ -829,27 +901,20 @@ namespace New_TJ_Tutors_System
         /// <param name="e"></param>
         private void dgv_subject_SelectionChanged(object sender, EventArgs e)
         {
-            string subject = "";
-            string state = "";
-            string tutor_num = "";
-            string tutor_name = "";
-            string remark = "";
-            //新建对象tutoring_info
+                   
             if (dgv_subject.SelectedRows.Count != 0)
             {
-                subject = dgv_subject.SelectedRows[0].Cells[0].Value.ToString();
-                state = dgv_subject.SelectedRows[0].Cells[1].Value.ToString();
-                tutor_num = dgv_subject.SelectedRows[0].Cells[2].Value.ToString();
-                tutor_name = dgv_subject.SelectedRows[0].Cells[3].Value.ToString();
-                remark = dgv_subject.SelectedRows[0].Cells[4].Value.ToString();
-            }
-            Console.WriteLine(subject);
-            cbo_subject.Text = subject;
-            Console.WriteLine(cbo_subject.Text);
-            cbo_state.SelectedItem = state;
-            txt_tutor_num.Text = tutor_num;
-            txt_tutor_name.Text = tutor_name;
-            txt_remark.Text = remark;
+                bus1.subject = dgv_subject.SelectedRows[0].Cells[0].Value.ToString();
+                bus1.state = dgv_subject.SelectedRows[0].Cells[1].Value.ToString();
+                bus1.tutor_num = dgv_subject.SelectedRows[0].Cells[2].Value.ToString();
+                bus1.tutor_name = dgv_subject.SelectedRows[0].Cells[3].Value.ToString();
+                bus1.remarks = dgv_subject.SelectedRows[0].Cells[4].Value.ToString();
+            }         
+            cbo_subject.Text = bus1.subject;
+            cbo_state.SelectedItem = bus1.state;
+            txt_tutor_num.Text = bus1.tutor_num;
+            txt_tutor_name.Text = bus1.tutor_name;
+            txt_remark.Text = bus1.remarks;
         }
         #endregion
 
@@ -892,23 +957,31 @@ namespace New_TJ_Tutors_System
         private void btn_bus_Click(object sender, EventArgs e)
         {
 
-            //(print_num, tutor_num, tutor_name, subject, state, time, remarks, now)
-            objectclass.business bus = new objectclass.business();
-            bus.print_num = tutoring1.print_num;
+            string history = "";
+            
+            bus1.print_num = tutoring1.print_num;
+            
+            bus1.subject = cbo_subject.Text;
+            history += bus1.subject + ":";
+            updateinfo(ref history, ref bus1.state, cbo_state.SelectedItem.ToString());
+            updateinfo(ref history, ref bus1.tutor_num, txt_tutor_num.Text.Trim());
+            updateinfo(ref history, ref bus1.tutor_name, txt_tutor_name.Text.Trim());
+            updateinfo(ref history, ref bus1.remarks, txt_remarks.Text.Trim());
+
+            /*bus.state = cbo_state.SelectedItem.ToString();
             bus.tutor_num = txt_tutor_num.Text.Trim();
             bus.tutor_name = txt_tutor_name.Text.Trim();
-            bus.subject = cbo_subject.Text;
-            bus.state = cbo_state.SelectedItem.ToString();
-            bus.time = DateTime.Now.ToString();
-            bus.remarks = txt_remark.Text.Trim();
-            bus.reception = "";
+            
+            bus.remarks = txt_remark.Text.Trim();*/
+            bus1.time = DateTime.Now.ToString();
+            bus1.reception = "";
             /*if (bus.state == "换人" || bus.state == "不请" || bus.state == "重请")
                 bus.now = "0";
             else
                 bus.now = "1";*/
-            bus.now = "1";
+            bus1.now = "1";
 
-            string mysql = "insert into business " + insert_business_str + " values " + bus.connectstr();
+            string mysql = "insert into business " + insert_business_str + " values " + bus1.connectstr();
             Console.WriteLine(mysql);
             DialogResult result = MessageBox.Show("确认办理？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.Cancel)
@@ -917,6 +990,9 @@ namespace New_TJ_Tutors_System
             {
                 try
                 {
+                    mydb.ExecuteNonQuery(mysql);
+                    mysql = string.Format("insert into history (user,optype,num,time,content) values ('{0}', '{1}', '{2}', '{3}','{4}')",
+                            user, "办理业务", tutoring1.print_num, DateTime.Now.ToString(), history);
                     mydb.ExecuteNonQuery(mysql);
                 }
                 catch (Exception ex)

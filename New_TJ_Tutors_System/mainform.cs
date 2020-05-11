@@ -17,7 +17,7 @@ namespace New_TJ_Tutors_System
 
         private bool dragging = false;
         private Point startpoint = new Point(0, 0);
-
+        public string username = objectclass.userinfo.username;
 
         public mainform()
         {
@@ -261,8 +261,36 @@ namespace New_TJ_Tutors_System
                 Location = new Point(p.X - this.startpoint.X, p.Y - this.startpoint.Y);
             }
         }
+
         #endregion
 
+        private void mainform_Load(object sender, EventArgs e)
+        {
+            commondb mydb = new commondb();
+            string mysql = "";
+            string name = "";
+            mysql = "select name from worker where worker_num='" + username + "'";
+            int count = mydb.Rownum(mysql);
+            if (count > 0)
+            {
+                name = mydb.Returnafield(mysql);
+                lbl_user_num.Text = username;
+                lbl_user_name.Text = name;
+                lbl_admin.Visible = false;
+            }
+            else
+            {            
+                lbl_user_num.Text = username;
+                lbl_user_name.Text = "";
+                lbl_admin.Visible = true;
+            }
+                
+        }
 
+        private void lbl_admin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            user myform = new user();
+            myform.ShowDialog();
+        }
     }
 }

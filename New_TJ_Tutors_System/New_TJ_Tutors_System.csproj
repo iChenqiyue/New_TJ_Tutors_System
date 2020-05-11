@@ -136,6 +136,12 @@
     <Compile Include="tutoring_info.Designer.cs">
       <DependentUpon>tutoring_info.cs</DependentUpon>
     </Compile>
+    <Compile Include="user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
     <Compile Include="worker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tutoring_info.resx">
       <DependentUpon>tutoring_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user.resx">
+      <DependentUpon>user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="worker.resx">
       <DependentUpon>worker.cs</DependentUpon>

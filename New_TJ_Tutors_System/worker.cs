@@ -21,6 +21,7 @@ namespace New_TJ_Tutors_System
         string select_worker_str = "select worker_num as 职员编号,name as 姓名,student_num as 学号,subject as 院系专业," +
             "sex as 性别,position as 职位,month_score as 本月积分,total_score as 累计积分,isleave as 是否离职 from worker ";
         string insert_worker_str = "(worker_num, name, sex, student_num, subject, phone, position, month_score, total_score,isleave)";
+        string select_history_str = "select user as 职工编号,optype as 操作类型,num as 打印编号,content as 内容,time as 时间 from history ";
         bool insertstate = false;
 
         public worker()
@@ -56,16 +57,22 @@ namespace New_TJ_Tutors_System
             txt_name_search.Text = "职工姓名";
             txt_stunum_search.Text = "学号";
             txt_phone_search.Text = "联系方式";
+            txt_print_num.Text = "打印编号";
+            txt_worker_num.Text = "职工编号";
+            ckb_time.Checked = false;
 
             dgvstyle.ColorDataGridView(dgv_search);
-            dgvstyle.ColorDataGridView(dgv_exist);
+            dgvstyle.ColorDataGridView(dgv_res);
 
-            dgv_exist.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
-
+            //dgv_res.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            
+            dgv_res.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_res.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgv_res.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             cbo_select.SelectedItem = "全部";
 
             datainit();
-
+            dgvhisfresh();
             //
             showworker();
         }
@@ -104,8 +111,6 @@ namespace New_TJ_Tutors_System
             worker1.month_score = info.Tables[0].Rows[0].ItemArray[7].ToString();        
             worker1.total_score = info.Tables[0].Rows[0].ItemArray[8].ToString();
             worker1.isleave = info.Tables[0].Rows[0].ItemArray[9].ToString();
-
-
 
         }
 
@@ -210,6 +215,56 @@ namespace New_TJ_Tutors_System
             }
         }
 
+
+
+        private void txt_print_num_Enter(object sender, EventArgs e)
+        {
+            if (txt_print_num.Text.Trim() == "打印编号")
+            {
+                txt_print_num.Text = "";
+            }
+        }
+
+        private void txt_print_num_Leave(object sender, EventArgs e)
+        {
+            if (txt_print_num.Text.Trim().Length == 0)
+            {
+                txt_print_num.Text = "打印编号";
+            }
+        }
+
+        private void txt_print_num_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsNumber(e.KeyChar)) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_worker_num_Enter(object sender, EventArgs e)
+        {
+            if (txt_worker_num.Text.Trim() == "职工编号")
+            {
+                txt_worker_num.Text = "";
+            }
+        }
+
+        private void txt_worker_num_Leave(object sender, EventArgs e)
+        {
+            if (txt_worker_num.Text.Trim().Length == 0)
+            {
+                txt_worker_num.Text = "职工编号";
+            }
+        }
+
+        private void txt_worker_num_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsNumber(e.KeyChar)) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
         #endregion
 
         #region 功能函数
@@ -247,6 +302,18 @@ namespace New_TJ_Tutors_System
             else { }
             
             dgvbind.dgvbind(dgv_search, mysql, tablename);
+        }
+
+        /// <summary>
+        /// 刷新表格
+        /// </summary>
+        public void dgvhisfresh()
+        {
+            string mysql = select_history_str+" order by time desc";
+            string tablename = "history";
+            Console.WriteLine(mysql);
+            dgvbind.dgvbind(dgv_res, mysql, tablename);
+            dgv_res.Columns[3].FillWeight = 250;
         }
 
         #endregion
@@ -415,7 +482,6 @@ namespace New_TJ_Tutors_System
             if (insertstate == true)
             {
                 mysql = "insert into worker " + insert_worker_str + " values " + worker1.connectstr();
-                Console.WriteLine(mysql);
                 DialogResult result = MessageBox.Show("确认新增职工信息？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Cancel)
                     return;
@@ -440,7 +506,6 @@ namespace New_TJ_Tutors_System
             else
             {
                 mysql = worker1.updatestr();
-                Console.WriteLine(mysql);
                 DialogResult result = MessageBox.Show("确认更新职工信息？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Cancel)
                     return;
@@ -464,7 +529,7 @@ namespace New_TJ_Tutors_System
         private void btn_delete_Click(object sender, EventArgs e)
         {
             string mysql = "";
-            mysql = "delete from worker where worker_num= " + worker1.worker_num;
+            mysql = "delete from worker where worker_num= '" + worker1.worker_num+"'";
             DialogResult result = MessageBox.Show("确认删除该条信息？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.Cancel)
                 return;
@@ -483,5 +548,43 @@ namespace New_TJ_Tutors_System
                 dgvfresh();
             }
         }
+
+        private void btn_research_Click(object sender, EventArgs e)
+        {
+            string mysql = "";
+            string tablename = "history";
+            string print_num = txt_print_num.Text.Trim();
+            string worker_num = txt_worker_num.Text.Trim();
+
+            if (print_num == "打印编号"  && worker_num == "职工编号"&&ckb_time.Checked==false)
+            {
+                mysql = select_history_str + "order by time desc";
+                dgvbind.dgvbind(dgv_res, mysql, tablename);
+                return;
+            }
+            string tempstr = "";
+            if (print_num != "打印编号")
+                tempstr = "num Like '%" + print_num + "%'";
+
+            if (worker_num != "职工编号")
+            {
+                if (tempstr == "")
+                    tempstr = "user Like '%" + worker_num + "%'";
+                else
+                    tempstr += " AND user Like '%" + worker_num + "%'";
+            }
+
+            if (ckb_time.Checked == true)
+            {
+                if (tempstr == "")
+                    tempstr += "time>'" + dt_from.Value.ToString() + "' and time<'" + dt_to.Value.ToString() + "'";
+                else
+                    tempstr += " and time>'" + dt_from.Value.ToString() + "' and time<'" + dt_to.Value.ToString() + "'";
+            }
+            mysql = select_history_str + "where " + tempstr + " order by time desc";
+            dgvbind.dgvbind(dgv_res, mysql, tablename);
+        }
+
+        
     }
 }

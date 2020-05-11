@@ -50,17 +50,18 @@
             this.btn_tutoring_search = new System.Windows.Forms.Button();
             this.btn_tutoring_info = new System.Windows.Forms.Button();
             this.panellogo = new System.Windows.Forms.Panel();
+            this.lbl_admin = new System.Windows.Forms.LinkLabel();
+            this.lbl_user_name = new System.Windows.Forms.Label();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbl_user_num = new System.Windows.Forms.Label();
             this.paneltutoring = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltitle = new System.Windows.Forms.Panel();
             this.btn_min = new System.Windows.Forms.Button();
             this.btn_max = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
             this.labeltitle = new System.Windows.Forms.Label();
-            this.lbl_user_num = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_logout = new System.Windows.Forms.Button();
-            this.lbl_user_name = new System.Windows.Forms.Label();
             this.panelmenu.SuspendLayout();
             this.panelemergency.SuspendLayout();
             this.panelhelpmenu.SuspendLayout();
@@ -68,10 +69,10 @@
             this.paneltutormenu.SuspendLayout();
             this.paneltutoringmenu.SuspendLayout();
             this.panellogo.SuspendLayout();
-            this.paneltutoring.SuspendLayout();
-            this.paneltitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.paneltutoring.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.paneltitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelmenu
@@ -398,6 +399,7 @@
             // 
             // panellogo
             // 
+            this.panellogo.Controls.Add(this.lbl_admin);
             this.panellogo.Controls.Add(this.lbl_user_name);
             this.panellogo.Controls.Add(this.btn_logout);
             this.panellogo.Controls.Add(this.pictureBox2);
@@ -408,15 +410,89 @@
             this.panellogo.Size = new System.Drawing.Size(220, 102);
             this.panellogo.TabIndex = 1;
             // 
+            // lbl_admin
+            // 
+            this.lbl_admin.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
+            this.lbl_admin.AutoSize = true;
+            this.lbl_admin.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbl_admin.LinkColor = System.Drawing.Color.White;
+            this.lbl_admin.Location = new System.Drawing.Point(103, 29);
+            this.lbl_admin.Name = "lbl_admin";
+            this.lbl_admin.Size = new System.Drawing.Size(88, 26);
+            this.lbl_admin.TabIndex = 64;
+            this.lbl_admin.TabStop = true;
+            this.lbl_admin.Text = "用户管理";
+            this.lbl_admin.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
+            this.lbl_admin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_admin_LinkClicked);
+            // 
+            // lbl_user_name
+            // 
+            this.lbl_user_name.AutoSize = true;
+            this.lbl_user_name.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_user_name.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_user_name.ForeColor = System.Drawing.Color.White;
+            this.lbl_user_name.Location = new System.Drawing.Point(103, 32);
+            this.lbl_user_name.Name = "lbl_user_name";
+            this.lbl_user_name.Size = new System.Drawing.Size(69, 26);
+            this.lbl_user_name.TabIndex = 63;
+            this.lbl_user_name.Text = "陈振华";
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
+            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_logout.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(0, 61);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(220, 41);
+            this.btn_logout.TabIndex = 62;
+            this.btn_logout.Text = "换班登出";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(31, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lbl_user_num
+            // 
+            this.lbl_user_num.AutoSize = true;
+            this.lbl_user_num.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_user_num.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_user_num.ForeColor = System.Drawing.Color.White;
+            this.lbl_user_num.Location = new System.Drawing.Point(103, 3);
+            this.lbl_user_num.Name = "lbl_user_num";
+            this.lbl_user_num.Size = new System.Drawing.Size(84, 26);
+            this.lbl_user_num.TabIndex = 60;
+            this.lbl_user_num.Text = "190031";
+            // 
             // paneltutoring
             // 
-            this.paneltutoring.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.paneltutoring.BackColor = System.Drawing.Color.White;
             this.paneltutoring.Controls.Add(this.pictureBox1);
             this.paneltutoring.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneltutoring.Location = new System.Drawing.Point(220, 56);
             this.paneltutoring.Name = "paneltutoring";
             this.paneltutoring.Size = new System.Drawing.Size(1170, 785);
             this.paneltutoring.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::New_TJ_Tutors_System.Properties.Resources.QQ图片20190223220706;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1170, 785);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // paneltitle
             // 
@@ -493,64 +569,6 @@
             this.labeltitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labeltitle_MouseMove);
             this.labeltitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.labeltitle_MouseUp);
             // 
-            // lbl_user_num
-            // 
-            this.lbl_user_num.AutoSize = true;
-            this.lbl_user_num.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_user_num.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_user_num.ForeColor = System.Drawing.Color.White;
-            this.lbl_user_num.Location = new System.Drawing.Point(103, 3);
-            this.lbl_user_num.Name = "lbl_user_num";
-            this.lbl_user_num.Size = new System.Drawing.Size(84, 26);
-            this.lbl_user_num.TabIndex = 60;
-            this.lbl_user_num.Text = "190031";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::New_TJ_Tutors_System.Properties.Resources.QQ图片20190223220706;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1170, 785);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(31, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 55);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 61;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
-            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_logout.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(0, 61);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(220, 41);
-            this.btn_logout.TabIndex = 62;
-            this.btn_logout.Text = "换班登出";
-            this.btn_logout.UseVisualStyleBackColor = false;
-            // 
-            // lbl_user_name
-            // 
-            this.lbl_user_name.AutoSize = true;
-            this.lbl_user_name.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_user_name.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_user_name.ForeColor = System.Drawing.Color.White;
-            this.lbl_user_name.Location = new System.Drawing.Point(103, 32);
-            this.lbl_user_name.Name = "lbl_user_name";
-            this.lbl_user_name.Size = new System.Drawing.Size(69, 26);
-            this.lbl_user_name.TabIndex = 63;
-            this.lbl_user_name.Text = "陈振华";
-            // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -565,6 +583,7 @@
             this.Name = "mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.mainform_Load);
             this.panelmenu.ResumeLayout(false);
             this.panelemergency.ResumeLayout(false);
             this.panelhelpmenu.ResumeLayout(false);
@@ -573,11 +592,11 @@
             this.paneltutoringmenu.ResumeLayout(false);
             this.panellogo.ResumeLayout(false);
             this.panellogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.paneltutoring.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.paneltitle.ResumeLayout(false);
             this.paneltitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -616,6 +635,7 @@
         private System.Windows.Forms.Label lbl_user_num;
         private System.Windows.Forms.Label lbl_user_name;
         private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.LinkLabel lbl_admin;
     }
 }
 
