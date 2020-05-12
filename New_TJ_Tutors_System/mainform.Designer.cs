@@ -129,7 +129,7 @@
             this.btn_emergency.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_emergency.FlatAppearance.BorderSize = 0;
             this.btn_emergency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_emergency.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_emergency.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_emergency.ForeColor = System.Drawing.Color.White;
             this.btn_emergency.Location = new System.Drawing.Point(0, 644);
             this.btn_emergency.Name = "btn_emergency";
@@ -230,7 +230,7 @@
             this.btn_help.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_help.FlatAppearance.BorderSize = 0;
             this.btn_help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_help.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_help.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_help.ForeColor = System.Drawing.Color.White;
             this.btn_help.Location = new System.Drawing.Point(0, 419);
             this.btn_help.Name = "btn_help";
@@ -275,7 +275,7 @@
             this.btn_worker.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_worker.FlatAppearance.BorderSize = 0;
             this.btn_worker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_worker.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_worker.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_worker.ForeColor = System.Drawing.Color.White;
             this.btn_worker.Location = new System.Drawing.Point(0, 327);
             this.btn_worker.Name = "btn_worker";
@@ -320,7 +320,7 @@
             this.btn_tutor_info.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_tutor_info.FlatAppearance.BorderSize = 0;
             this.btn_tutor_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_tutor_info.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_tutor_info.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_tutor_info.ForeColor = System.Drawing.Color.White;
             this.btn_tutor_info.Location = new System.Drawing.Point(0, 237);
             this.btn_tutor_info.Name = "btn_tutor_info";
@@ -385,7 +385,7 @@
             this.btn_tutoring_info.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_tutoring_info.FlatAppearance.BorderSize = 0;
             this.btn_tutoring_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_tutoring_info.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_tutoring_info.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_tutoring_info.ForeColor = System.Drawing.Color.White;
             this.btn_tutoring_info.Location = new System.Drawing.Point(0, 102);
             this.btn_tutoring_info.Name = "btn_tutoring_info";
@@ -421,7 +421,7 @@
             this.lbl_admin.Size = new System.Drawing.Size(88, 26);
             this.lbl_admin.TabIndex = 64;
             this.lbl_admin.TabStop = true;
-            this.lbl_admin.Text = "用户管理";
+            this.lbl_admin.Text = "系统设置";
             this.lbl_admin.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
             this.lbl_admin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_admin_LinkClicked);
             // 
@@ -449,6 +449,7 @@
             this.btn_logout.TabIndex = 62;
             this.btn_logout.Text = "换班登出";
             this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // pictureBox2
             // 

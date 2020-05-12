@@ -322,7 +322,7 @@ namespace New_TJ_Tutors_System
 
 
         #region 搜索和筛选
-        private void btn_search_Click(object sender, EventArgs e)
+        private void btn_workersearch_Click(object sender, EventArgs e)
         {
             string mysql = "";
             string tablename = "worker";

@@ -41,7 +41,7 @@ namespace New_TJ_Tutors_System
                 else
                 {
                     mysql = "select degree from user where username='"+ objectclass.userinfo.username + "'";
-                    string level = mydb.Returnafield(mysql);
+                    objectclass.userinfo.degree = mydb.Returnafield(mysql);
                     this.Hide();
                     Form myform = new mainform();
                     myform.Show();
@@ -57,7 +57,7 @@ namespace New_TJ_Tutors_System
 
         private void button_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btn_min_Click(object sender, EventArgs e)

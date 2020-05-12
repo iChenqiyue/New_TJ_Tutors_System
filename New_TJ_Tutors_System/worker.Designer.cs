@@ -63,26 +63,26 @@
             this.panelsearch = new System.Windows.Forms.Panel();
             this.gbo_search = new System.Windows.Forms.GroupBox();
             this.txt_num_search = new System.Windows.Forms.TextBox();
-            this.btn_search = new System.Windows.Forms.Button();
             this.txt_stunum_search = new System.Windows.Forms.TextBox();
             this.txt_phone_search = new System.Windows.Forms.TextBox();
+            this.btn_workersearch = new System.Windows.Forms.Button();
             this.txt_name_search = new System.Windows.Forms.TextBox();
             this.panelworker = new System.Windows.Forms.Panel();
             this.panselect1 = new System.Windows.Forms.Panel();
             this.btn_worker = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.panelright = new System.Windows.Forms.Panel();
             this.panelinfo = new System.Windows.Forms.Panel();
             this.dgv_res = new System.Windows.Forms.DataGridView();
             this.panelres = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_to = new System.Windows.Forms.Label();
+            this.txt_print_num = new System.Windows.Forms.TextBox();
             this.lbl_from = new System.Windows.Forms.Label();
             this.ckb_time = new System.Windows.Forms.CheckBox();
             this.dt_to = new System.Windows.Forms.DateTimePicker();
-            this.dt_from = new System.Windows.Forms.DateTimePicker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_print_num = new System.Windows.Forms.TextBox();
-            this.btn_research = new System.Windows.Forms.Button();
             this.txt_worker_num = new System.Windows.Forms.TextBox();
+            this.dt_from = new System.Windows.Forms.DateTimePicker();
             this.paneltop = new System.Windows.Forms.Panel();
             this.panel_tutor = new System.Windows.Forms.Panel();
             this.btn_worker_info = new System.Windows.Forms.Button();
@@ -496,7 +496,7 @@
             this.gbo_search.Controls.Add(this.txt_num_search);
             this.gbo_search.Controls.Add(this.txt_stunum_search);
             this.gbo_search.Controls.Add(this.txt_phone_search);
-            this.gbo_search.Controls.Add(this.btn_research);
+            this.gbo_search.Controls.Add(this.btn_workersearch);
             this.gbo_search.Controls.Add(this.txt_name_search);
             this.gbo_search.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gbo_search.ForeColor = System.Drawing.Color.White;
@@ -521,22 +521,6 @@
             this.txt_num_search.Enter += new System.EventHandler(this.txt_num_search_Enter);
             this.txt_num_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_num_search_KeyPress);
             this.txt_num_search.Leave += new System.EventHandler(this.txt_num_search_Leave);
-            // 
-            // btn_search
-            // 
-            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_search.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_search.ForeColor = System.Drawing.Color.White;
-            this.btn_search.Location = new System.Drawing.Point(393, 41);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(78, 35);
-            this.btn_search.TabIndex = 4;
-            this.btn_search.Text = "查询";
-            this.btn_search.UseVisualStyleBackColor = false;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_stunum_search
             // 
@@ -567,6 +551,22 @@
             this.txt_phone_search.Enter += new System.EventHandler(this.txt_phone_search_Enter);
             this.txt_phone_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phone_search_KeyPress);
             this.txt_phone_search.Leave += new System.EventHandler(this.txt_phone_search_Leave);
+            // 
+            // btn_workersearch
+            // 
+            this.btn_workersearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_workersearch.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_workersearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_workersearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_workersearch.ForeColor = System.Drawing.Color.White;
+            this.btn_workersearch.Location = new System.Drawing.Point(397, 35);
+            this.btn_workersearch.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btn_workersearch.Name = "btn_workersearch";
+            this.btn_workersearch.Size = new System.Drawing.Size(78, 54);
+            this.btn_workersearch.TabIndex = 4;
+            this.btn_workersearch.Text = "查询";
+            this.btn_workersearch.UseVisualStyleBackColor = false;
+            this.btn_workersearch.Click += new System.EventHandler(this.btn_workersearch_Click);
             // 
             // txt_name_search
             // 
@@ -616,6 +616,22 @@
             this.btn_worker.Text = "职工信息";
             this.btn_worker.UseVisualStyleBackColor = false;
             // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_search.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_search.ForeColor = System.Drawing.Color.White;
+            this.btn_search.Location = new System.Drawing.Point(393, 40);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(78, 39);
+            this.btn_search.TabIndex = 4;
+            this.btn_search.Text = "查询";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_research_Click);
+            // 
             // panelright
             // 
             this.panelright.Controls.Add(this.panelinfo);
@@ -657,6 +673,25 @@
             this.panelres.Size = new System.Drawing.Size(579, 169);
             this.panelres.TabIndex = 11;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbl_to);
+            this.groupBox1.Controls.Add(this.btn_search);
+            this.groupBox1.Controls.Add(this.txt_print_num);
+            this.groupBox1.Controls.Add(this.lbl_from);
+            this.groupBox1.Controls.Add(this.ckb_time);
+            this.groupBox1.Controls.Add(this.dt_to);
+            this.groupBox1.Controls.Add(this.txt_worker_num);
+            this.groupBox1.Controls.Add(this.dt_from);
+            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(48, -3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(496, 158);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "搜索";
+            // 
             // lbl_to
             // 
             this.lbl_to.AutoSize = true;
@@ -667,6 +702,21 @@
             this.lbl_to.Size = new System.Drawing.Size(28, 19);
             this.lbl_to.TabIndex = 50;
             this.lbl_to.Text = "To";
+            // 
+            // txt_print_num
+            // 
+            this.txt_print_num.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
+            this.txt_print_num.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_print_num.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_print_num.ForeColor = System.Drawing.Color.Gray;
+            this.txt_print_num.Location = new System.Drawing.Point(25, 45);
+            this.txt_print_num.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
+            this.txt_print_num.Name = "txt_print_num";
+            this.txt_print_num.Size = new System.Drawing.Size(179, 27);
+            this.txt_print_num.TabIndex = 0;
+            this.txt_print_num.Enter += new System.EventHandler(this.txt_print_num_Enter);
+            this.txt_print_num.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_print_num_KeyPress);
+            this.txt_print_num.Leave += new System.EventHandler(this.txt_print_num_Leave);
             // 
             // lbl_from
             // 
@@ -684,7 +734,7 @@
             this.ckb_time.AutoSize = true;
             this.ckb_time.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ckb_time.ForeColor = System.Drawing.Color.White;
-            this.ckb_time.Location = new System.Drawing.Point(390, 122);
+            this.ckb_time.Location = new System.Drawing.Point(391, 121);
             this.ckb_time.Name = "ckb_time";
             this.ckb_time.Size = new System.Drawing.Size(91, 23);
             this.ckb_time.TabIndex = 9;
@@ -698,64 +748,6 @@
             this.dt_to.Name = "dt_to";
             this.dt_to.Size = new System.Drawing.Size(179, 27);
             this.dt_to.TabIndex = 8;
-            // 
-            // dt_from
-            // 
-            this.dt_from.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dt_from.Location = new System.Drawing.Point(25, 118);
-            this.dt_from.Name = "dt_from";
-            this.dt_from.Size = new System.Drawing.Size(179, 27);
-            this.dt_from.TabIndex = 7;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lbl_to);
-            this.groupBox1.Controls.Add(this.btn_search);
-            this.groupBox1.Controls.Add(this.txt_print_num);
-            this.groupBox1.Controls.Add(this.lbl_from);
-            this.groupBox1.Controls.Add(this.ckb_time);
-            this.groupBox1.Controls.Add(this.dt_to);
-            this.groupBox1.Controls.Add(this.txt_worker_num);
-            this.groupBox1.Controls.Add(this.dt_from);
-            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(48, -3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(483, 158);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "搜索";
-            // 
-            // txt_print_num
-            // 
-            this.txt_print_num.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
-            this.txt_print_num.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_print_num.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_print_num.ForeColor = System.Drawing.Color.Gray;
-            this.txt_print_num.Location = new System.Drawing.Point(25, 45);
-            this.txt_print_num.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
-            this.txt_print_num.Name = "txt_print_num";
-            this.txt_print_num.Size = new System.Drawing.Size(179, 27);
-            this.txt_print_num.TabIndex = 0;
-            this.txt_print_num.Enter += new System.EventHandler(this.txt_print_num_Enter);
-            this.txt_print_num.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_print_num_KeyPress);
-            this.txt_print_num.Leave += new System.EventHandler(this.txt_print_num_Leave);
-            // 
-            // btn_research
-            // 
-            this.btn_research.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_research.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_research.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_research.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_research.ForeColor = System.Drawing.Color.White;
-            this.btn_research.Location = new System.Drawing.Point(397, 35);
-            this.btn_research.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btn_research.Name = "btn_research";
-            this.btn_research.Size = new System.Drawing.Size(78, 54);
-            this.btn_research.TabIndex = 4;
-            this.btn_research.Text = "查询";
-            this.btn_research.UseVisualStyleBackColor = false;
-            this.btn_research.Click += new System.EventHandler(this.btn_research_Click);
             // 
             // txt_worker_num
             // 
@@ -771,6 +763,14 @@
             this.txt_worker_num.Enter += new System.EventHandler(this.txt_worker_num_Enter);
             this.txt_worker_num.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_worker_num_KeyPress);
             this.txt_worker_num.Leave += new System.EventHandler(this.txt_worker_num_Leave);
+            // 
+            // dt_from
+            // 
+            this.dt_from.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dt_from.Location = new System.Drawing.Point(25, 118);
+            this.dt_from.Name = "dt_from";
+            this.dt_from.Size = new System.Drawing.Size(179, 27);
+            this.dt_from.TabIndex = 7;
             // 
             // paneltop
             // 
@@ -898,7 +898,7 @@
         private System.Windows.Forms.DateTimePicker dt_from;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_print_num;
-        private System.Windows.Forms.Button btn_research;
+        private System.Windows.Forms.Button btn_workersearch;
         private System.Windows.Forms.TextBox txt_worker_num;
     }
 }

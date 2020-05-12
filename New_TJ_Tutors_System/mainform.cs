@@ -18,6 +18,7 @@ namespace New_TJ_Tutors_System
         private bool dragging = false;
         private Point startpoint = new Point(0, 0);
         public string username = objectclass.userinfo.username;
+        private string degree = objectclass.userinfo.degree;
 
         public mainform()
         {
@@ -133,9 +134,29 @@ namespace New_TJ_Tutors_System
 
         private void btn_worker_search_Click(object sender, EventArgs e)
         {
-            openchidform(new worker());
+            if(degree=="管理员")
+                openchidform(new worker());
+            else
+            {
+                pwdinput myform = new pwdinput();
+                myform.admincheck += new admincheckHandler(admincheck);
+                myform.ShowDialog();
+            }
             /**/
             //hidesubmenu();
+        }
+        /// <summary>
+        /// 返回是否有权限
+        /// </summary>
+        /// <param name="is_admin"></param>
+        public void admincheck(bool is_admin)
+        {
+            if(is_admin==true)
+                openchidform(new worker());
+            else
+            {
+                MessageBox.Show("密码错误，权限不足！", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btn_worker_add_Click(object sender, EventArgs e)
@@ -270,27 +291,52 @@ namespace New_TJ_Tutors_System
             string mysql = "";
             string name = "";
             mysql = "select name from worker where worker_num='" + username + "'";
-            int count = mydb.Rownum(mysql);
-            if (count > 0)
+            int count = 0;
+            try
             {
-                name = mydb.Returnafield(mysql);
-                lbl_user_num.Text = username;
-                lbl_user_name.Text = name;
-                lbl_admin.Visible = false;
+                count = mydb.Rownum(mysql);
+                if (count > 0)
+                {
+
+                    name = mydb.Returnafield(mysql);
+                    lbl_user_num.Text = username;
+                    lbl_user_name.Text = name;
+                    lbl_admin.Visible = false;
+                }
+                if (degree == "管理员")
+                {
+                    lbl_user_num.Text = username;
+                    lbl_user_name.Text = "";
+                    lbl_admin.Visible = true;
+                }
             }
-            else
-            {            
-                lbl_user_num.Text = username;
-                lbl_user_name.Text = "";
-                lbl_admin.Visible = true;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "操作数据库出错！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
-                
+                       
+
         }
 
         private void lbl_admin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             user myform = new user();
             myform.ShowDialog();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确认换班？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.Cancel)
+                return;
+            else
+            {
+                MessageBox.Show("登出成功！", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                login myform = new login();               
+                myform.Show();
+                this.Close();
+            }
         }
     }
 }

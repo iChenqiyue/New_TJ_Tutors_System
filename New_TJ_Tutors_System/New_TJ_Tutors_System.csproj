@@ -96,6 +96,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="pwdinput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pwdinput.Designer.cs">
+      <DependentUpon>pwdinput.cs</DependentUpon>
+    </Compile>
     <Compile Include="styleinit.cs" />
     <Compile Include="objectclass.cs" />
     <Compile Include="tutor_search.cs">
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="progress.resx">
       <DependentUpon>progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pwdinput.resx">
+      <DependentUpon>pwdinput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tutor_search.resx">
       <DependentUpon>tutor_search.cs</DependentUpon>

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tutoring_all));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.paneleft = new System.Windows.Forms.Panel();
             this.panel_searchresult = new System.Windows.Forms.Panel();
             this.dgv_search = new System.Windows.Forms.DataGridView();
@@ -109,10 +109,10 @@
             this.lbl_remark = new System.Windows.Forms.Label();
             this.txt_tutor_num = new System.Windows.Forms.TextBox();
             this.lbl_tutor_num = new System.Windows.Forms.Label();
-            this.lbl_tutor_name = new System.Windows.Forms.Label();
             this.lbl_state = new System.Windows.Forms.Label();
             this.txt_tutor_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbl_tutor_name = new System.Windows.Forms.Label();
             this.panelstate = new System.Windows.Forms.Panel();
             this.gpo_state = new System.Windows.Forms.GroupBox();
             this.cbo_tutor_state = new System.Windows.Forms.ComboBox();
@@ -141,7 +141,6 @@
             this.txt_important_remarks = new System.Windows.Forms.TextBox();
             this.lbl_important_remarks = new System.Windows.Forms.Label();
             this.txttutorphone = new System.Windows.Forms.TextBox();
-            this.lbltutorphone = new System.Windows.Forms.Label();
             this.cbo_degree = new System.Windows.Forms.ComboBox();
             this.lbl_degree = new System.Windows.Forms.Label();
             this.rdotutorwoman = new System.Windows.Forms.RadioButton();
@@ -156,6 +155,7 @@
             this.lbl_student_name = new System.Windows.Forms.Label();
             this.txt_num = new System.Windows.Forms.TextBox();
             this.lbl_num = new System.Windows.Forms.Label();
+            this.lbltutorphone = new System.Windows.Forms.Label();
             this.dgv_tutoring = new System.Windows.Forms.DataGridView();
             this.paneltutor = new System.Windows.Forms.Panel();
             this.paneleft.SuspendLayout();
@@ -213,14 +213,14 @@
             this.dgv_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_search.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_search.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_search.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_search.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_search.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_search.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_search.EnableHeadersVisualStyles = false;
@@ -229,12 +229,12 @@
             this.dgv_search.Name = "dgv_search";
             this.dgv_search.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_search.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(61)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_search.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(61)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_search.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_search.RowTemplate.Height = 27;
             this.dgv_search.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_search.Size = new System.Drawing.Size(591, 616);
@@ -427,8 +427,8 @@
             // 
             // panelright
             // 
-            this.panelright.Controls.Add(this.panelinfo);
             this.panelright.Controls.Add(this.panelbuss);
+            this.panelright.Controls.Add(this.panelinfo);
             this.panelright.Controls.Add(this.paneltitle);
             this.panelright.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelright.Location = new System.Drawing.Point(591, 0);
@@ -1011,27 +1011,27 @@
             this.dgv_done.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_done.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_done.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_done.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_done.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_done.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_done.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_done.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv_done.Location = new System.Drawing.Point(0, 484);
+            this.dgv_done.Location = new System.Drawing.Point(0, 451);
             this.dgv_done.Name = "dgv_done";
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_done.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_done.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_done.RowTemplate.Height = 27;
-            this.dgv_done.Size = new System.Drawing.Size(579, 265);
+            this.dgv_done.Size = new System.Drawing.Size(579, 298);
             this.dgv_done.TabIndex = 69;
             this.dgv_done.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_done_CellClick);
             // 
@@ -1044,7 +1044,7 @@
             this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltop.Location = new System.Drawing.Point(0, 0);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(579, 484);
+            this.paneltop.Size = new System.Drawing.Size(579, 451);
             this.paneltop.TabIndex = 68;
             // 
             // dgv_subject
@@ -1055,7 +1055,7 @@
             this.dgv_subject.Location = new System.Drawing.Point(0, 165);
             this.dgv_subject.Name = "dgv_subject";
             this.dgv_subject.RowTemplate.Height = 27;
-            this.dgv_subject.Size = new System.Drawing.Size(281, 319);
+            this.dgv_subject.Size = new System.Drawing.Size(281, 286);
             this.dgv_subject.TabIndex = 66;
             this.dgv_subject.SelectionChanged += new System.EventHandler(this.dgv_subject_SelectionChanged);
             // 
@@ -1076,16 +1076,17 @@
             this.panelbus.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelbus.Location = new System.Drawing.Point(281, 165);
             this.panelbus.Name = "panelbus";
-            this.panelbus.Size = new System.Drawing.Size(298, 319);
+            this.panelbus.Size = new System.Drawing.Size(298, 286);
             this.panelbus.TabIndex = 81;
             // 
             // cbo_subject
             // 
             this.cbo_subject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_subject.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_subject.FormattingEnabled = true;
             this.cbo_subject.Location = new System.Drawing.Point(29, 38);
             this.cbo_subject.Name = "cbo_subject";
-            this.cbo_subject.Size = new System.Drawing.Size(114, 23);
+            this.cbo_subject.Size = new System.Drawing.Size(114, 28);
             this.cbo_subject.TabIndex = 80;
             // 
             // panelbutton
@@ -1093,7 +1094,7 @@
             this.panelbutton.Controls.Add(this.btn_bus);
             this.panelbutton.Controls.Add(this.btn_searchtutor);
             this.panelbutton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelbutton.Location = new System.Drawing.Point(0, 279);
+            this.panelbutton.Location = new System.Drawing.Point(0, 246);
             this.panelbutton.Name = "panelbutton";
             this.panelbutton.Size = new System.Drawing.Size(298, 40);
             this.panelbutton.TabIndex = 79;
@@ -1131,6 +1132,7 @@
             // cbo_state
             // 
             this.cbo_state.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_state.FormattingEnabled = true;
             this.cbo_state.Items.AddRange(new object[] {
             "接入",
@@ -1141,12 +1143,13 @@
             "重请"});
             this.cbo_state.Location = new System.Drawing.Point(166, 37);
             this.cbo_state.Name = "cbo_state";
-            this.cbo_state.Size = new System.Drawing.Size(114, 23);
+            this.cbo_state.Size = new System.Drawing.Size(114, 28);
             this.cbo_state.TabIndex = 53;
             // 
             // txt_remark
             // 
-            this.txt_remark.Location = new System.Drawing.Point(29, 146);
+            this.txt_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_remark.Location = new System.Drawing.Point(29, 139);
             this.txt_remark.Multiline = true;
             this.txt_remark.Name = "txt_remark";
             this.txt_remark.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1158,7 +1161,7 @@
             this.lbl_remark.AutoSize = true;
             this.lbl_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_remark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_remark.Location = new System.Drawing.Point(25, 124);
+            this.lbl_remark.Location = new System.Drawing.Point(25, 117);
             this.lbl_remark.Name = "lbl_remark";
             this.lbl_remark.Size = new System.Drawing.Size(39, 19);
             this.lbl_remark.TabIndex = 51;
@@ -1166,10 +1169,11 @@
             // 
             // txt_tutor_num
             // 
+            this.txt_tutor_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txt_tutor_num.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txt_tutor_num.Location = new System.Drawing.Point(29, 90);
             this.txt_tutor_num.Name = "txt_tutor_num";
-            this.txt_tutor_num.Size = new System.Drawing.Size(114, 25);
+            this.txt_tutor_num.Size = new System.Drawing.Size(114, 27);
             this.txt_tutor_num.TabIndex = 50;
             // 
             // lbl_tutor_num
@@ -1182,17 +1186,6 @@
             this.lbl_tutor_num.Size = new System.Drawing.Size(69, 19);
             this.lbl_tutor_num.TabIndex = 45;
             this.lbl_tutor_num.Text = "教员编号";
-            // 
-            // lbl_tutor_name
-            // 
-            this.lbl_tutor_name.AutoSize = true;
-            this.lbl_tutor_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_tutor_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_tutor_name.Location = new System.Drawing.Point(163, 70);
-            this.lbl_tutor_name.Name = "lbl_tutor_name";
-            this.lbl_tutor_name.Size = new System.Drawing.Size(69, 19);
-            this.lbl_tutor_name.TabIndex = 46;
-            this.lbl_tutor_name.Text = "教员姓名";
             // 
             // lbl_state
             // 
@@ -1207,10 +1200,11 @@
             // 
             // txt_tutor_name
             // 
+            this.txt_tutor_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txt_tutor_name.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txt_tutor_name.Location = new System.Drawing.Point(166, 90);
             this.txt_tutor_name.Name = "txt_tutor_name";
-            this.txt_tutor_name.Size = new System.Drawing.Size(114, 25);
+            this.txt_tutor_name.Size = new System.Drawing.Size(114, 27);
             this.txt_tutor_name.TabIndex = 47;
             // 
             // label1
@@ -1223,6 +1217,17 @@
             this.label1.Size = new System.Drawing.Size(39, 19);
             this.label1.TabIndex = 43;
             this.label1.Text = "科目";
+            // 
+            // lbl_tutor_name
+            // 
+            this.lbl_tutor_name.AutoSize = true;
+            this.lbl_tutor_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_tutor_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.lbl_tutor_name.Location = new System.Drawing.Point(163, 70);
+            this.lbl_tutor_name.Name = "lbl_tutor_name";
+            this.lbl_tutor_name.Size = new System.Drawing.Size(69, 19);
+            this.lbl_tutor_name.TabIndex = 46;
+            this.lbl_tutor_name.Text = "教员姓名";
             // 
             // panelstate
             // 
@@ -1579,16 +1584,6 @@
             this.txttutorphone.Size = new System.Drawing.Size(200, 27);
             this.txttutorphone.TabIndex = 38;
             // 
-            // lbltutorphone
-            // 
-            this.lbltutorphone.AutoSize = true;
-            this.lbltutorphone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.lbltutorphone.Location = new System.Drawing.Point(84, 183);
-            this.lbltutorphone.Name = "lbltutorphone";
-            this.lbltutorphone.Size = new System.Drawing.Size(69, 19);
-            this.lbltutorphone.TabIndex = 37;
-            this.lbltutorphone.Text = "联系电话";
-            // 
             // cbo_degree
             // 
             this.cbo_degree.DisplayMember = "姓名";
@@ -1731,6 +1726,16 @@
             this.lbl_num.Size = new System.Drawing.Size(69, 19);
             this.lbl_num.TabIndex = 24;
             this.lbl_num.Text = "教员编号";
+            // 
+            // lbltutorphone
+            // 
+            this.lbltutorphone.AutoSize = true;
+            this.lbltutorphone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbltutorphone.Location = new System.Drawing.Point(84, 183);
+            this.lbltutorphone.Name = "lbltutorphone";
+            this.lbltutorphone.Size = new System.Drawing.Size(69, 19);
+            this.lbltutorphone.TabIndex = 37;
+            this.lbltutorphone.Text = "联系电话";
             // 
             // dgv_tutoring
             // 

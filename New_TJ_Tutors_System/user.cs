@@ -15,7 +15,7 @@ namespace New_TJ_Tutors_System
         styleinit dgvstyle = new styleinit();
         databind dgvbind = new databind();
         commondb mydb = new commondb();
-        private string username="";
+        private string username = "";
         private string password = "";
         private string level = "";
         private string select_user_str = "select username as 用户名,password as 密码,degree as 级别 from user order by degree,username desc";
@@ -40,8 +40,8 @@ namespace New_TJ_Tutors_System
         }
         public void datainit()
         {
-            username= dgv_user.SelectedRows[0].Cells[0].Value.ToString();
-            password=dgv_user.SelectedRows[0].Cells[1].Value.ToString();
+            username = dgv_user.SelectedRows[0].Cells[0].Value.ToString();
+            password = dgv_user.SelectedRows[0].Cells[1].Value.ToString();
             level = dgv_user.SelectedRows[0].Cells[2].Value.ToString();
         }
 
@@ -95,7 +95,7 @@ namespace New_TJ_Tutors_System
 
             if (dgv_user.SelectedRows.Count > 0)
                 dgv_user.SelectedRows[0].Selected = false;
-            
+
             insertstate = true;
             username = "";
             password = "";
@@ -107,7 +107,7 @@ namespace New_TJ_Tutors_System
         {
             //封装数组
             TextBox[] txt = { txt_username, txt_password };
-            string[] message = { "用户名", "密码"};
+            string[] message = { "用户名", "密码" };
             string mysql = "";
 
             //操作提示
@@ -123,11 +123,11 @@ namespace New_TJ_Tutors_System
             username = txt_username.Text.Trim();
             password = txt_password.Text.Trim();
             level = cbo_degree.SelectedItem.ToString();
-           
+
             //插入新信息
             if (insertstate == true)
             {
-                mysql = string.Format("insert into user (username,password,degree) values ('{0}','{1}','{2}')",username,password,level);
+                mysql = string.Format("insert into user (username,password,degree) values ('{0}','{1}','{2}')", username, password, level);
                 DialogResult result = MessageBox.Show("确认新增？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Cancel)
                     return;
@@ -175,7 +175,7 @@ namespace New_TJ_Tutors_System
         private void btn_delete_Click(object sender, EventArgs e)
         {
             string mysql = "";
-            mysql = "delete from user where username= '" + username+"'";
+            mysql = "delete from user where username= '" + username + "'";
             DialogResult result = MessageBox.Show("确认删除？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.Cancel)
                 return;
@@ -232,6 +232,41 @@ namespace New_TJ_Tutors_System
             {
                 Point p = PointToScreen(e.Location);
                 Location = new Point(p.X - this.startpoint.X, p.Y - this.startpoint.Y);
+            }
+        }
+
+        private void btn_user_Click(object sender, EventArgs e)
+        {
+            paneluser.Visible = true;
+            panelsettings.Visible = false;
+
+        }
+
+        private void btn_other_Click(object sender, EventArgs e)
+        {
+            paneluser.Visible = false;
+            panelsettings.Visible = true;
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            string mysql = "";
+            mysql = "update worker set month_score = 0 where worker_num in (select worker_num from(select worker_num from worker)as a)";
+            DialogResult result = MessageBox.Show("确认清空？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.Cancel)
+                return;
+            else
+            {
+                try
+                {
+                    mydb.ExecuteNonQuery(mysql);
+                    MessageBox.Show("清空成功！", "操作提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "操作数据库出错！", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
             }
         }
     }
