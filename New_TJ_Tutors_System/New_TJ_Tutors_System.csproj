@@ -77,6 +77,12 @@
       <DependentUpon>bussiness.cs</DependentUpon>
     </Compile>
     <Compile Include="commondb.cs" />
+    <Compile Include="database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="database.Designer.cs">
+      <DependentUpon>database.cs</DependentUpon>
+    </Compile>
     <Compile Include="databind.cs" />
     <Compile Include="exporttoexcel.cs" />
     <Compile Include="login.cs">
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="bussiness.resx">
       <DependentUpon>bussiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="database.resx">
+      <DependentUpon>database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

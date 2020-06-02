@@ -49,6 +49,31 @@
             this.txt_phone_search = new System.Windows.Forms.TextBox();
             this.txt_print_search = new System.Windows.Forms.TextBox();
             this.panelright = new System.Windows.Forms.Panel();
+            this.panelbuss = new System.Windows.Forms.Panel();
+            this.dgv_done = new System.Windows.Forms.DataGridView();
+            this.paneltop = new System.Windows.Forms.Panel();
+            this.dgv_subject = new System.Windows.Forms.DataGridView();
+            this.panelbus = new System.Windows.Forms.Panel();
+            this.cbo_subject = new System.Windows.Forms.ComboBox();
+            this.panelbutton = new System.Windows.Forms.Panel();
+            this.btn_bus = new System.Windows.Forms.Button();
+            this.btn_searchtutor = new System.Windows.Forms.Button();
+            this.cbo_state = new System.Windows.Forms.ComboBox();
+            this.txt_remark = new System.Windows.Forms.TextBox();
+            this.lbl_remark = new System.Windows.Forms.Label();
+            this.txt_tutor_num = new System.Windows.Forms.TextBox();
+            this.lbl_tutor_num = new System.Windows.Forms.Label();
+            this.lbl_state = new System.Windows.Forms.Label();
+            this.txt_tutor_name = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_tutor_name = new System.Windows.Forms.Label();
+            this.panelstate = new System.Windows.Forms.Panel();
+            this.gpo_state = new System.Windows.Forms.GroupBox();
+            this.cbo_tutor_state = new System.Windows.Forms.ComboBox();
+            this.txt_remarks = new System.Windows.Forms.TextBox();
+            this.lbl_tutor_state = new System.Windows.Forms.Label();
+            this.lbl_remarks = new System.Windows.Forms.Label();
+            this.btn_save_buss = new System.Windows.Forms.Button();
             this.panelinfo = new System.Windows.Forms.Panel();
             this.gbo_request = new System.Windows.Forms.GroupBox();
             this.txt_place = new System.Windows.Forms.TextBox();
@@ -95,31 +120,6 @@
             this.cbo_payment_state = new System.Windows.Forms.ComboBox();
             this.lbl_payment_state = new System.Windows.Forms.Label();
             this.lbl_payment_time = new System.Windows.Forms.Label();
-            this.panelbuss = new System.Windows.Forms.Panel();
-            this.dgv_done = new System.Windows.Forms.DataGridView();
-            this.paneltop = new System.Windows.Forms.Panel();
-            this.dgv_subject = new System.Windows.Forms.DataGridView();
-            this.panelbus = new System.Windows.Forms.Panel();
-            this.cbo_subject = new System.Windows.Forms.ComboBox();
-            this.panelbutton = new System.Windows.Forms.Panel();
-            this.btn_bus = new System.Windows.Forms.Button();
-            this.btn_searchtutor = new System.Windows.Forms.Button();
-            this.cbo_state = new System.Windows.Forms.ComboBox();
-            this.txt_remark = new System.Windows.Forms.TextBox();
-            this.lbl_remark = new System.Windows.Forms.Label();
-            this.txt_tutor_num = new System.Windows.Forms.TextBox();
-            this.lbl_tutor_num = new System.Windows.Forms.Label();
-            this.lbl_state = new System.Windows.Forms.Label();
-            this.txt_tutor_name = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_tutor_name = new System.Windows.Forms.Label();
-            this.panelstate = new System.Windows.Forms.Panel();
-            this.gpo_state = new System.Windows.Forms.GroupBox();
-            this.cbo_tutor_state = new System.Windows.Forms.ComboBox();
-            this.txt_remarks = new System.Windows.Forms.TextBox();
-            this.lbl_tutor_state = new System.Windows.Forms.Label();
-            this.lbl_remarks = new System.Windows.Forms.Label();
-            this.btn_save_buss = new System.Windows.Forms.Button();
             this.paneltitle = new System.Windows.Forms.Panel();
             this.panel_tutor = new System.Windows.Forms.Panel();
             this.panel_buss = new System.Windows.Forms.Panel();
@@ -165,9 +165,6 @@
             this.panelsearch.SuspendLayout();
             this.gbo_search.SuspendLayout();
             this.panelright.SuspendLayout();
-            this.panelinfo.SuspendLayout();
-            this.gbo_request.SuspendLayout();
-            this.gpo_info.SuspendLayout();
             this.panelbuss.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_done)).BeginInit();
             this.paneltop.SuspendLayout();
@@ -176,6 +173,9 @@
             this.panelbutton.SuspendLayout();
             this.panelstate.SuspendLayout();
             this.gpo_state.SuspendLayout();
+            this.panelinfo.SuspendLayout();
+            this.gbo_request.SuspendLayout();
+            this.gpo_info.SuspendLayout();
             this.paneltitle.SuspendLayout();
             this.pantop.SuspendLayout();
             this.pantutor.SuspendLayout();
@@ -195,7 +195,7 @@
             this.paneleft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneleft.Location = new System.Drawing.Point(0, 0);
             this.paneleft.Name = "paneleft";
-            this.paneleft.Size = new System.Drawing.Size(591, 785);
+            this.paneleft.Size = new System.Drawing.Size(12, 785);
             this.paneleft.TabIndex = 0;
             // 
             // panel_searchresult
@@ -204,7 +204,7 @@
             this.panel_searchresult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_searchresult.Location = new System.Drawing.Point(0, 169);
             this.panel_searchresult.Name = "panel_searchresult";
-            this.panel_searchresult.Size = new System.Drawing.Size(591, 616);
+            this.panel_searchresult.Size = new System.Drawing.Size(12, 616);
             this.panel_searchresult.TabIndex = 12;
             // 
             // dgv_search
@@ -229,6 +229,7 @@
             this.dgv_search.Name = "dgv_search";
             this.dgv_search.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_search.RowHeadersVisible = false;
+            this.dgv_search.RowHeadersWidth = 51;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(61)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
@@ -237,7 +238,7 @@
             this.dgv_search.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_search.RowTemplate.Height = 27;
             this.dgv_search.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_search.Size = new System.Drawing.Size(591, 616);
+            this.dgv_search.Size = new System.Drawing.Size(12, 616);
             this.dgv_search.TabIndex = 0;
             this.dgv_search.SelectionChanged += new System.EventHandler(this.dgv_search_SelectionChanged);
             // 
@@ -251,7 +252,7 @@
             this.panelop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelop.Location = new System.Drawing.Point(0, 119);
             this.panelop.Name = "panelop";
-            this.panelop.Size = new System.Drawing.Size(591, 50);
+            this.panelop.Size = new System.Drawing.Size(12, 50);
             this.panelop.TabIndex = 11;
             // 
             // lbl_select
@@ -331,11 +332,12 @@
             this.panelsearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelsearch.Location = new System.Drawing.Point(0, 0);
             this.panelsearch.Name = "panelsearch";
-            this.panelsearch.Size = new System.Drawing.Size(591, 119);
+            this.panelsearch.Size = new System.Drawing.Size(12, 119);
             this.panelsearch.TabIndex = 10;
             // 
             // gbo_search
             // 
+            this.gbo_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbo_search.Controls.Add(this.txt_parent_search);
             this.gbo_search.Controls.Add(this.btn_search);
             this.gbo_search.Controls.Add(this.txt_address_search);
@@ -343,7 +345,7 @@
             this.gbo_search.Controls.Add(this.txt_print_search);
             this.gbo_search.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gbo_search.ForeColor = System.Drawing.Color.White;
-            this.gbo_search.Location = new System.Drawing.Point(12, 5);
+            this.gbo_search.Location = new System.Drawing.Point(-235, 4);
             this.gbo_search.Name = "gbo_search";
             this.gbo_search.Size = new System.Drawing.Size(483, 111);
             this.gbo_search.TabIndex = 5;
@@ -435,6 +437,336 @@
             this.panelright.Name = "panelright";
             this.panelright.Size = new System.Drawing.Size(579, 785);
             this.panelright.TabIndex = 1;
+            // 
+            // panelbuss
+            // 
+            this.panelbuss.Controls.Add(this.dgv_done);
+            this.panelbuss.Controls.Add(this.paneltop);
+            this.panelbuss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelbuss.Location = new System.Drawing.Point(0, 36);
+            this.panelbuss.Name = "panelbuss";
+            this.panelbuss.Size = new System.Drawing.Size(579, 749);
+            this.panelbuss.TabIndex = 108;
+            // 
+            // dgv_done
+            // 
+            this.dgv_done.AllowUserToDeleteRows = false;
+            this.dgv_done.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_done.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_done.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_done.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_done.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_done.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_done.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgv_done.Location = new System.Drawing.Point(0, 451);
+            this.dgv_done.Name = "dgv_done";
+            this.dgv_done.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_done.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_done.RowTemplate.Height = 27;
+            this.dgv_done.Size = new System.Drawing.Size(579, 298);
+            this.dgv_done.TabIndex = 69;
+            this.dgv_done.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_done_CellClick);
+            // 
+            // paneltop
+            // 
+            this.paneltop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.paneltop.Controls.Add(this.dgv_subject);
+            this.paneltop.Controls.Add(this.panelbus);
+            this.paneltop.Controls.Add(this.panelstate);
+            this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneltop.Location = new System.Drawing.Point(0, 0);
+            this.paneltop.Name = "paneltop";
+            this.paneltop.Size = new System.Drawing.Size(579, 451);
+            this.paneltop.TabIndex = 68;
+            // 
+            // dgv_subject
+            // 
+            this.dgv_subject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgv_subject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_subject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_subject.Location = new System.Drawing.Point(0, 165);
+            this.dgv_subject.Name = "dgv_subject";
+            this.dgv_subject.RowHeadersWidth = 51;
+            this.dgv_subject.RowTemplate.Height = 27;
+            this.dgv_subject.Size = new System.Drawing.Size(281, 286);
+            this.dgv_subject.TabIndex = 66;
+            this.dgv_subject.SelectionChanged += new System.EventHandler(this.dgv_subject_SelectionChanged);
+            // 
+            // panelbus
+            // 
+            this.panelbus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panelbus.Controls.Add(this.cbo_subject);
+            this.panelbus.Controls.Add(this.panelbutton);
+            this.panelbus.Controls.Add(this.cbo_state);
+            this.panelbus.Controls.Add(this.txt_remark);
+            this.panelbus.Controls.Add(this.lbl_remark);
+            this.panelbus.Controls.Add(this.txt_tutor_num);
+            this.panelbus.Controls.Add(this.lbl_tutor_num);
+            this.panelbus.Controls.Add(this.lbl_state);
+            this.panelbus.Controls.Add(this.txt_tutor_name);
+            this.panelbus.Controls.Add(this.label1);
+            this.panelbus.Controls.Add(this.lbl_tutor_name);
+            this.panelbus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelbus.Location = new System.Drawing.Point(281, 165);
+            this.panelbus.Name = "panelbus";
+            this.panelbus.Size = new System.Drawing.Size(298, 286);
+            this.panelbus.TabIndex = 81;
+            // 
+            // cbo_subject
+            // 
+            this.cbo_subject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_subject.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbo_subject.FormattingEnabled = true;
+            this.cbo_subject.Location = new System.Drawing.Point(29, 38);
+            this.cbo_subject.Name = "cbo_subject";
+            this.cbo_subject.Size = new System.Drawing.Size(114, 28);
+            this.cbo_subject.TabIndex = 80;
+            // 
+            // panelbutton
+            // 
+            this.panelbutton.Controls.Add(this.btn_bus);
+            this.panelbutton.Controls.Add(this.btn_searchtutor);
+            this.panelbutton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelbutton.Location = new System.Drawing.Point(0, 246);
+            this.panelbutton.Name = "panelbutton";
+            this.panelbutton.Size = new System.Drawing.Size(298, 40);
+            this.panelbutton.TabIndex = 79;
+            // 
+            // btn_bus
+            // 
+            this.btn_bus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_bus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_bus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_bus.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_bus.ForeColor = System.Drawing.Color.White;
+            this.btn_bus.Location = new System.Drawing.Point(161, 0);
+            this.btn_bus.Name = "btn_bus";
+            this.btn_bus.Size = new System.Drawing.Size(137, 40);
+            this.btn_bus.TabIndex = 76;
+            this.btn_bus.Text = "办理";
+            this.btn_bus.UseVisualStyleBackColor = false;
+            this.btn_bus.Click += new System.EventHandler(this.btn_bus_Click);
+            // 
+            // btn_searchtutor
+            // 
+            this.btn_searchtutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_searchtutor.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_searchtutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_searchtutor.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_searchtutor.ForeColor = System.Drawing.Color.White;
+            this.btn_searchtutor.Location = new System.Drawing.Point(0, 0);
+            this.btn_searchtutor.Name = "btn_searchtutor";
+            this.btn_searchtutor.Size = new System.Drawing.Size(161, 40);
+            this.btn_searchtutor.TabIndex = 78;
+            this.btn_searchtutor.Text = "添加/更换教员";
+            this.btn_searchtutor.UseVisualStyleBackColor = false;
+            this.btn_searchtutor.Click += new System.EventHandler(this.btn_searchtutor_Click);
+            // 
+            // cbo_state
+            // 
+            this.cbo_state.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbo_state.FormattingEnabled = true;
+            this.cbo_state.Items.AddRange(new object[] {
+            "接入",
+            "已接",
+            "待接",
+            "换人",
+            "不请",
+            "重请"});
+            this.cbo_state.Location = new System.Drawing.Point(166, 37);
+            this.cbo_state.Name = "cbo_state";
+            this.cbo_state.Size = new System.Drawing.Size(114, 28);
+            this.cbo_state.TabIndex = 53;
+            // 
+            // txt_remark
+            // 
+            this.txt_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_remark.Location = new System.Drawing.Point(29, 139);
+            this.txt_remark.Multiline = true;
+            this.txt_remark.Name = "txt_remark";
+            this.txt_remark.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txt_remark.Size = new System.Drawing.Size(251, 100);
+            this.txt_remark.TabIndex = 52;
+            // 
+            // lbl_remark
+            // 
+            this.lbl_remark.AutoSize = true;
+            this.lbl_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_remark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.lbl_remark.Location = new System.Drawing.Point(25, 117);
+            this.lbl_remark.Name = "lbl_remark";
+            this.lbl_remark.Size = new System.Drawing.Size(39, 19);
+            this.lbl_remark.TabIndex = 51;
+            this.lbl_remark.Text = "备注";
+            // 
+            // txt_tutor_num
+            // 
+            this.txt_tutor_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_tutor_num.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_tutor_num.Location = new System.Drawing.Point(29, 90);
+            this.txt_tutor_num.Name = "txt_tutor_num";
+            this.txt_tutor_num.Size = new System.Drawing.Size(114, 27);
+            this.txt_tutor_num.TabIndex = 50;
+            // 
+            // lbl_tutor_num
+            // 
+            this.lbl_tutor_num.AutoSize = true;
+            this.lbl_tutor_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_tutor_num.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.lbl_tutor_num.Location = new System.Drawing.Point(25, 70);
+            this.lbl_tutor_num.Name = "lbl_tutor_num";
+            this.lbl_tutor_num.Size = new System.Drawing.Size(69, 19);
+            this.lbl_tutor_num.TabIndex = 45;
+            this.lbl_tutor_num.Text = "教员编号";
+            // 
+            // lbl_state
+            // 
+            this.lbl_state.AutoSize = true;
+            this.lbl_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_state.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.lbl_state.Location = new System.Drawing.Point(163, 15);
+            this.lbl_state.Name = "lbl_state";
+            this.lbl_state.Size = new System.Drawing.Size(69, 19);
+            this.lbl_state.TabIndex = 48;
+            this.lbl_state.Text = "进行状态";
+            // 
+            // txt_tutor_name
+            // 
+            this.txt_tutor_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_tutor_name.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_tutor_name.Location = new System.Drawing.Point(166, 90);
+            this.txt_tutor_name.Name = "txt_tutor_name";
+            this.txt_tutor_name.Size = new System.Drawing.Size(114, 27);
+            this.txt_tutor_name.TabIndex = 47;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.label1.Location = new System.Drawing.Point(25, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 19);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "科目";
+            // 
+            // lbl_tutor_name
+            // 
+            this.lbl_tutor_name.AutoSize = true;
+            this.lbl_tutor_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_tutor_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.lbl_tutor_name.Location = new System.Drawing.Point(163, 70);
+            this.lbl_tutor_name.Name = "lbl_tutor_name";
+            this.lbl_tutor_name.Size = new System.Drawing.Size(69, 19);
+            this.lbl_tutor_name.TabIndex = 46;
+            this.lbl_tutor_name.Text = "教员姓名";
+            // 
+            // panelstate
+            // 
+            this.panelstate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panelstate.Controls.Add(this.gpo_state);
+            this.panelstate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelstate.Location = new System.Drawing.Point(0, 0);
+            this.panelstate.Name = "panelstate";
+            this.panelstate.Size = new System.Drawing.Size(579, 165);
+            this.panelstate.TabIndex = 79;
+            // 
+            // gpo_state
+            // 
+            this.gpo_state.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
+            this.gpo_state.Controls.Add(this.cbo_tutor_state);
+            this.gpo_state.Controls.Add(this.txt_remarks);
+            this.gpo_state.Controls.Add(this.lbl_tutor_state);
+            this.gpo_state.Controls.Add(this.lbl_remarks);
+            this.gpo_state.Controls.Add(this.btn_save_buss);
+            this.gpo_state.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gpo_state.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold);
+            this.gpo_state.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.gpo_state.Location = new System.Drawing.Point(0, 0);
+            this.gpo_state.Name = "gpo_state";
+            this.gpo_state.Size = new System.Drawing.Size(579, 165);
+            this.gpo_state.TabIndex = 78;
+            this.gpo_state.TabStop = false;
+            this.gpo_state.Text = "当前状态";
+            // 
+            // cbo_tutor_state
+            // 
+            this.cbo_tutor_state.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tutor_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbo_tutor_state.ForeColor = System.Drawing.Color.Black;
+            this.cbo_tutor_state.FormattingEnabled = true;
+            this.cbo_tutor_state.Items.AddRange(new object[] {
+            "接入",
+            "已接",
+            "待接",
+            "换人",
+            "不请",
+            "重请"});
+            this.cbo_tutor_state.Location = new System.Drawing.Point(66, 48);
+            this.cbo_tutor_state.Name = "cbo_tutor_state";
+            this.cbo_tutor_state.Size = new System.Drawing.Size(195, 28);
+            this.cbo_tutor_state.TabIndex = 77;
+            // 
+            // txt_remarks
+            // 
+            this.txt_remarks.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_remarks.ForeColor = System.Drawing.Color.Black;
+            this.txt_remarks.Location = new System.Drawing.Point(66, 98);
+            this.txt_remarks.Multiline = true;
+            this.txt_remarks.Name = "txt_remarks";
+            this.txt_remarks.Size = new System.Drawing.Size(449, 50);
+            this.txt_remarks.TabIndex = 72;
+            // 
+            // lbl_tutor_state
+            // 
+            this.lbl_tutor_state.AutoSize = true;
+            this.lbl_tutor_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_tutor_state.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.lbl_tutor_state.Location = new System.Drawing.Point(63, 30);
+            this.lbl_tutor_state.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.lbl_tutor_state.Name = "lbl_tutor_state";
+            this.lbl_tutor_state.Size = new System.Drawing.Size(69, 19);
+            this.lbl_tutor_state.TabIndex = 67;
+            this.lbl_tutor_state.Text = "家教状态";
+            // 
+            // lbl_remarks
+            // 
+            this.lbl_remarks.AutoSize = true;
+            this.lbl_remarks.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_remarks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.lbl_remarks.Location = new System.Drawing.Point(63, 79);
+            this.lbl_remarks.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.lbl_remarks.Name = "lbl_remarks";
+            this.lbl_remarks.Size = new System.Drawing.Size(69, 19);
+            this.lbl_remarks.TabIndex = 69;
+            this.lbl_remarks.Text = "重要备注";
+            // 
+            // btn_save_buss
+            // 
+            this.btn_save_buss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_save_buss.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save_buss.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_save_buss.ForeColor = System.Drawing.Color.White;
+            this.btn_save_buss.Location = new System.Drawing.Point(410, 27);
+            this.btn_save_buss.Name = "btn_save_buss";
+            this.btn_save_buss.Size = new System.Drawing.Size(105, 61);
+            this.btn_save_buss.TabIndex = 75;
+            this.btn_save_buss.Text = "保存信息";
+            this.btn_save_buss.UseVisualStyleBackColor = false;
+            this.btn_save_buss.Click += new System.EventHandler(this.btn_save_buss_Click);
             // 
             // panelinfo
             // 
@@ -995,334 +1327,6 @@
             this.lbl_payment_time.TabIndex = 104;
             this.lbl_payment_time.Text = "缴费时间";
             // 
-            // panelbuss
-            // 
-            this.panelbuss.Controls.Add(this.dgv_done);
-            this.panelbuss.Controls.Add(this.paneltop);
-            this.panelbuss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelbuss.Location = new System.Drawing.Point(0, 36);
-            this.panelbuss.Name = "panelbuss";
-            this.panelbuss.Size = new System.Drawing.Size(579, 749);
-            this.panelbuss.TabIndex = 108;
-            // 
-            // dgv_done
-            // 
-            this.dgv_done.AllowUserToDeleteRows = false;
-            this.dgv_done.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_done.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_done.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_done.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_done.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_done.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_done.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv_done.Location = new System.Drawing.Point(0, 451);
-            this.dgv_done.Name = "dgv_done";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_done.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_done.RowTemplate.Height = 27;
-            this.dgv_done.Size = new System.Drawing.Size(579, 298);
-            this.dgv_done.TabIndex = 69;
-            this.dgv_done.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_done_CellClick);
-            // 
-            // paneltop
-            // 
-            this.paneltop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.paneltop.Controls.Add(this.dgv_subject);
-            this.paneltop.Controls.Add(this.panelbus);
-            this.paneltop.Controls.Add(this.panelstate);
-            this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltop.Location = new System.Drawing.Point(0, 0);
-            this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(579, 451);
-            this.paneltop.TabIndex = 68;
-            // 
-            // dgv_subject
-            // 
-            this.dgv_subject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dgv_subject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_subject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_subject.Location = new System.Drawing.Point(0, 165);
-            this.dgv_subject.Name = "dgv_subject";
-            this.dgv_subject.RowTemplate.Height = 27;
-            this.dgv_subject.Size = new System.Drawing.Size(281, 286);
-            this.dgv_subject.TabIndex = 66;
-            this.dgv_subject.SelectionChanged += new System.EventHandler(this.dgv_subject_SelectionChanged);
-            // 
-            // panelbus
-            // 
-            this.panelbus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panelbus.Controls.Add(this.cbo_subject);
-            this.panelbus.Controls.Add(this.panelbutton);
-            this.panelbus.Controls.Add(this.cbo_state);
-            this.panelbus.Controls.Add(this.txt_remark);
-            this.panelbus.Controls.Add(this.lbl_remark);
-            this.panelbus.Controls.Add(this.txt_tutor_num);
-            this.panelbus.Controls.Add(this.lbl_tutor_num);
-            this.panelbus.Controls.Add(this.lbl_state);
-            this.panelbus.Controls.Add(this.txt_tutor_name);
-            this.panelbus.Controls.Add(this.label1);
-            this.panelbus.Controls.Add(this.lbl_tutor_name);
-            this.panelbus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelbus.Location = new System.Drawing.Point(281, 165);
-            this.panelbus.Name = "panelbus";
-            this.panelbus.Size = new System.Drawing.Size(298, 286);
-            this.panelbus.TabIndex = 81;
-            // 
-            // cbo_subject
-            // 
-            this.cbo_subject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_subject.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbo_subject.FormattingEnabled = true;
-            this.cbo_subject.Location = new System.Drawing.Point(29, 38);
-            this.cbo_subject.Name = "cbo_subject";
-            this.cbo_subject.Size = new System.Drawing.Size(114, 28);
-            this.cbo_subject.TabIndex = 80;
-            // 
-            // panelbutton
-            // 
-            this.panelbutton.Controls.Add(this.btn_bus);
-            this.panelbutton.Controls.Add(this.btn_searchtutor);
-            this.panelbutton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelbutton.Location = new System.Drawing.Point(0, 246);
-            this.panelbutton.Name = "panelbutton";
-            this.panelbutton.Size = new System.Drawing.Size(298, 40);
-            this.panelbutton.TabIndex = 79;
-            // 
-            // btn_bus
-            // 
-            this.btn_bus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_bus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_bus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bus.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_bus.ForeColor = System.Drawing.Color.White;
-            this.btn_bus.Location = new System.Drawing.Point(161, 0);
-            this.btn_bus.Name = "btn_bus";
-            this.btn_bus.Size = new System.Drawing.Size(137, 40);
-            this.btn_bus.TabIndex = 76;
-            this.btn_bus.Text = "办理";
-            this.btn_bus.UseVisualStyleBackColor = false;
-            this.btn_bus.Click += new System.EventHandler(this.btn_bus_Click);
-            // 
-            // btn_searchtutor
-            // 
-            this.btn_searchtutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_searchtutor.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_searchtutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_searchtutor.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_searchtutor.ForeColor = System.Drawing.Color.White;
-            this.btn_searchtutor.Location = new System.Drawing.Point(0, 0);
-            this.btn_searchtutor.Name = "btn_searchtutor";
-            this.btn_searchtutor.Size = new System.Drawing.Size(161, 40);
-            this.btn_searchtutor.TabIndex = 78;
-            this.btn_searchtutor.Text = "添加/更换教员";
-            this.btn_searchtutor.UseVisualStyleBackColor = false;
-            this.btn_searchtutor.Click += new System.EventHandler(this.btn_searchtutor_Click);
-            // 
-            // cbo_state
-            // 
-            this.cbo_state.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbo_state.FormattingEnabled = true;
-            this.cbo_state.Items.AddRange(new object[] {
-            "接入",
-            "已接",
-            "待接",
-            "换人",
-            "不请",
-            "重请"});
-            this.cbo_state.Location = new System.Drawing.Point(166, 37);
-            this.cbo_state.Name = "cbo_state";
-            this.cbo_state.Size = new System.Drawing.Size(114, 28);
-            this.cbo_state.TabIndex = 53;
-            // 
-            // txt_remark
-            // 
-            this.txt_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_remark.Location = new System.Drawing.Point(29, 139);
-            this.txt_remark.Multiline = true;
-            this.txt_remark.Name = "txt_remark";
-            this.txt_remark.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_remark.Size = new System.Drawing.Size(251, 100);
-            this.txt_remark.TabIndex = 52;
-            // 
-            // lbl_remark
-            // 
-            this.lbl_remark.AutoSize = true;
-            this.lbl_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_remark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_remark.Location = new System.Drawing.Point(25, 117);
-            this.lbl_remark.Name = "lbl_remark";
-            this.lbl_remark.Size = new System.Drawing.Size(39, 19);
-            this.lbl_remark.TabIndex = 51;
-            this.lbl_remark.Text = "备注";
-            // 
-            // txt_tutor_num
-            // 
-            this.txt_tutor_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_tutor_num.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txt_tutor_num.Location = new System.Drawing.Point(29, 90);
-            this.txt_tutor_num.Name = "txt_tutor_num";
-            this.txt_tutor_num.Size = new System.Drawing.Size(114, 27);
-            this.txt_tutor_num.TabIndex = 50;
-            // 
-            // lbl_tutor_num
-            // 
-            this.lbl_tutor_num.AutoSize = true;
-            this.lbl_tutor_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_tutor_num.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_tutor_num.Location = new System.Drawing.Point(25, 70);
-            this.lbl_tutor_num.Name = "lbl_tutor_num";
-            this.lbl_tutor_num.Size = new System.Drawing.Size(69, 19);
-            this.lbl_tutor_num.TabIndex = 45;
-            this.lbl_tutor_num.Text = "教员编号";
-            // 
-            // lbl_state
-            // 
-            this.lbl_state.AutoSize = true;
-            this.lbl_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_state.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_state.Location = new System.Drawing.Point(163, 15);
-            this.lbl_state.Name = "lbl_state";
-            this.lbl_state.Size = new System.Drawing.Size(69, 19);
-            this.lbl_state.TabIndex = 48;
-            this.lbl_state.Text = "进行状态";
-            // 
-            // txt_tutor_name
-            // 
-            this.txt_tutor_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_tutor_name.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txt_tutor_name.Location = new System.Drawing.Point(166, 90);
-            this.txt_tutor_name.Name = "txt_tutor_name";
-            this.txt_tutor_name.Size = new System.Drawing.Size(114, 27);
-            this.txt_tutor_name.TabIndex = 47;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.label1.Location = new System.Drawing.Point(25, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 19);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "科目";
-            // 
-            // lbl_tutor_name
-            // 
-            this.lbl_tutor_name.AutoSize = true;
-            this.lbl_tutor_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_tutor_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_tutor_name.Location = new System.Drawing.Point(163, 70);
-            this.lbl_tutor_name.Name = "lbl_tutor_name";
-            this.lbl_tutor_name.Size = new System.Drawing.Size(69, 19);
-            this.lbl_tutor_name.TabIndex = 46;
-            this.lbl_tutor_name.Text = "教员姓名";
-            // 
-            // panelstate
-            // 
-            this.panelstate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panelstate.Controls.Add(this.gpo_state);
-            this.panelstate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelstate.Location = new System.Drawing.Point(0, 0);
-            this.panelstate.Name = "panelstate";
-            this.panelstate.Size = new System.Drawing.Size(579, 165);
-            this.panelstate.TabIndex = 79;
-            // 
-            // gpo_state
-            // 
-            this.gpo_state.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
-            this.gpo_state.Controls.Add(this.cbo_tutor_state);
-            this.gpo_state.Controls.Add(this.txt_remarks);
-            this.gpo_state.Controls.Add(this.lbl_tutor_state);
-            this.gpo_state.Controls.Add(this.lbl_remarks);
-            this.gpo_state.Controls.Add(this.btn_save_buss);
-            this.gpo_state.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gpo_state.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold);
-            this.gpo_state.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.gpo_state.Location = new System.Drawing.Point(0, 0);
-            this.gpo_state.Name = "gpo_state";
-            this.gpo_state.Size = new System.Drawing.Size(579, 165);
-            this.gpo_state.TabIndex = 78;
-            this.gpo_state.TabStop = false;
-            this.gpo_state.Text = "当前状态";
-            // 
-            // cbo_tutor_state
-            // 
-            this.cbo_tutor_state.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_tutor_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbo_tutor_state.ForeColor = System.Drawing.Color.Black;
-            this.cbo_tutor_state.FormattingEnabled = true;
-            this.cbo_tutor_state.Items.AddRange(new object[] {
-            "接入",
-            "已接",
-            "待接",
-            "换人",
-            "不请",
-            "重请"});
-            this.cbo_tutor_state.Location = new System.Drawing.Point(66, 48);
-            this.cbo_tutor_state.Name = "cbo_tutor_state";
-            this.cbo_tutor_state.Size = new System.Drawing.Size(195, 28);
-            this.cbo_tutor_state.TabIndex = 77;
-            // 
-            // txt_remarks
-            // 
-            this.txt_remarks.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_remarks.ForeColor = System.Drawing.Color.Black;
-            this.txt_remarks.Location = new System.Drawing.Point(66, 98);
-            this.txt_remarks.Multiline = true;
-            this.txt_remarks.Name = "txt_remarks";
-            this.txt_remarks.Size = new System.Drawing.Size(449, 50);
-            this.txt_remarks.TabIndex = 72;
-            // 
-            // lbl_tutor_state
-            // 
-            this.lbl_tutor_state.AutoSize = true;
-            this.lbl_tutor_state.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_tutor_state.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_tutor_state.Location = new System.Drawing.Point(63, 30);
-            this.lbl_tutor_state.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.lbl_tutor_state.Name = "lbl_tutor_state";
-            this.lbl_tutor_state.Size = new System.Drawing.Size(69, 19);
-            this.lbl_tutor_state.TabIndex = 67;
-            this.lbl_tutor_state.Text = "家教状态";
-            // 
-            // lbl_remarks
-            // 
-            this.lbl_remarks.AutoSize = true;
-            this.lbl_remarks.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_remarks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_remarks.Location = new System.Drawing.Point(63, 79);
-            this.lbl_remarks.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.lbl_remarks.Name = "lbl_remarks";
-            this.lbl_remarks.Size = new System.Drawing.Size(69, 19);
-            this.lbl_remarks.TabIndex = 69;
-            this.lbl_remarks.Text = "重要备注";
-            // 
-            // btn_save_buss
-            // 
-            this.btn_save_buss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_save_buss.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save_buss.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_save_buss.ForeColor = System.Drawing.Color.White;
-            this.btn_save_buss.Location = new System.Drawing.Point(410, 27);
-            this.btn_save_buss.Name = "btn_save_buss";
-            this.btn_save_buss.Size = new System.Drawing.Size(105, 61);
-            this.btn_save_buss.TabIndex = 75;
-            this.btn_save_buss.Text = "保存信息";
-            this.btn_save_buss.UseVisualStyleBackColor = false;
-            this.btn_save_buss.Click += new System.EventHandler(this.btn_save_buss_Click);
-            // 
             // paneltitle
             // 
             this.paneltitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
@@ -1454,6 +1458,7 @@
             this.dgv_exist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_exist.Location = new System.Drawing.Point(0, 451);
             this.dgv_exist.Name = "dgv_exist";
+            this.dgv_exist.RowHeadersWidth = 51;
             this.dgv_exist.RowTemplate.Height = 27;
             this.dgv_exist.Size = new System.Drawing.Size(579, 298);
             this.dgv_exist.TabIndex = 2;
@@ -1739,9 +1744,11 @@
             // 
             // dgv_tutoring
             // 
+            this.dgv_tutoring.ColumnHeadersHeight = 29;
             this.dgv_tutoring.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_tutoring.Location = new System.Drawing.Point(0, 0);
             this.dgv_tutoring.Name = "dgv_tutoring";
+            this.dgv_tutoring.RowHeadersWidth = 51;
             this.dgv_tutoring.Size = new System.Drawing.Size(579, 749);
             this.dgv_tutoring.TabIndex = 0;
             // 
@@ -1761,8 +1768,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 785);
-            this.Controls.Add(this.paneltutor);
             this.Controls.Add(this.paneleft);
+            this.Controls.Add(this.paneltutor);
             this.Controls.Add(this.panelright);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tutoring_all";
@@ -1777,12 +1784,6 @@
             this.gbo_search.ResumeLayout(false);
             this.gbo_search.PerformLayout();
             this.panelright.ResumeLayout(false);
-            this.panelinfo.ResumeLayout(false);
-            this.panelinfo.PerformLayout();
-            this.gbo_request.ResumeLayout(false);
-            this.gbo_request.PerformLayout();
-            this.gpo_info.ResumeLayout(false);
-            this.gpo_info.PerformLayout();
             this.panelbuss.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_done)).EndInit();
             this.paneltop.ResumeLayout(false);
@@ -1793,6 +1794,12 @@
             this.panelstate.ResumeLayout(false);
             this.gpo_state.ResumeLayout(false);
             this.gpo_state.PerformLayout();
+            this.panelinfo.ResumeLayout(false);
+            this.panelinfo.PerformLayout();
+            this.gbo_request.ResumeLayout(false);
+            this.gbo_request.PerformLayout();
+            this.gpo_info.ResumeLayout(false);
+            this.gpo_info.PerformLayout();
             this.paneltitle.ResumeLayout(false);
             this.pantop.ResumeLayout(false);
             this.pantutor.ResumeLayout(false);

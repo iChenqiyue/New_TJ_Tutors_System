@@ -39,23 +39,23 @@
             this.lbl_degree = new System.Windows.Forms.Label();
             this.lbl_username = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelmenu = new System.Windows.Forms.Panel();
             this.btn_other = new System.Windows.Forms.Button();
             this.btn_user = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelop = new System.Windows.Forms.Panel();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.btn_delete = new System.Windows.Forms.Button();
             this.dgv_user = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.paneluser = new System.Windows.Forms.Panel();
             this.panelsettings = new System.Windows.Forms.Panel();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_score = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
             this.paneltop.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelmenu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_user)).BeginInit();
@@ -190,16 +190,48 @@
             this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // panel2
+            // panelmenu
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
-            this.panel2.Controls.Add(this.btn_other);
-            this.panel2.Controls.Add(this.btn_user);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 52);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(179, 297);
-            this.panel2.TabIndex = 13;
+            this.panelmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(99)))), ((int)(((byte)(199)))));
+            this.panelmenu.Controls.Add(this.btn_other);
+            this.panelmenu.Controls.Add(this.btn_user);
+            this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelmenu.Location = new System.Drawing.Point(0, 52);
+            this.panelmenu.Name = "panelmenu";
+            this.panelmenu.Size = new System.Drawing.Size(179, 297);
+            this.panelmenu.TabIndex = 13;
+            // 
+            // btn_other
+            // 
+            this.btn_other.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
+            this.btn_other.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_other.FlatAppearance.BorderSize = 0;
+            this.btn_other.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_other.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_other.ForeColor = System.Drawing.Color.White;
+            this.btn_other.Location = new System.Drawing.Point(0, 45);
+            this.btn_other.Name = "btn_other";
+            this.btn_other.Size = new System.Drawing.Size(179, 45);
+            this.btn_other.TabIndex = 5;
+            this.btn_other.Text = "其他设置";
+            this.btn_other.UseVisualStyleBackColor = false;
+            this.btn_other.Click += new System.EventHandler(this.btn_other_Click);
+            // 
+            // btn_user
+            // 
+            this.btn_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
+            this.btn_user.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_user.FlatAppearance.BorderSize = 0;
+            this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_user.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_user.ForeColor = System.Drawing.Color.White;
+            this.btn_user.Location = new System.Drawing.Point(0, 0);
+            this.btn_user.Name = "btn_user";
+            this.btn_user.Size = new System.Drawing.Size(179, 45);
+            this.btn_user.TabIndex = 4;
+            this.btn_user.Text = "用户管理";
+            this.btn_user.UseVisualStyleBackColor = false;
+            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
             // 
             // panel3
             // 
@@ -216,42 +248,6 @@
             this.panel3.Size = new System.Drawing.Size(218, 297);
             this.panel3.TabIndex = 103;
             // 
-            // btn_other
-            // 
-            this.btn_other.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
-            this.btn_other.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_other.FlatAppearance.BorderSize = 0;
-            this.btn_other.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_other.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_other.ForeColor = System.Drawing.Color.White;
-            this.btn_other.Location = new System.Drawing.Point(0, 45);
-            this.btn_other.Name = "btn_other";
-            this.btn_other.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_other.Size = new System.Drawing.Size(179, 45);
-            this.btn_other.TabIndex = 5;
-            this.btn_other.Text = "其他设置";
-            this.btn_other.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_other.UseVisualStyleBackColor = false;
-            this.btn_other.Click += new System.EventHandler(this.btn_other_Click);
-            // 
-            // btn_user
-            // 
-            this.btn_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
-            this.btn_user.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_user.FlatAppearance.BorderSize = 0;
-            this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_user.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_user.ForeColor = System.Drawing.Color.White;
-            this.btn_user.Location = new System.Drawing.Point(0, 0);
-            this.btn_user.Name = "btn_user";
-            this.btn_user.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_user.Size = new System.Drawing.Size(179, 45);
-            this.btn_user.TabIndex = 4;
-            this.btn_user.Text = "用户管理";
-            this.btn_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_user.UseVisualStyleBackColor = false;
-            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
-            // 
             // panelop
             // 
             this.panelop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
@@ -263,52 +259,13 @@
             this.panelop.Size = new System.Drawing.Size(317, 50);
             this.panelop.TabIndex = 12;
             // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_add.FlatAppearance.BorderSize = 0;
-            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
-            this.btn_add.Location = new System.Drawing.Point(0, 0);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(160, 50);
-            this.btn_add.TabIndex = 15;
-            this.btn_add.Text = "新增";
-            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_delete.FlatAppearance.BorderSize = 0;
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.Location = new System.Drawing.Point(160, 0);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(157, 50);
-            this.btn_delete.TabIndex = 16;
-            this.btn_delete.Text = "删除";
-            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
             // dgv_user
             // 
             this.dgv_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_user.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_user.Location = new System.Drawing.Point(0, 50);
             this.dgv_user.Name = "dgv_user";
+            this.dgv_user.RowHeadersWidth = 51;
             this.dgv_user.RowTemplate.Height = 27;
             this.dgv_user.Size = new System.Drawing.Size(317, 247);
             this.dgv_user.TabIndex = 3;
@@ -346,6 +303,31 @@
             this.panelsettings.Size = new System.Drawing.Size(535, 297);
             this.panelsettings.TabIndex = 13;
             // 
+            // btn_clear
+            // 
+            this.btn_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_clear.ForeColor = System.Drawing.Color.White;
+            this.btn_clear.Location = new System.Drawing.Point(392, 24);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(94, 32);
+            this.btn_clear.TabIndex = 100;
+            this.btn_clear.Text = "清空";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.label1.Location = new System.Drawing.Point(153, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "月初清空所有职工的当月积分";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
@@ -361,36 +343,51 @@
             this.lbl_score.AutoSize = true;
             this.lbl_score.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbl_score.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_score.Location = new System.Drawing.Point(11, 27);
+            this.lbl_score.Location = new System.Drawing.Point(18, 27);
             this.lbl_score.Name = "lbl_score";
-            this.lbl_score.Size = new System.Drawing.Size(107, 26);
+            this.lbl_score.Size = new System.Drawing.Size(88, 26);
             this.lbl_score.TabIndex = 0;
-            this.lbl_score.Text = "积分清零：";
+            this.lbl_score.Text = "积分清零";
             // 
-            // label1
+            // btn_delete
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.label1.Location = new System.Drawing.Point(153, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "月初清空所有职工的当月积分";
+            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_delete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.Location = new System.Drawing.Point(160, 0);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(157, 50);
+            this.btn_delete.TabIndex = 16;
+            this.btn_delete.Text = "删除";
+            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
-            // btn_clear
+            // btn_add
             // 
-            this.btn_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
-            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clear.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_clear.ForeColor = System.Drawing.Color.White;
-            this.btn_clear.Location = new System.Drawing.Point(392, 24);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(94, 32);
-            this.btn_clear.TabIndex = 100;
-            this.btn_clear.Text = "清空";
-            this.btn_clear.UseVisualStyleBackColor = false;
-            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(144)))), ((int)(((byte)(251)))));
+            this.btn_add.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_add.FlatAppearance.BorderSize = 0;
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_add.ForeColor = System.Drawing.Color.White;
+            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
+            this.btn_add.Location = new System.Drawing.Point(0, 0);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(160, 50);
+            this.btn_add.TabIndex = 15;
+            this.btn_add.Text = "新增";
+            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // user
             // 
@@ -399,7 +396,7 @@
             this.ClientSize = new System.Drawing.Size(714, 349);
             this.Controls.Add(this.panelsettings);
             this.Controls.Add(this.paneluser);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelmenu);
             this.Controls.Add(this.paneltop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "user";
@@ -408,7 +405,7 @@
             this.Load += new System.EventHandler(this.user_Load);
             this.paneltop.ResumeLayout(false);
             this.paneltop.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.panelmenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelop.ResumeLayout(false);
@@ -435,7 +432,7 @@
         private System.Windows.Forms.Label lbl_degree;
         private System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelmenu;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_other;
         private System.Windows.Forms.Button btn_user;

@@ -394,6 +394,7 @@
             this.dgv_search.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_search.Location = new System.Drawing.Point(0, 0);
             this.dgv_search.Name = "dgv_search";
+            this.dgv_search.RowHeadersWidth = 51;
             this.dgv_search.RowTemplate.Height = 27;
             this.dgv_search.Size = new System.Drawing.Size(591, 226);
             this.dgv_search.TabIndex = 0;
@@ -493,6 +494,7 @@
             // 
             // gbo_search
             // 
+            this.gbo_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbo_search.Controls.Add(this.txt_num_search);
             this.gbo_search.Controls.Add(this.txt_stunum_search);
             this.gbo_search.Controls.Add(this.txt_phone_search);
@@ -500,7 +502,7 @@
             this.gbo_search.Controls.Add(this.txt_name_search);
             this.gbo_search.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gbo_search.ForeColor = System.Drawing.Color.White;
-            this.gbo_search.Location = new System.Drawing.Point(21, -1);
+            this.gbo_search.Location = new System.Drawing.Point(54, -1);
             this.gbo_search.Name = "gbo_search";
             this.gbo_search.Size = new System.Drawing.Size(483, 111);
             this.gbo_search.TabIndex = 5;
@@ -659,6 +661,7 @@
             this.dgv_res.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_res.Location = new System.Drawing.Point(0, 169);
             this.dgv_res.Name = "dgv_res";
+            this.dgv_res.RowHeadersWidth = 51;
             this.dgv_res.RowTemplate.Height = 27;
             this.dgv_res.Size = new System.Drawing.Size(579, 580);
             this.dgv_res.TabIndex = 12;
@@ -675,6 +678,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.lbl_to);
             this.groupBox1.Controls.Add(this.btn_search);
             this.groupBox1.Controls.Add(this.txt_print_num);
@@ -697,7 +701,7 @@
             this.lbl_to.AutoSize = true;
             this.lbl_to.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_to.ForeColor = System.Drawing.Color.White;
-            this.lbl_to.Location = new System.Drawing.Point(200, 96);
+            this.lbl_to.Location = new System.Drawing.Point(200, 86);
             this.lbl_to.Name = "lbl_to";
             this.lbl_to.Size = new System.Drawing.Size(28, 19);
             this.lbl_to.TabIndex = 50;
@@ -723,7 +727,7 @@
             this.lbl_from.AutoSize = true;
             this.lbl_from.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_from.ForeColor = System.Drawing.Color.White;
-            this.lbl_from.Location = new System.Drawing.Point(21, 96);
+            this.lbl_from.Location = new System.Drawing.Point(21, 86);
             this.lbl_from.Name = "lbl_from";
             this.lbl_from.Size = new System.Drawing.Size(48, 19);
             this.lbl_from.TabIndex = 49;
@@ -734,7 +738,7 @@
             this.ckb_time.AutoSize = true;
             this.ckb_time.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ckb_time.ForeColor = System.Drawing.Color.White;
-            this.ckb_time.Location = new System.Drawing.Point(391, 121);
+            this.ckb_time.Location = new System.Drawing.Point(391, 111);
             this.ckb_time.Name = "ckb_time";
             this.ckb_time.Size = new System.Drawing.Size(91, 23);
             this.ckb_time.TabIndex = 9;
@@ -744,7 +748,7 @@
             // dt_to
             // 
             this.dt_to.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dt_to.Location = new System.Drawing.Point(204, 118);
+            this.dt_to.Location = new System.Drawing.Point(204, 108);
             this.dt_to.Name = "dt_to";
             this.dt_to.Size = new System.Drawing.Size(179, 27);
             this.dt_to.TabIndex = 8;
@@ -767,7 +771,7 @@
             // dt_from
             // 
             this.dt_from.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dt_from.Location = new System.Drawing.Point(25, 118);
+            this.dt_from.Location = new System.Drawing.Point(25, 108);
             this.dt_from.Name = "dt_from";
             this.dt_from.Size = new System.Drawing.Size(179, 27);
             this.dt_from.TabIndex = 7;

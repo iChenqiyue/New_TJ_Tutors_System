@@ -490,6 +490,9 @@ namespace New_TJ_Tutors_System
                     try
                     {
                         mydb.ExecuteNonQuery(mysql);
+                        mysql = string.Format("insert into user (username,password,degree) values ('{0}','{1}','{2}')", 
+                            worker1.worker_num,worker1.student_num, "操作员");
+                        mydb.ExecuteNonQuery(mysql);
                     }
                     catch (Exception ex)
                     {
