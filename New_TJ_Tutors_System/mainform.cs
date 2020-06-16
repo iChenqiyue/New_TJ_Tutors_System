@@ -64,6 +64,7 @@ namespace New_TJ_Tutors_System
         private Form activeform = null;
         private void openchidform(Form childform)
         {
+            Cursor = Cursors.WaitCursor;
             if (activeform != null)
                 activeform.Close();
             activeform = childform;
@@ -72,8 +73,9 @@ namespace New_TJ_Tutors_System
             childform.Dock = DockStyle.Fill;
             paneltutoring.Controls.Add(childform);
             paneltutoring.Tag = childform;
-            childform.BringToFront();
             childform.Show();
+            childform.BringToFront();
+            Cursor = Cursors.Default;
         }
         #endregion
 
@@ -181,6 +183,7 @@ namespace New_TJ_Tutors_System
         {
             /**/
             //hidesubmenu();
+            System.Diagnostics.Process.Start(System.Windows.Forms.Application.StartupPath + "//家教部工作流程.pdf");
         }
         #endregion
 
@@ -190,11 +193,13 @@ namespace New_TJ_Tutors_System
         {
             /**/
             //hidesubmenu();
+            System.Diagnostics.Process.Start(System.Windows.Forms.Application.StartupPath + "//家教价格表.pdf");
         }
 
         private void btn_doc_Click(object sender, EventArgs e)
         {
             /**/
+            System.Diagnostics.Process.Start(System.Windows.Forms.Application.StartupPath + "//同济家教服务中心数据系统使用说明.pdf");
             //hidesubmenu();
         }
 
@@ -335,6 +340,11 @@ namespace New_TJ_Tutors_System
                 myform.Show();
                 this.Close();
             }
+        }
+
+        private void btn_rules_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(System.Windows.Forms.Application.StartupPath + "//家教部制度规范.pdf");
         }
     }
 }

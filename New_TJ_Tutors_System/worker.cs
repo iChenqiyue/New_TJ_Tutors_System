@@ -12,7 +12,22 @@ namespace New_TJ_Tutors_System
 {
     public partial class worker : Form
     {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
         //全局变量
+        public int pageSize = 20;      //每页记录数
+        public int recordCount = 0;    //总记录数
+        public int pageCount = 0;      //总页数
+        public int currentPage = 0;    //当前页
+        DataTable dtSource = new DataTable();
+
         styleinit dgvstyle = new styleinit();
         databind dgvbind = new databind();
         databind cbobind = new databind();
@@ -72,8 +87,7 @@ namespace New_TJ_Tutors_System
             cbo_select.SelectedItem = "全部";
 
             datainit();
-            dgvhisfresh();
-            //
+            dgvhisfresh();           
             showworker();
         }
         #endregion
@@ -312,8 +326,34 @@ namespace New_TJ_Tutors_System
             string mysql = select_history_str+" order by time desc";
             string tablename = "history";
             Console.WriteLine(mysql);
-            dgvbind.dgvbind(dgv_res, mysql, tablename);
+            //dgvbind.dgvbind(dgv_res, mysql, tablename);
+            pages_divided(mysql, tablename);
+            LoadPage();//调用加载数据的方法
             dgv_res.Columns[3].FillWeight = 250;
+        }
+        private void LoadPage()
+        {
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > pageCount) currentPage = pageCount;
+
+            int beginRecord;
+            int endRecord;
+            DataTable dtTemp;
+            dtTemp = dtSource.Clone();
+
+            beginRecord = pageSize * (currentPage - 1);
+            if (currentPage == 1) beginRecord = 0;
+            endRecord = pageSize * currentPage;
+
+            if (currentPage == pageCount) endRecord = recordCount;
+            for (int i = beginRecord; i < endRecord; i++)
+            {
+                dtTemp.ImportRow(dtSource.Rows[i]);
+            }
+            dgv_res.DataSource = dtTemp;  //datagridview控件名是tf_dgv1
+            txt_currentpage.Text = currentPage.ToString();//当前页
+            lbl_pagetotal.Text = "/ " + pageCount.ToString();//总页数
+            lbl_totalrecords.Text = "共 " + recordCount.ToString() + " 条记录";//总记录数
         }
 
         #endregion
@@ -585,9 +625,23 @@ namespace New_TJ_Tutors_System
                     tempstr += " and time>'" + dt_from.Value.ToString() + "' and time<'" + dt_to.Value.ToString() + "'";
             }
             mysql = select_history_str + "where " + tempstr + " order by time desc";
-            dgvbind.dgvbind(dgv_res, mysql, tablename);
+            pages_divided(mysql, tablename);
+            LoadPage();//调用加载数据的方法
+        }
+        private void pages_divided(string mysql, string tablename)
+        {
+            DataSet mydataset = mydb.ExecuteQuery(mysql, tablename);
+            dtSource = mydataset.Tables[0];
+            recordCount = dtSource.Rows.Count;
+            pageCount = (recordCount / pageSize);
+            if ((recordCount % pageSize) > 0)
+            {
+                pageCount++;
+            }
+            //默认第一页
+            currentPage = 1;
+            LoadPage();//调用加载数据的方法
         }
 
-        
     }
 }

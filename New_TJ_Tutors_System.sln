@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New_TJ_Tutors_System", "New_TJ_Tutors_System\New_TJ_Tutors_System.csproj", "{D33EA7F4-8564-40BC-85A0-3D2A919A3686}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TJ_Tutors_Setup", "TJ_Tutors_Setup\TJ_Tutors_Setup.vdproj", "{4D3BF2B5-D19C-4626-BFC3-02C3ECDB9C37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{D33EA7F4-8564-40BC-85A0-3D2A919A3686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D33EA7F4-8564-40BC-85A0-3D2A919A3686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D33EA7F4-8564-40BC-85A0-3D2A919A3686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D3BF2B5-D19C-4626-BFC3-02C3ECDB9C37}.Debug|Any CPU.ActiveCfg = Debug
+		{4D3BF2B5-D19C-4626-BFC3-02C3ECDB9C37}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

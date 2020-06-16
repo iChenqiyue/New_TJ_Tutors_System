@@ -36,6 +36,14 @@
             this.paneleft = new System.Windows.Forms.Panel();
             this.panel_searchresult = new System.Windows.Forms.Panel();
             this.dgv_search = new System.Windows.Forms.DataGridView();
+            this.panel_pages = new System.Windows.Forms.Panel();
+            this.lbl_totalrecords = new System.Windows.Forms.Label();
+            this.lbl_pagetotal = new System.Windows.Forms.Label();
+            this.txt_currentpage = new System.Windows.Forms.TextBox();
+            this.btn_pre = new System.Windows.Forms.Button();
+            this.btn_next = new System.Windows.Forms.Button();
+            this.btn_last = new System.Windows.Forms.Button();
+            this.btn_first = new System.Windows.Forms.Button();
             this.panelop = new System.Windows.Forms.Panel();
             this.lbl_select = new System.Windows.Forms.Label();
             this.cbo_select = new System.Windows.Forms.ComboBox();
@@ -60,13 +68,13 @@
             this.btn_searchtutor = new System.Windows.Forms.Button();
             this.cbo_state = new System.Windows.Forms.ComboBox();
             this.txt_remark = new System.Windows.Forms.TextBox();
-            this.lbl_remark = new System.Windows.Forms.Label();
             this.txt_tutor_num = new System.Windows.Forms.TextBox();
             this.lbl_tutor_num = new System.Windows.Forms.Label();
             this.lbl_state = new System.Windows.Forms.Label();
             this.txt_tutor_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_tutor_name = new System.Windows.Forms.Label();
+            this.lbl_remark = new System.Windows.Forms.Label();
             this.panelstate = new System.Windows.Forms.Panel();
             this.gpo_state = new System.Windows.Forms.GroupBox();
             this.cbo_tutor_state = new System.Windows.Forms.ComboBox();
@@ -88,7 +96,6 @@
             this.lbl_other_requests = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.gpo_info = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.rdo_woman = new System.Windows.Forms.RadioButton();
             this.rdo_man = new System.Windows.Forms.RadioButton();
             this.dt_recepiton_time = new System.Windows.Forms.DateTimePicker();
@@ -161,6 +168,7 @@
             this.paneleft.SuspendLayout();
             this.panel_searchresult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).BeginInit();
+            this.panel_pages.SuspendLayout();
             this.panelop.SuspendLayout();
             this.panelsearch.SuspendLayout();
             this.gbo_search.SuspendLayout();
@@ -195,16 +203,17 @@
             this.paneleft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneleft.Location = new System.Drawing.Point(0, 0);
             this.paneleft.Name = "paneleft";
-            this.paneleft.Size = new System.Drawing.Size(12, 785);
+            this.paneleft.Size = new System.Drawing.Size(591, 785);
             this.paneleft.TabIndex = 0;
             // 
             // panel_searchresult
             // 
             this.panel_searchresult.Controls.Add(this.dgv_search);
+            this.panel_searchresult.Controls.Add(this.panel_pages);
             this.panel_searchresult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_searchresult.Location = new System.Drawing.Point(0, 169);
             this.panel_searchresult.Name = "panel_searchresult";
-            this.panel_searchresult.Size = new System.Drawing.Size(12, 616);
+            this.panel_searchresult.Size = new System.Drawing.Size(591, 616);
             this.panel_searchresult.TabIndex = 12;
             // 
             // dgv_search
@@ -238,9 +247,136 @@
             this.dgv_search.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_search.RowTemplate.Height = 27;
             this.dgv_search.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_search.Size = new System.Drawing.Size(12, 616);
+            this.dgv_search.Size = new System.Drawing.Size(591, 579);
             this.dgv_search.TabIndex = 0;
             this.dgv_search.SelectionChanged += new System.EventHandler(this.dgv_search_SelectionChanged);
+            // 
+            // panel_pages
+            // 
+            this.panel_pages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.panel_pages.Controls.Add(this.lbl_totalrecords);
+            this.panel_pages.Controls.Add(this.lbl_pagetotal);
+            this.panel_pages.Controls.Add(this.txt_currentpage);
+            this.panel_pages.Controls.Add(this.btn_pre);
+            this.panel_pages.Controls.Add(this.btn_next);
+            this.panel_pages.Controls.Add(this.btn_last);
+            this.panel_pages.Controls.Add(this.btn_first);
+            this.panel_pages.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_pages.Location = new System.Drawing.Point(0, 579);
+            this.panel_pages.Name = "panel_pages";
+            this.panel_pages.Size = new System.Drawing.Size(591, 37);
+            this.panel_pages.TabIndex = 1;
+            // 
+            // lbl_totalrecords
+            // 
+            this.lbl_totalrecords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_totalrecords.AutoSize = true;
+            this.lbl_totalrecords.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_totalrecords.ForeColor = System.Drawing.Color.White;
+            this.lbl_totalrecords.Location = new System.Drawing.Point(475, 8);
+            this.lbl_totalrecords.Name = "lbl_totalrecords";
+            this.lbl_totalrecords.Size = new System.Drawing.Size(104, 20);
+            this.lbl_totalrecords.TabIndex = 9;
+            this.lbl_totalrecords.Text = "共 100 条记录";
+            // 
+            // lbl_pagetotal
+            // 
+            this.lbl_pagetotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_pagetotal.AutoSize = true;
+            this.lbl_pagetotal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_pagetotal.ForeColor = System.Drawing.Color.White;
+            this.lbl_pagetotal.Location = new System.Drawing.Point(327, 9);
+            this.lbl_pagetotal.Name = "lbl_pagetotal";
+            this.lbl_pagetotal.Size = new System.Drawing.Size(37, 20);
+            this.lbl_pagetotal.TabIndex = 8;
+            this.lbl_pagetotal.Text = "/ 52";
+            // 
+            // txt_currentpage
+            // 
+            this.txt_currentpage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_currentpage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.txt_currentpage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_currentpage.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_currentpage.ForeColor = System.Drawing.Color.White;
+            this.txt_currentpage.Location = new System.Drawing.Point(300, 9);
+            this.txt_currentpage.Name = "txt_currentpage";
+            this.txt_currentpage.Size = new System.Drawing.Size(21, 20);
+            this.txt_currentpage.TabIndex = 7;
+            this.txt_currentpage.Text = "1";
+            this.txt_currentpage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_currentpage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_currentpage_KeyPress);
+            this.txt_currentpage.Leave += new System.EventHandler(this.txt_currentpage_Leave);
+            // 
+            // btn_pre
+            // 
+            this.btn_pre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_pre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btn_pre.FlatAppearance.BorderSize = 0;
+            this.btn_pre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pre.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_pre.ForeColor = System.Drawing.Color.White;
+            this.btn_pre.Location = new System.Drawing.Point(246, 0);
+            this.btn_pre.Name = "btn_pre";
+            this.btn_pre.Size = new System.Drawing.Size(42, 37);
+            this.btn_pre.TabIndex = 6;
+            this.btn_pre.Text = "<";
+            this.btn_pre.UseVisualStyleBackColor = false;
+            this.btn_pre.Click += new System.EventHandler(this.btn_pre_Click);
+            // 
+            // btn_next
+            // 
+            this.btn_next.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btn_next.FlatAppearance.BorderSize = 0;
+            this.btn_next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_next.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_next.ForeColor = System.Drawing.Color.White;
+            this.btn_next.Location = new System.Drawing.Point(378, 0);
+            this.btn_next.Name = "btn_next";
+            this.btn_next.Size = new System.Drawing.Size(42, 37);
+            this.btn_next.TabIndex = 5;
+            this.btn_next.Text = ">";
+            this.btn_next.UseVisualStyleBackColor = false;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
+            // 
+            // btn_last
+            // 
+            this.btn_last.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_last.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btn_last.FlatAppearance.BorderSize = 0;
+            this.btn_last.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_last.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_last.ForeColor = System.Drawing.Color.White;
+            this.btn_last.Location = new System.Drawing.Point(426, 0);
+            this.btn_last.Name = "btn_last";
+            this.btn_last.Size = new System.Drawing.Size(42, 37);
+            this.btn_last.TabIndex = 4;
+            this.btn_last.Text = ">>";
+            this.btn_last.UseVisualStyleBackColor = false;
+            this.btn_last.Click += new System.EventHandler(this.btn_last_Click);
+            // 
+            // btn_first
+            // 
+            this.btn_first.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_first.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btn_first.FlatAppearance.BorderSize = 0;
+            this.btn_first.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_first.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_first.ForeColor = System.Drawing.Color.White;
+            this.btn_first.Location = new System.Drawing.Point(198, 0);
+            this.btn_first.Name = "btn_first";
+            this.btn_first.Size = new System.Drawing.Size(42, 37);
+            this.btn_first.TabIndex = 3;
+            this.btn_first.Text = "<<";
+            this.btn_first.UseVisualStyleBackColor = false;
+            this.btn_first.Click += new System.EventHandler(this.btn_first_Click);
             // 
             // panelop
             // 
@@ -252,7 +388,7 @@
             this.panelop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelop.Location = new System.Drawing.Point(0, 119);
             this.panelop.Name = "panelop";
-            this.panelop.Size = new System.Drawing.Size(12, 50);
+            this.panelop.Size = new System.Drawing.Size(591, 50);
             this.panelop.TabIndex = 11;
             // 
             // lbl_select
@@ -332,7 +468,7 @@
             this.panelsearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelsearch.Location = new System.Drawing.Point(0, 0);
             this.panelsearch.Name = "panelsearch";
-            this.panelsearch.Size = new System.Drawing.Size(12, 119);
+            this.panelsearch.Size = new System.Drawing.Size(591, 119);
             this.panelsearch.TabIndex = 10;
             // 
             // gbo_search
@@ -345,7 +481,7 @@
             this.gbo_search.Controls.Add(this.txt_print_search);
             this.gbo_search.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gbo_search.ForeColor = System.Drawing.Color.White;
-            this.gbo_search.Location = new System.Drawing.Point(-235, 4);
+            this.gbo_search.Location = new System.Drawing.Point(54, 4);
             this.gbo_search.Name = "gbo_search";
             this.gbo_search.Size = new System.Drawing.Size(483, 111);
             this.gbo_search.TabIndex = 5;
@@ -429,8 +565,8 @@
             // 
             // panelright
             // 
-            this.panelright.Controls.Add(this.panelbuss);
             this.panelright.Controls.Add(this.panelinfo);
+            this.panelright.Controls.Add(this.panelbuss);
             this.panelright.Controls.Add(this.paneltitle);
             this.panelright.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelright.Location = new System.Drawing.Point(591, 0);
@@ -511,13 +647,13 @@
             this.panelbus.Controls.Add(this.panelbutton);
             this.panelbus.Controls.Add(this.cbo_state);
             this.panelbus.Controls.Add(this.txt_remark);
-            this.panelbus.Controls.Add(this.lbl_remark);
             this.panelbus.Controls.Add(this.txt_tutor_num);
             this.panelbus.Controls.Add(this.lbl_tutor_num);
             this.panelbus.Controls.Add(this.lbl_state);
             this.panelbus.Controls.Add(this.txt_tutor_name);
             this.panelbus.Controls.Add(this.label1);
             this.panelbus.Controls.Add(this.lbl_tutor_name);
+            this.panelbus.Controls.Add(this.lbl_remark);
             this.panelbus.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelbus.Location = new System.Drawing.Point(281, 165);
             this.panelbus.Name = "panelbus";
@@ -601,17 +737,6 @@
             this.txt_remark.Size = new System.Drawing.Size(251, 100);
             this.txt_remark.TabIndex = 52;
             // 
-            // lbl_remark
-            // 
-            this.lbl_remark.AutoSize = true;
-            this.lbl_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl_remark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
-            this.lbl_remark.Location = new System.Drawing.Point(25, 117);
-            this.lbl_remark.Name = "lbl_remark";
-            this.lbl_remark.Size = new System.Drawing.Size(39, 19);
-            this.lbl_remark.TabIndex = 51;
-            this.lbl_remark.Text = "备注";
-            // 
             // txt_tutor_num
             // 
             this.txt_tutor_num.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -673,6 +798,17 @@
             this.lbl_tutor_name.Size = new System.Drawing.Size(69, 19);
             this.lbl_tutor_name.TabIndex = 46;
             this.lbl_tutor_name.Text = "教员姓名";
+            // 
+            // lbl_remark
+            // 
+            this.lbl_remark.AutoSize = true;
+            this.lbl_remark.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_remark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(89)))), ((int)(((byte)(112)))));
+            this.lbl_remark.Location = new System.Drawing.Point(25, 117);
+            this.lbl_remark.Name = "lbl_remark";
+            this.lbl_remark.Size = new System.Drawing.Size(39, 19);
+            this.lbl_remark.TabIndex = 51;
+            this.lbl_remark.Text = "备注";
             // 
             // panelstate
             // 
@@ -938,7 +1074,6 @@
             // gpo_info
             // 
             this.gpo_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
-            this.gpo_info.Controls.Add(this.panel1);
             this.gpo_info.Controls.Add(this.rdo_woman);
             this.gpo_info.Controls.Add(this.rdo_man);
             this.gpo_info.Controls.Add(this.dt_recepiton_time);
@@ -975,14 +1110,6 @@
             this.gpo_info.TabIndex = 102;
             this.gpo_info.TabStop = false;
             this.gpo_info.Text = "基本信息";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(213, 19);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1);
-            this.panel1.TabIndex = 86;
             // 
             // rdo_woman
             // 
@@ -1768,8 +1895,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 785);
-            this.Controls.Add(this.paneleft);
             this.Controls.Add(this.paneltutor);
+            this.Controls.Add(this.paneleft);
             this.Controls.Add(this.panelright);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tutoring_all";
@@ -1778,6 +1905,8 @@
             this.paneleft.ResumeLayout(false);
             this.panel_searchresult.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search)).EndInit();
+            this.panel_pages.ResumeLayout(false);
+            this.panel_pages.PerformLayout();
             this.panelop.ResumeLayout(false);
             this.panelop.PerformLayout();
             this.panelsearch.ResumeLayout(false);
@@ -1939,6 +2068,13 @@
         private System.Windows.Forms.Label lbl_num;
         private System.Windows.Forms.DataGridView dgv_tutoring;
         private System.Windows.Forms.Panel paneltutor;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_pages;
+        private System.Windows.Forms.Label lbl_totalrecords;
+        private System.Windows.Forms.Label lbl_pagetotal;
+        private System.Windows.Forms.TextBox txt_currentpage;
+        private System.Windows.Forms.Button btn_pre;
+        private System.Windows.Forms.Button btn_next;
+        private System.Windows.Forms.Button btn_last;
+        private System.Windows.Forms.Button btn_first;
     }
 }

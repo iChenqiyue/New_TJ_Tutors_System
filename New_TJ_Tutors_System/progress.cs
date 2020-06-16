@@ -30,6 +30,7 @@ namespace New_TJ_Tutors_System
         public void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             this.Close();
+            MessageBox.Show("保存成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }

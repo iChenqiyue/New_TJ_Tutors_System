@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Data;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -84,20 +84,20 @@ namespace New_TJ_Tutors_System
             xlApp.Quit();
             GC.Collect();//强行销毁 
             // if (fileSaved && System.IO.File.Exists(saveFileName)) System.Diagnostics.Process.Start(saveFileName); //打开EXCEL
-            MessageBox.Show("保存成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            
         }
-        public void ExportExcel(string fileName, string cbo)
+        public void ExportExcel(string fileName, string tablename)
         {
 
-            string saveFileName = "";
+            /*string saveFileName = "";
             //bool fileSaved = false;
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.DefaultExt = "xlsx";
             saveDialog.Filter = "Excel文件|*.xlsx";
             saveDialog.FileName = fileName;
             saveDialog.ShowDialog();
-            Cursor.Current = Cursors.WaitCursor;
-            saveFileName = saveDialog.FileName;
+            Cursor.Current = Cursors.WaitCursor;*/
+            string saveFileName = fileName;
             if (saveFileName.IndexOf(":") < 0) return; //被点了取消 
             Excel.Application xlApp = new Excel.Application();
             if (xlApp == null)
@@ -108,17 +108,10 @@ namespace New_TJ_Tutors_System
             Excel.Workbooks workbooks = xlApp.Workbooks;
             Excel.Workbook workbook = workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
             Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Worksheets[1];//取得sheet1
-            string tb = cbo;
-            string mysql = "SELECT * FROM [" + cbo + "]";
-            string mystr = System.Configuration.ConfigurationManager.
-               ConnectionStrings["myconnstring"].ToString();
-            SqlConnection myconn = new SqlConnection();
-            myconn.ConnectionString = mystr;
-            myconn.Open();
-            SqlDataAdapter myda = new SqlDataAdapter(mysql, myconn);
-            DataTable dt = new DataTable();
-            myda.Fill(dt);
-            myconn.Close();
+            commondb mydb = new commondb();
+            string mysql = "select * from " + tablename;
+            DataSet mydataset = mydb.ExecuteQuery(mysql, tablename);
+            DataTable dt = mydataset.Tables[0];
             //写入标题
             for (int i = 0; i < dt.Columns.Count; i++)
             {
@@ -165,7 +158,6 @@ namespace New_TJ_Tutors_System
             xlApp.Quit();
             GC.Collect();//强行销毁 
             // if (fileSaved && System.IO.File.Exists(saveFileName)) System.Diagnostics.Process.Start(saveFileName); //打开EXCEL
-            MessageBox.Show("保存成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
         #endregion
     }

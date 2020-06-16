@@ -52,8 +52,6 @@ namespace New_TJ_Tutors_System
             worker.WorkerSupportsCancellation = true;
 
 
-            
-
             //CheckUpdate为窗体显示过程中需要处理算法的方法
             worker.DoWork += new DoWorkEventHandler(CheckUpdate);
             worker.RunWorkerAsync();
@@ -72,7 +70,6 @@ namespace New_TJ_Tutors_System
         public void CheckUpdate(object sender, DoWorkEventArgs e)
         {
             exporttoexcel ete = new exporttoexcel();
-            //string filename = DateTime.Now.ToLongDateString() + ".xlsx";
             ete.ExportExcel(filename, dgv_todayform);
         }
     }

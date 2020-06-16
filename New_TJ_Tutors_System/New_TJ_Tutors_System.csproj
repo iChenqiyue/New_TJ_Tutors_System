@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="backup.cs" />
     <Compile Include="bussiness.cs">
       <SubType>Form</SubType>
     </Compile>

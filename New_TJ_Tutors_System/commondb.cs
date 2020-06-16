@@ -11,11 +11,16 @@ namespace New_TJ_Tutors_System
     class commondb
     {
         public commondb() { }
-        public static string host = "localhost";
+        //public static string host = "139.180.147.146";
+        /*public static string host = "localhost";
         public static string userid = "root";
-        public static string password = "chen76487591";
+        public static string password = "chen76487591";*/
+        public static string host = "175.24.55.217";
+        public static string userid = "tjtutor";
+        public static string password = "tjjj2020";
         public static string database = "tjtutor";
         public static string connectionstr = "server="+host+";User Id ="+userid+";password="+password+";Database="+database+";";
+        public static string mysql_path = @"C:\Program Files\MySQL\MySQL Server 8.0\bin";
 
 
         public string connection()
@@ -37,7 +42,6 @@ namespace New_TJ_Tutors_System
             }
             return state;
         }
-
 
         public int Rownum(string sql)
         {
@@ -131,6 +135,8 @@ namespace New_TJ_Tutors_System
             mycmd.ExecuteNonQuery();
             myconn.Close();
         }
+
+
 
     }
 }

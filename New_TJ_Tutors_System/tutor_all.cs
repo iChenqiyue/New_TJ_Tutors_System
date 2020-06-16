@@ -10,10 +10,26 @@ using System.Windows.Forms;
 
 namespace New_TJ_Tutors_System
 {
+
+
     public partial class tutor_all : Form
     {
-
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
         //全局变量
+        public int pageSize = 20;      //每页记录数
+        public int recordCount = 0;    //总记录数
+        public int pageCount = 0;      //总页数
+        public int currentPage = 0;    //当前页
+        DataTable dtSource = new DataTable();
+
         styleinit dgvstyle = new styleinit();
         databind dgvbind = new databind();
         databind cbobind = new databind();
@@ -86,7 +102,7 @@ namespace New_TJ_Tutors_System
 
             datainit();
 
-            //
+            
             showtutor();
         }
 
@@ -283,7 +299,37 @@ namespace New_TJ_Tutors_System
                 mysql += "where blacklist='否' order by tutor_num desc";
             }
             else { }
-            dgvbind.dgvbind(dgv_search, mysql, tablename);
+            //dgvbind.dgvbind(dgv_search, mysql, tablename);
+            pages_divided(mysql, tablename);
+            LoadPage();//调用加载数据的方法
+        }
+        ///LoadPage方法
+        /// <summary>
+        /// loaddpage方法
+        /// </summary>
+        private void LoadPage()
+        {
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > pageCount) currentPage = pageCount;
+
+            int beginRecord;
+            int endRecord;
+            DataTable dtTemp;
+            dtTemp = dtSource.Clone();
+
+            beginRecord = pageSize * (currentPage - 1);
+            if (currentPage == 1) beginRecord = 0;
+            endRecord = pageSize * currentPage;
+
+            if (currentPage == pageCount) endRecord = recordCount;
+            for (int i = beginRecord; i < endRecord; i++)
+            {
+                dtTemp.ImportRow(dtSource.Rows[i]);
+            }
+            dgv_search.DataSource = dtTemp;  //datagridview控件名是tf_dgv1
+            txt_currentpage.Text = currentPage.ToString();//当前页
+            lbl_pagetotal.Text = "/ " + pageCount.ToString();//总页数
+            lbl_totalrecords.Text = "共 " + recordCount.ToString() + " 条记录";//总记录数
         }
         #endregion
 
@@ -336,10 +382,25 @@ namespace New_TJ_Tutors_System
                     tempstr += " AND phone Like '%" + phone + "%'";
             }
             mysql = select_tutor_str + "where " + tempstr + " order by tutor_num desc";
-            dgvbind.dgvbind(dgv_search, mysql, tablename);
+            //dgvbind.dgvbind(dgv_search, mysql, tablename);
+            pages_divided(mysql, tablename);
+            LoadPage();//调用加载数据的方法
         }
-        
 
+        private void pages_divided(string mysql, string tablename)
+        {
+            DataSet mydataset = mydb.ExecuteQuery(mysql, tablename);
+            dtSource = mydataset.Tables[0];
+            recordCount = dtSource.Rows.Count;
+            pageCount = (recordCount / pageSize);
+            if ((recordCount % pageSize) > 0)
+            {
+                pageCount++;
+            }
+            //默认第一页
+            currentPage = 1;
+            LoadPage();//调用加载数据的方法
+        }
         /// <summary>
         /// 筛选条件变更
         /// </summary>
@@ -747,8 +808,65 @@ namespace New_TJ_Tutors_System
             txt_tutor_name.Text = tutor_name;
             txt_remark.Text = remark;
         }
+
         #endregion
 
+        private void btn_pre_Click(object sender, EventArgs e)
+        {
+            currentPage--;
+            LoadPage();
+        }
 
+        private void btn_first_Click(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            LoadPage();
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            currentPage++;
+            LoadPage();
+        }
+
+        private void btn_last_Click(object sender, EventArgs e)
+        {
+            currentPage = pageCount;
+            LoadPage();
+        }
+
+        private void txt_currentpage_Leave(object sender, EventArgs e)
+        {
+            string num = txt_currentpage.Text.Trim();
+            if (num != "")
+                currentPage = int.Parse(num);
+            else
+            {
+                txt_currentpage.Text = "1";
+                currentPage = 1;
+            }
+            LoadPage();
+        }
+
+        private void txt_currentpage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsNumber(e.KeyChar)) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == (char)13)
+            {
+
+                string num = txt_currentpage.Text.Trim();
+                if (num != "")
+                    currentPage = int.Parse(num);
+                else
+                {
+                    txt_currentpage.Text = "1";
+                    currentPage = 1;
+                }
+                LoadPage();
+            }
+        }
     }
 }

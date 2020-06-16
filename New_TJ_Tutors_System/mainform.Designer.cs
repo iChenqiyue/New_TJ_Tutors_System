@@ -34,7 +34,7 @@
             this.btn_backup = new System.Windows.Forms.Button();
             this.btn_emergency = new System.Windows.Forms.Button();
             this.panelhelpmenu = new System.Windows.Forms.Panel();
-            this.btn_about = new System.Windows.Forms.Button();
+            this.btn_rules = new System.Windows.Forms.Button();
             this.btn_doc = new System.Windows.Forms.Button();
             this.btn_price_check = new System.Windows.Forms.Button();
             this.btn_work_tutorial = new System.Windows.Forms.Button();
@@ -143,9 +143,9 @@
             // 
             // panelhelpmenu
             // 
-            this.panelhelpmenu.Controls.Add(this.btn_about);
             this.panelhelpmenu.Controls.Add(this.btn_doc);
             this.panelhelpmenu.Controls.Add(this.btn_price_check);
+            this.panelhelpmenu.Controls.Add(this.btn_rules);
             this.panelhelpmenu.Controls.Add(this.btn_work_tutorial);
             this.panelhelpmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelhelpmenu.Location = new System.Drawing.Point(0, 464);
@@ -153,22 +153,23 @@
             this.panelhelpmenu.Size = new System.Drawing.Size(220, 180);
             this.panelhelpmenu.TabIndex = 8;
             // 
-            // btn_about
+            // btn_rules
             // 
-            this.btn_about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
-            this.btn_about.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_about.FlatAppearance.BorderSize = 0;
-            this.btn_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_about.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_about.ForeColor = System.Drawing.Color.White;
-            this.btn_about.Location = new System.Drawing.Point(0, 135);
-            this.btn_about.Name = "btn_about";
-            this.btn_about.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_about.Size = new System.Drawing.Size(220, 45);
-            this.btn_about.TabIndex = 4;
-            this.btn_about.Text = "系统负责人信息";
-            this.btn_about.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_about.UseVisualStyleBackColor = false;
+            this.btn_rules.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(114)))), ((int)(((byte)(219)))));
+            this.btn_rules.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_rules.FlatAppearance.BorderSize = 0;
+            this.btn_rules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_rules.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_rules.ForeColor = System.Drawing.Color.White;
+            this.btn_rules.Location = new System.Drawing.Point(0, 45);
+            this.btn_rules.Name = "btn_rules";
+            this.btn_rules.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_rules.Size = new System.Drawing.Size(220, 45);
+            this.btn_rules.TabIndex = 4;
+            this.btn_rules.Text = "家教部制度规范";
+            this.btn_rules.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_rules.UseVisualStyleBackColor = false;
+            this.btn_rules.Click += new System.EventHandler(this.btn_rules_Click);
             // 
             // btn_doc
             // 
@@ -178,7 +179,7 @@
             this.btn_doc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_doc.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_doc.ForeColor = System.Drawing.Color.White;
-            this.btn_doc.Location = new System.Drawing.Point(0, 90);
+            this.btn_doc.Location = new System.Drawing.Point(0, 135);
             this.btn_doc.Name = "btn_doc";
             this.btn_doc.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btn_doc.Size = new System.Drawing.Size(220, 45);
@@ -196,7 +197,7 @@
             this.btn_price_check.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_price_check.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_price_check.ForeColor = System.Drawing.Color.White;
-            this.btn_price_check.Location = new System.Drawing.Point(0, 45);
+            this.btn_price_check.Location = new System.Drawing.Point(0, 90);
             this.btn_price_check.Name = "btn_price_check";
             this.btn_price_check.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btn_price_check.Size = new System.Drawing.Size(220, 45);
@@ -625,7 +626,7 @@
         private System.Windows.Forms.Panel panelemergency;
         private System.Windows.Forms.Button btn_backup;
         private System.Windows.Forms.Button btn_emergency;
-        private System.Windows.Forms.Button btn_about;
+        private System.Windows.Forms.Button btn_rules;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel paneltitle;
         private System.Windows.Forms.Label labeltitle;

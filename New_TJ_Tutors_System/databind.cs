@@ -35,6 +35,7 @@ namespace New_TJ_Tutors_System
             mydataset = mydb.ExecuteQuery(cmdText, tb);
             cbo.DataSource = mydataset.Tables[tb];
             cbo.DisplayMember = DisplayFied;
+
         }
         
 

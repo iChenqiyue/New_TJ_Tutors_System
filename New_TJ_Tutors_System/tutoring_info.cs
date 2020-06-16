@@ -15,7 +15,6 @@ namespace New_TJ_Tutors_System
 
 
         //全局变量
-        string print_num;
         commondb mydb = new commondb();
         objectclass.tutoringinfo tutor = new objectclass.tutoringinfo();
 

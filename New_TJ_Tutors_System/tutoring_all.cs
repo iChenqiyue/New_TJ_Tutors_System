@@ -10,12 +10,28 @@ using System.Windows.Forms;
 
 namespace New_TJ_Tutors_System
 {
+
     public partial class tutoring_all : Form
     {
-
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
 
 
         //全局变量
+        public int pageSize = 20;      //每页记录数
+        public int recordCount = 0;    //总记录数
+        public int pageCount = 0;      //总页数
+        public int currentPage = 0;    //当前页
+        DataTable dtSource = new DataTable();
+
+
         styleinit dgvstyle = new styleinit();
         databind dgvbind = new databind();
         databind cbobind = new databind();
@@ -141,6 +157,8 @@ namespace New_TJ_Tutors_System
             try
             {
                 info = mydb.ExecuteQuery(mysql, tablename);
+                mysql = "select name from worker where isleave='否'";
+                cbobind.tablecbobind(cbo_reception, mysql, "workers", "name");
             }
             catch (Exception ex)
             {
@@ -361,7 +379,39 @@ namespace New_TJ_Tutors_System
                 mysql += "where tutor_state='接入' or tutor_state='换人' or tutor_state='重请' order by latest_time desc";
             }
             else { }
-            dgvbind.dgvbind(dgv_search, mysql, tablename);
+            //dgvbind.dgvbind(dgv_search, mysql, tablename);
+            pages_divided(mysql, tablename);
+            LoadPage();//调用加载数据的方法
+        }
+
+
+        ///LoadPage方法
+        /// <summary>
+        /// loaddpage方法
+        /// </summary>
+        private void LoadPage()
+        {
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > pageCount) currentPage = pageCount;
+
+            int beginRecord;
+            int endRecord;
+            DataTable dtTemp;
+            dtTemp = dtSource.Clone();
+
+            beginRecord = pageSize * (currentPage - 1);
+            if (currentPage == 1) beginRecord = 0;
+            endRecord = pageSize * currentPage;
+
+            if (currentPage == pageCount) endRecord = recordCount;
+            for (int i = beginRecord; i < endRecord; i++)
+            {
+                dtTemp.ImportRow(dtSource.Rows[i]);
+            }
+            dgv_search.DataSource = dtTemp;  //datagridview控件名是tf_dgv1
+            txt_currentpage.Text = currentPage.ToString();//当前页
+            lbl_pagetotal.Text = "/ " + pageCount.ToString();//总页数
+            lbl_totalrecords.Text = "共 " + recordCount.ToString() + " 条记录";//总记录数
         }
         #endregion
 
@@ -410,8 +460,25 @@ namespace New_TJ_Tutors_System
                     tempstr += " AND phone Like '%" + phone + "%'";
             }
             mysql = select_tutoring_str + "where " + tempstr + " order by print_num desc";
-            dgvbind.dgvbind(dgv_search, mysql, tablename);
+            //dgvbind.dgvbind(dgv_search, mysql, tablename);
+            pages_divided(mysql, tablename);
         }
+
+        private void pages_divided(string mysql, string tablename)
+        {
+            DataSet mydataset = mydb.ExecuteQuery(mysql, tablename);
+            dtSource = mydataset.Tables[0];
+            recordCount = dtSource.Rows.Count;
+            pageCount = (recordCount / pageSize);
+            if ((recordCount % pageSize) > 0)
+            {
+                pageCount++;
+            }
+            //默认第一页
+            currentPage = 1;
+            LoadPage();//调用加载数据的方法
+        }
+
 
         //筛选条件
         private void cbo_select_SelectedIndexChanged(object sender, EventArgs e)
@@ -526,6 +593,8 @@ namespace New_TJ_Tutors_System
             //重置tutoring1
             tutoring1.reset();
             insertstate = true;
+            
+            
 
             //数据准备，初始化家长编号和打印编号
             //家长编号+1
@@ -560,6 +629,7 @@ namespace New_TJ_Tutors_System
             rdo_man.Checked = false;
             rdo_woman.Checked = false;
             tutoring1.grade = "不限";
+            cbo_reception.SelectedItem = null;
             //判断数组非空
             btn_buss.Enabled = false;
             btn_tutor_info.Enabled = false;
@@ -614,7 +684,7 @@ namespace New_TJ_Tutors_System
             updateinfo(ref history, ref tutoring1.parent_num, txt_parent_num.Text.Trim());
             updateinfo(ref history, ref tutoring1.print_num, txt_print_num.Text.Trim());
             updateinfo(ref history, ref tutoring1.parent_name, txt_parent_name.Text.Trim());
-            updateinfo(ref history, ref tutoring1.reception, cbo_reception.SelectedItem.ToString());        
+            updateinfo(ref history, ref tutoring1.reception, cbo_reception.SelectedItem.ToString());
             updateinfo(ref history, ref tutoring1.phone, txt_phone.Text.Trim());
             updateinfo(ref history, ref tutoring1.simple_adr, txt_sadd.Text.Trim());
             updateinfo(ref history, ref tutoring1.detail_adr, txt_dadd.Text.Trim());
@@ -655,7 +725,7 @@ namespace New_TJ_Tutors_System
 
 
             bool payment_changed = false;
-            if (tutoring1.payment_state !="已缴"&& cbo_payment_state.SelectedItem.ToString()=="已缴")
+            if (tutoring1.payment_state != "已缴" && cbo_payment_state.SelectedItem.ToString() == "已缴")
             {
                 payment_changed = true;
             }
@@ -679,7 +749,7 @@ namespace New_TJ_Tutors_System
             {
                 tutoring1.tutor_state = "接入";
                 tutoring1.remarks = "";
-                
+
                 mysql = "insert into tutoring " + insert_tutoring_str + " values " + tutoring1.connectstr();
                 DialogResult result = MessageBox.Show("确认新增家教信息？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Cancel)
@@ -691,7 +761,7 @@ namespace New_TJ_Tutors_System
                         mydb.ExecuteNonQuery(mysql);
                         Console.WriteLine(history);
                         mysql = string.Format("insert into history (user,optype,num,time,content) values ('{0}', '{1}', '{2}', '{3}','{4}')",
-                            user, "新增家教信息", tutoring1.print_num, DateTime.Now.ToString(),history);
+                            user, "新增家教信息", tutoring1.print_num, DateTime.Now.ToString(), history);
                         Console.WriteLine(mysql);
                         mydb.ExecuteNonQuery(mysql);
                         if (tutoring1.payment_time != null)
@@ -709,10 +779,10 @@ namespace New_TJ_Tutors_System
                             //string insert_business_str = "(print_num,tutor_num,subject,state,time,reception,remarks,now";
                             mysql = string.Format("insert into business (print_num,subject,time,reception) values ('{0}', '{1}', '{2}', '{3}')",
                                 tutoring1.print_num, subject[i], DateTime.Now.ToString(), tutoring1.reception);
-                            
+
                             mydb.ExecuteNonQuery(mysql);
                         }
-                        
+
 
                     }
                     catch (Exception ex)
@@ -730,7 +800,7 @@ namespace New_TJ_Tutors_System
             else
             {
                 mysql = tutoring1.updatestr();
-                
+
                 DialogResult result = MessageBox.Show("确认更新家教信息？", "操作提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Cancel)
                     return;
@@ -740,7 +810,7 @@ namespace New_TJ_Tutors_System
                     {
                         mydb.ExecuteNonQuery(mysql);
                         mysql = string.Format("insert into history (user,optype,num,time,content) values ('{0}', '{1}', '{2}', '{3}','{4}')",
-                            user, "更新家教信息", tutoring1.print_num, DateTime.Now.ToString(),history);
+                            user, "更新家教信息", tutoring1.print_num, DateTime.Now.ToString(), history);
                         mydb.ExecuteNonQuery(mysql);
                         if (tutoring1.payment_time != null)
                         {
@@ -767,13 +837,13 @@ namespace New_TJ_Tutors_System
                                 temp += "'" + subject[i] + "',";
                                 mydb.ExecuteNonQuery(mysql);
                             }
-                            
+
                             temp = temp.Substring(0, temp.Length - 1);
                             mysql = "update business set now=0 where print_num='" + tutoring1.print_num +
                                       "' and subject not in(" + temp + ")";
                             Console.WriteLine(mysql);
                             mydb.ExecuteNonQuery(mysql);
-                            
+
 
                         }
 
@@ -849,7 +919,7 @@ namespace New_TJ_Tutors_System
         }
         #endregion
 
-        private void updateinfo(ref string history,ref string str1,string str2)
+        private void updateinfo(ref string history, ref string str1, string str2)
         {
             if (str1 != str2)
                 history += str1 + "->" + str2 + ";";
@@ -864,9 +934,9 @@ namespace New_TJ_Tutors_System
         /// <param name="e"></param>
         private void btn_save_buss_Click(object sender, EventArgs e)
         {
-           
+
             string history = "";
-            updateinfo(ref history, ref tutoring1.tutor_state,cbo_tutor_state.SelectedItem.ToString()) ;
+            updateinfo(ref history, ref tutoring1.tutor_state, cbo_tutor_state.SelectedItem.ToString());
             updateinfo(ref history, ref tutoring1.remarks, txt_remarks.Text.Trim());
             tutoring1.latest_time = DateTime.Now.ToString();
             string mysql = "";
@@ -881,7 +951,7 @@ namespace New_TJ_Tutors_System
                 {
                     mydb.ExecuteNonQuery(mysql);
                     mysql = string.Format("insert into history (user,optype,num,time,content) values ('{0}', '{1}', '{2}', '{3}','{4}')",
-                            user, "更新家教状态/备注", tutoring1.print_num, DateTime.Now.ToString(),history);
+                            user, "更新家教状态/备注", tutoring1.print_num, DateTime.Now.ToString(), history);
                     mydb.ExecuteNonQuery(mysql);
                 }
                 catch (Exception ex)
@@ -901,7 +971,7 @@ namespace New_TJ_Tutors_System
         /// <param name="e"></param>
         private void dgv_subject_SelectionChanged(object sender, EventArgs e)
         {
-                   
+
             if (dgv_subject.SelectedRows.Count != 0)
             {
                 bus1.subject = dgv_subject.SelectedRows[0].Cells[0].Value.ToString();
@@ -909,7 +979,7 @@ namespace New_TJ_Tutors_System
                 bus1.tutor_num = dgv_subject.SelectedRows[0].Cells[2].Value.ToString();
                 bus1.tutor_name = dgv_subject.SelectedRows[0].Cells[3].Value.ToString();
                 bus1.remarks = dgv_subject.SelectedRows[0].Cells[4].Value.ToString();
-            }         
+            }
             cbo_subject.Text = bus1.subject;
             cbo_state.SelectedItem = bus1.state;
             txt_tutor_num.Text = bus1.tutor_num;
@@ -958,9 +1028,9 @@ namespace New_TJ_Tutors_System
         {
 
             string history = "";
-            
+
             bus1.print_num = tutoring1.print_num;
-            
+
             bus1.subject = cbo_subject.Text;
             history += bus1.subject + ":";
             updateinfo(ref history, ref bus1.state, cbo_state.SelectedItem.ToString());
@@ -1094,7 +1164,66 @@ namespace New_TJ_Tutors_System
         {
             paneltutor.Visible = false;
         }
+
         #endregion
+
+        private void btn_pre_Click(object sender, EventArgs e)
+        {
+            currentPage--;
+            LoadPage();
+        }
+
+        private void btn_first_Click(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            LoadPage();
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            currentPage++;
+            LoadPage();
+        }
+
+        private void btn_last_Click(object sender, EventArgs e)
+        {
+            currentPage = pageCount;
+            LoadPage();
+        }
+
+        private void txt_currentpage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsNumber(e.KeyChar)) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == (char)13)
+            {
+                
+                string num = txt_currentpage.Text.Trim();
+                if (num != "")
+                    currentPage = int.Parse(num);
+                else
+                {
+                    txt_currentpage.Text = "1";
+                    currentPage = 1;
+                }
+                LoadPage();
+            }
+        }
+
+        private void txt_currentpage_Leave(object sender, EventArgs e)
+        {
+            string num = txt_currentpage.Text.Trim();
+            if (num != "")
+                currentPage = int.Parse(num);
+            else
+            {
+                txt_currentpage.Text = "1";
+                currentPage = 1;
+            }
+            LoadPage();
+        }
 
 
     }
